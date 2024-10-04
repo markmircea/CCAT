@@ -184,6 +184,11 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                                 API Tokens
                                             </DropdownLink>
 
+                                            <!-- Upgrade Account Button -->
+                                            <DropdownLink v-if="!isSubscribed" :href="route('upgrade.account')">
+                                                Upgrade Account
+                                            </DropdownLink>
+
                                             <div class="border-t border-gray-200 dark:border-gray-600" />
 
                                             <!-- Authentication -->
@@ -292,6 +297,11 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
 
                                 <ResponsiveNavLink v-if="$page.props.jetstream.hasApiFeatures" :href="route('api-tokens.index')" :active="route().current('api-tokens.index')">
                                     API Tokens
+                                </ResponsiveNavLink>
+
+                                <!-- Responsive Upgrade Account Button -->
+                                <ResponsiveNavLink v-if="!isSubscribed" :href="route('upgrade.account')" :active="route().current('upgrade.account')">
+                                    Upgrade Account
                                 </ResponsiveNavLink>
 
                                 <!-- Authentication -->

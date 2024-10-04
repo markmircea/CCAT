@@ -4,7 +4,12 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import LazyImage from '@/Components/LazyImage.vue';
 import { Link } from '@inertiajs/vue3';
 
+
 const isIntersecting = ref({});
+
+const props = defineProps({
+  isSubscribed: Boolean
+});
 
 onMounted(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -39,8 +44,29 @@ onMounted(() => {
             </header>
 
             <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <!-- New Lifetime Plan Information Section -->
-                <section id="lifetime-plan" class="mb-12 animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting['lifetime-plan'] }">
+                <!-- Upgrade Account Section for non-subscribed users -->
+                <section v-if="!props.isSubscribed" id="upgrade-account" class="mb-12 animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting['upgrade-account'] }">
+                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-4">Upgrade to Lifetime Access</h2>
+                        <p class="mb-4">Get unlimited access to all our practice tests and questions. Upgrade now to supercharge your CCAT preparation!</p>
+                        <ul class="list-disc list-inside mb-6 space-y-2">
+                            <li>10 Full Practice tests (500 Questions)</li>
+                            <li>380 Verbal practice questions</li>
+                            <li>326 Math & Logic practice questions</li>
+                            <li>260 Spatial Reasoning practice questions</li>
+                            <li>Weekly updates with new questions</li>
+                        </ul>
+                        <Link :href="route('upgrade.account')" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
+                            Upgrade Now
+                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </Link>
+                    </div>
+                </section>
+
+                <!-- Lifetime Plan Information Section for subscribed users -->
+                <section v-if="props.isSubscribed" id="lifetime-plan" class="mb-12 animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting['lifetime-plan'] }">
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Your Lifetime Plan</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                         <p class="mb-4 text-gray-700 dark:text-gray-300">

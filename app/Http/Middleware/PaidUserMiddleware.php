@@ -15,8 +15,8 @@ class PaidUserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$request->user() || !$request->user()->isSubscribed()) {
-            return redirect()->route('dashboard')->with('error', 'This content is only available to paid users.');
+        if (!$request->user() || !$request->user()->has_paid_subscription) {
+            return redirect()->route('upgrade.account')->with('error', 'You need to upgrade your account to access this feature.');
         }
 
         return $next($request);

@@ -3,6 +3,9 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\UpgradeAccountController;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +25,12 @@ Route::get('/', function () {
 
 // Dashboard route accessible to all users
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    $user = Auth::user();
+    $isSubscribed = $user ? $user->isSubscribed() : false;
+    
+    return Inertia::render('Dashboard', [
+        'isSubscribed' => $isSubscribed,
+    ]);
 })->name('dashboard');
 
 // Free Practice Test route accessible to all users
@@ -37,6 +45,10 @@ Route::middleware([
     'verified',
 ])->group(function () {
     // Add any authenticated-only routes here
+    
+    // Upgrade Account route
+    Route::get('/upgrade-account', [UpgradeAccountController::class, 'show'])->name('upgrade.account');
+    Route::post('/upgrade-account', [UpgradeAccountController::class, 'process'])->name('upgrade.account.process');
 });
 
 // Paid user routes group
