@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Inertia\Inertia;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,8 +19,16 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot()
     {
-        //
+        Inertia::share([
+            'flash' => function () {
+                return [
+                    'success' => session()->get('success'),
+                    'error' => session()->get('error'),
+                    'message' => session()->get('message'),
+                ];
+            },
+        ]);
     }
 }

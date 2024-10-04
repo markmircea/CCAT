@@ -8,6 +8,7 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import LazyImage from '@/Components/LazyImage.vue';
+import FlashMessage from '@/Components/FlashMessage.vue';
 
 defineProps({
     title: String,
@@ -36,6 +37,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
         <Head :title="title" />
 
         <Banner />
+<FlashMessage/> 
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             <nav class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
@@ -55,9 +57,11 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     CCAT Cognitive Aptitude
                                 </NavLink>
+                                <template v-if="!isSubscribed">
                                 <NavLink :href="route('free.practice.test')" :active="route().current('free.practice.test')">
                                     Free Practice Test
                                 </NavLink>
+                                </template>
                                 <template v-if="isSubscribed">
                                     <NavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
                                         Verbal
@@ -366,6 +370,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
             <!-- Page Content -->
             <main>
                 <slot />
+                
             </main>
         </div>
     </div>

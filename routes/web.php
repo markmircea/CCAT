@@ -20,7 +20,8 @@ use Illuminate\Support\Facades\Auth;
 
 // Redirect root to dashboard for all users
 Route::get('/', function () {
-    return redirect()->route('dashboard');
+    return redirect()->route('dashboard')->with('success', 'Congratulations! Your account has been successfully upgraded. You now have access to all premium features.');
+    
 });
 
 // Dashboard route accessible to all users

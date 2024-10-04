@@ -31,15 +31,19 @@ class UpgradeAccountController extends Controller
         ])
         ->get("https://api-m.sandbox.paypal.com/v2/checkout/orders/{$orderId}");
         
-        if ($response->successful() && $response['status'] === 'COMPLETED') {
-            $user = $request->user();
-            $user->has_paid_subscription = true;
-            $user->subscription_started_at = now();
-            $user->save();
+        if ($response->successful()) {
+            if ($response['status'] === 'COMPLETED') {
+                $user = $request->user();
+                $user->has_paid_subscription = true;
+                $user->subscription_started_at = now();
+                $user->save();
 
-            return redirect()->route('dashboard')->with('success', 'Your account has been successfully upgraded!');
+                return redirect()->route('dashboard')->with('success', 'Congratulations! Your account has been successfully upgraded. You now have access to all premium features.');
+            } else {
+                return back()->with('error', 'The payment was not completed. Please try again or contact support if the issue persists.');
+            }
         }
 
-        return back()->with('error', 'There was an error processing your payment. Please try again.');
+        return back()->with('error', 'There was an error processing your payment. Please try again or contact our support team for assistance.');
     }
 }
