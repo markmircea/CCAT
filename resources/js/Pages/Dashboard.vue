@@ -39,10 +39,32 @@ onMounted(() => {
             </header>
 
             <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <!-- New Lifetime Plan Information Section -->
+                <section id="lifetime-plan" class="mb-12 animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting['lifetime-plan'] }">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Your Lifetime Plan</h2>
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <p class="mb-4 text-gray-700 dark:text-gray-300">
+                            <strong>Access to:</strong>
+                        </p>
+                        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300">
+                            <li>10 Full Practice tests (500 Questions)</li>
+                            <li>380 Verbal practice questions</li>
+                            <li>326 Math & Logic practice questions</li>
+                            <li>260 Spatial Reasoning practice questions</li>
+                        </ul>
+                        <p class="mb-4 text-gray-700 dark:text-gray-300">
+                            More practice questions are added weekly.
+                        </p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                            Subscription started: {{ $page.props.auth.user.subscription_started_at }}
+                        </p>
+                    </div>
+                </section>
+
                 <nav class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 mb-8 animate-fade-in">
                     <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">Table of Contents</p>
                     <ul class="space-y-2">
-                        <li v-for="(item, index) in ['definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-mconsultingprep', 'faqs']" :key="index">
+                        <li v-for="(item, index) in ['lifetime-plan', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-mconsultingprep', 'faqs']" :key="index">
                             <a :href="`#${item}`" class="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200 flex items-center">
                                 <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
@@ -61,7 +83,6 @@ onMounted(() => {
                         <LazyImage src="/storage/img/1669372150373_ccat_assessments_2_1500_x751.png" alt="CCAT Assessments Overview" class="rounded-lg shadow-md mx-auto mb-4" />
                     </div>
                 </section>
-
                 <section id="math-and-logic-test" class="mb-12 animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting['math-and-logic-test'] }">
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">CCAT math & logic test</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">

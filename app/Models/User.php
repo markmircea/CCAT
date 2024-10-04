@@ -62,12 +62,22 @@ class User extends Authenticatable
     ];
 
     /**
-     * Check if the user has an active paid subscription.
+     * Check if the user has an active paid subscription (lifetime plan).
      *
      * @return bool
      */
     public function isSubscribed()
     {
         return $this->has_paid_subscription;
+    }
+
+    /**
+     * Get the date when the subscription (lifetime plan) started.
+     *
+     * @return \Illuminate\Support\Carbon|null
+     */
+    public function subscriptionStartDate()
+    {
+        return $this->subscription_started_at;
     }
 }
