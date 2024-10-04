@@ -4,10 +4,10 @@ import LazyImage from '@/Components/LazyImage.vue';
 </script>
 
 <template>
-    <AppLayout title="Verbal Test">
+    <AppLayout title="Verbal  ">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                Verbal Test: Overview and Practice
+                Verbal  : Overview and Practice
             </h2>
         </template>
 
@@ -15,7 +15,7 @@ import LazyImage from '@/Components/LazyImage.vue';
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
-                        <h1 class="text-3xl font-bold mb-4">Verbal Test: Overview and Practice</h1>
+                        <h1 class="text-3xl font-bold mb-4">Verbal  : Overview and Practice</h1>
                         <hr class="mb-4">
                         <div class="space-y-4">
                             <p>The Verbal Test is a crucial component of many cognitive aptitude assessments, including the CCAT. It measures your ability to understand and analyze written information, identify relationships between words, and select appropriate words in specific contexts.</p>

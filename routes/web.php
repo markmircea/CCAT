@@ -25,6 +25,11 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
+// Free Practice Test route accessible to all users
+Route::get('/free-practice-test', function () {
+    return Inertia::render('FreePracticeTestStart');
+})->name('free.practice.test');
+
 // Authenticated routes group
 Route::middleware([
     'auth:sanctum',
@@ -56,4 +61,8 @@ Route::middleware([
     Route::get('/full-practice-test', function () {
         return Inertia::render('FullPracticeTest');
     })->name('full.practice.test');
+
+    Route::get('/full-practice-test-start', function () {
+        return Inertia::render('FullPracticeTestStart');
+    })->name('full-practice-test-start');
 });

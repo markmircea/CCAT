@@ -53,17 +53,20 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    CCAT Cognitive Aptitude
+                                </NavLink>
+                                <NavLink :href="route('free.practice.test')" :active="route().current('free.practice.test')">
+                                    Free Practice Test
                                 </NavLink>
                                 <template v-if="isSubscribed">
                                     <NavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
-                                        Verbal Test
+                                        Verbal
                                     </NavLink>
                                     <NavLink :href="route('math.logic.test')" :active="route().current('math.logic.test')">
-                                        Math and Logic Test
+                                        Math and Logic
                                     </NavLink>
                                     <NavLink :href="route('spatial.reasoning.test')" :active="route().current('spatial.reasoning.test')">
-                                        Spatial Reasoning Test
+                                        Spatial Reasoning
                                     </NavLink>
                                     <NavLink :href="route('full.practice.test')" :active="route().current('full.practice.test')">
                                         Full Practice Test
@@ -228,7 +231,10 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                            CCAT Cognitive Aptitude
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('free.practice.test')" :active="route().current('free.practice.test')">
+                            Free Practice Test
                         </ResponsiveNavLink>
                         <template v-if="isSubscribed">
                             <ResponsiveNavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
