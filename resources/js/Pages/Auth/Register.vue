@@ -31,6 +31,13 @@ const submit = () => {
             <AuthenticationCardLogo />
         </template>
 
+        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900 dark:text-gray-100">
+            Join Us
+        </h2>
+        <p class="mt-2 mb-6 text-sm text-center text-gray-600 dark:text-gray-400">
+            Create a new account
+        </p>
+
         <form @submit.prevent="submit">
             <div>
                 <InputLabel for="name" value="Name" />
@@ -100,7 +107,7 @@ const submit = () => {
 
             <div class="flex items-center justify-end mt-4">
                 <Link :href="route('login')" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                    Already registered?
+                    Already have an account? Log in
                 </Link>
 
                 <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">

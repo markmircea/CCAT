@@ -1,0 +1,359 @@
+[
+    {
+        "id": 151,
+        "text": "CASTIGATE is to PUNISHMENT as...",
+        "options": ["APPROVE is to CITATION", "DEVOTE is to ANIMOSITY", "ADVISE is to MENTORSHIP", "REPORT is to VENGEANCE", "CLARIFY is to ENDOWMENT"],
+        "correctAnswer": "ADVISE is to MENTORSHIP",
+        "explanation": "CASTIGATE (to criticize severely) is related to PUNISHMENT as a form of verbal punishment. Similarly, ADVISE is related to MENTORSHIP as a key aspect of guiding or mentoring someone."
+    },
+    {
+        "id": 152,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Flustered by the accusation, the employee _____ denied any responsibility for the _____ found in the company's new product line.",
+        "options": ["angrily ... advantages", "justly ... abundance", "vehemently ... defects", "sufficiently ... stigmas", "respectfully ... shortages"],
+        "correctAnswer": "vehemently ... defects",
+        "explanation": "The employee's flustered state suggests a strong denial, which is best captured by 'vehemently'. The accusation likely relates to problems in the product line, which are best described as 'defects'."
+    },
+    {
+        "id": 153,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Believing himself to be _____ because of youthful _____ while in college, the popular businessman decided not to run for political office.",
+        "options": ["compromised ... accomplishments", "vulnerable ... indiscretions", "disadvantaged ... experiences", "qualified ... studies", "inviolate ... misadventures"],
+        "correctAnswer": "vulnerable ... indiscretions",
+        "explanation": "The context suggests that the businessman feels at risk ('vulnerable') due to past mistakes ('indiscretions') from his college days, which could be used against him in a political campaign."
+    },
+    {
+        "id": 154,
+        "text": "A basketball team knows that it can sell all 1,000 seats in its arena for a price of $15, but determines that if it sells tickets for $20 then it will only sell 90% of the seats. By what percentage will the team increase its revenue if it decides to sell tickets for the higher price?",
+        "options": ["10%", "12%", "15%", "18%", "20%"],
+        "correctAnswer": "20%",
+        "explanation": "At $15: 1000 seats * $15 = $15,000. At $20: 900 seats * $20 = $18,000. Increase: ($18,000 - $15,000) / $15,000 * 100 = 20%."
+    },
+    {
+        "id": 155,
+        "text": "A manufacturing company has two assembly lines, one with old equipment and one with new. The old assembly line generates products at a rate of 48 per hour, the new one at 60 per hour. If both assembly lines are operating at the same time, how long will it take them to create a total of 180 products?",
+        "options": ["1 hour and 20 minutes", "1 hour and 24 minutes", "1 hour and 30 minutes", "1 hour and 36 minutes", "1 hour and 40 minutes"],
+        "correctAnswer": "1 hour and 40 minutes",
+        "explanation": "Combined rate: 48 + 60 = 108 products per hour. Time needed: 180 / 108 = 1.6667 hours = 1 hour and 40 minutes."
+    },
+    {
+        "id": 156,
+        "text": "The average (arithmetic mean) of 4 numbers is greater than 11 but less than 16. Which of the following could NOT be the sum of these four numbers?",
+        "options": ["45", "57", "66", "48", "63"],
+        "correctAnswer": "66",
+        "explanation": "The sum must be greater than 11*4=44 and less than 16*4=64. 66 is the only option that exceeds this range."
+    },
+    {
+        "id": 157,
+        "text": "A store selling t-shirts featuring the Grand Canyon carries t-shirts in two different colors, with three different designs, and each shirt is available in four different sizes. How many different combinations of color, design, and size are possible?",
+        "options": ["9", "12", "16", "24", "35"],
+        "correctAnswer": "24",
+        "explanation": "This is a multiplication principle problem. 2 colors * 3 designs * 4 sizes = 24 combinations."
+    },
+    {
+        "id": 158,
+        "text": "A restaurant menu offers 3 different salads, 5 different main courses, and 4 different desserts. If a diner is going to have one salad, one main course, and one dessert, how many different possible combinations are available?",
+        "options": ["12", "24", "30", "48", "60"],
+        "correctAnswer": "60",
+        "explanation": "This is another multiplication principle problem. 3 salads * 5 main courses * 4 desserts = 60 combinations."
+    },
+    {
+        "id": 159,
+        "text": "It costs six tickets to go on an amusement park ride. How many tickets will a group of 15 children need in order for the whole group to go on the ride?",
+        "options": ["30", "45", "60", "90", "120"],
+        "correctAnswer": "90",
+        "explanation": "Each child needs 6 tickets. For 15 children: 15 * 6 = 90 tickets."
+    },
+    {
+        "id": 160,
+        "text": "Which of the following is the smallest value?",
+        "options": ["0.709", "1.079", "0.097", "1.097", "0.907"],
+        "correctAnswer": "0.097",
+        "explanation": "0.097 is the smallest value among the given options."
+    },
+    {
+        "id": 161,
+        "text": "A leasing agent leases 15 apartments in the month of September. If the agent leases 40% more apartments in the next month, how many does she lease in October?",
+        "options": ["19", "21", "23", "25", "27"],
+        "correctAnswer": "21",
+        "explanation": "40% of 15 is 6. So the agent leases 15 + 6 = 21 apartments in October."
+    },
+    {
+        "id": 162,
+        "text": "NECKLACE is to JEWELRY as ...",
+        "options": ["YARD is to LAWN", "AIRPLANE is to HELICOPTER", "DOG is to PET", "CLOCK is to WATCH", "SAFE is to VALUABLES"],
+        "correctAnswer": "DOG is to PET",
+        "explanation": "A necklace is a specific type of jewelry, just as a dog is a specific type of pet. This is the best analogy among the given options."
+    },
+    {
+        "id": 163,
+        "text": "OCCUPIED is to VACANT as...",
+        "options": ["BEAUTIFUL is to SIGHT", "BLISSFUL is to HAPPINESS", "CONSERVED is to RETAINED", "HONORABLE is to SHAMEFUL", "MYOPIC is to SHORTSIGHTED"],
+        "correctAnswer": "HONORABLE is to SHAMEFUL",
+        "explanation": "OCCUPIED and VACANT are opposites. Among the options, HONORABLE and SHAMEFUL are also opposites, making this the best analogy."
+    },
+    {
+        "id": 164,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Praised by many for her _____, the professor was known for her engaging lectures on topics as diverse as chemistry, the civil war, and the history of religion.",
+        "options": ["candor", "versatility", "sentiment", "friendliness", "brevity"],
+        "correctAnswer": "versatility",
+        "explanation": "The professor's ability to lecture on diverse topics suggests 'versatility', which means having many different skills or qualities."
+    },
+    {
+        "id": 165,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": ["reenactment", "critique", "unique", "declaration", "rebuttal", "preview"],
+        "correctAnswer": "critique",
+        "explanation": "A 'critique' is an evaluation or review, which fits the context of the sentence. The other options don't fit as well with the idea of an expected harsh assessment of the politician."
+    },
+    {
+        "id": 166,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Usually a _____ supporter of his team, the fan was uncharacteristically _____ about attending the opening game because the forecast called for heavy rain.",
+        "options": ["fervent ... ambivalent", "committed ... enthusiastic", "tepid ... reluctant", "rabid ... silent", "forthright ... quiet"],
+        "correctAnswer": "fervent ... ambivalent",
+        "explanation": "'Fervent' means having or showing great enthusiasm, which describes the fan's usual support. 'Ambivalent' means having mixed feelings, which fits the fan's unusual hesitation about attending due to rain."
+    },
+    {
+        "id": 167,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. One of her daughter's unique _____ was that she always clapped her hands when she laughed.",
+        "options": ["peculiarities", "treats", "discourses", "demeanors", "personas"],
+        "correctAnswer": "peculiarities",
+        "explanation": "'Peculiarities' means distinctive or characteristic features, often unusual ones. This best describes the daughter's unique habit of clapping when laughing."
+    },
+    {
+        "id": 168,
+        "text": "A mattress store has a sale where all mattresses are sold at a discount of 25%. If the regular price of the mattresses is $320, how many mattresses could be bought at the sale price if a shopper spent $1,440?",
+        "options": ["3", "4", "5", "6", "7"],
+        "correctAnswer": "6",
+        "explanation": "Sale price: $320 - 25% = $240. Number of mattresses: $1,440 / $240 = 6."
+    },
+    {
+        "id": 169,
+        "text": "12 is 40% of what number?",
+        "options": ["20", "24", "29", "30", "32"],
+        "correctAnswer": "30",
+        "explanation": "If 12 is 40% of x, then 12 = 0.4x. Solving for x: x = 12 / 0.4 = 30."
+    },
+    {
+        "id": 170,
+        "text": "What would be the next group of letters in the following series? kfvn ... kewm... kdxl ... kcyk?",
+        "options": ["kbzg", "kbzj", "kbxt", "kbzd", "kbzl"],
+        "correctAnswer": "kbzj",
+        "explanation": "The pattern is: the first letter is always 'k', the second letter decreases alphabetically (f, e, d, c, b), the third letter increases alphabetically (v, w, x, y, z), and the fourth letter alternates between the 14th letter (n) and the 13th letter (m) of the alphabet, then continues (l, k, j). So the next group should be 'kbzj'."
+    },
+    {
+        "id": 171,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Mia has watched 7 movies this year, which is 2 more than Ivan has watched. Ivan has watched more movies than Taylor this year. Taylor has watched fewer than 5 movies this year.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "True",
+        "explanation": "Mia watched 7 movies. Ivan watched 5 movies (2 less than Mia). Ivan watched more than Taylor, so Taylor watched less than 5 movies. Therefore, the statement 'Taylor has watched fewer than 5 movies this year' is true."
+    },
+    {
+        "id": 172,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Andy knows Bob. Bob knows Claire. Andy knows Claire.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "Uncertain",
+        "explanation": "We know Andy knows Bob and Bob knows Claire, but we can't be certain if Andy knows Claire. The relationships are not necessarily transitive."
+    },
+    {
+        "id": 173,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Tim is younger than Joe. Brenda is older than Joe. Tim is older than Brenda.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "False",
+        "explanation": "If Tim is younger than Joe, and Brenda is older than Joe, then Brenda must be older than Tim. Therefore, the statement 'Tim is older than Brenda' is false."
+    },
+    {
+        "id": 174,
+        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Ferreira Financial\n* Center City Rental Co.\n* Greenwood Construction\n* Moonrise Valley Bakery\n* West Lake Auto Mall\n\nRight column:\n* Ferreira Financial\n* Center City Rentals\n* Greenwood Construction\n* Moonrise Valley Bakery\n* Westlake Auto Mall",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "2",
+        "explanation": "Only 'Ferreira Financial' and 'Greenwood Construction' are exactly the same in both columns. 'Center City Rental Co.' vs 'Center City Rentals', 'West Lake Auto Mall' vs 'Westlake Auto Mall' are different."
+    },
+    {
+        "id": 175,
+        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Rinaldi, Harold C.\n* Wong, Cindy Z.\n* Travis-Ramsay, Craig R.\n* Collins, Courtney J.\n* Márquez, Katrina P.\n\nRight column:\n* Rinaldi, Harold C. L.\n* Wang, Cindy Z.\n* Travis Ramsay, Craig R.\n* Collins, Courtney J.\n* Márquez, Katrina P.",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "3",
+        "explanation": "'Collins, Courtney J.', 'Márquez, Katrina P.', and 'Wong, Cindy Z.' are exactly the same in both columns. The others have differences: 'Rinaldi, Harold C.' vs 'Rinaldi, Harold C. L.', 'Travis-Ramsay, Craig R.' vs 'Travis Ramsay, Craig R.'"
+    },
+    {
+        "id": 176,
+        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 12 Valley Dr. #4\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.\n\nRight column:\n* 12 Valley Dr.\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "4",
+        "explanation": "Four items are exactly the same: '56 Deerbrook Ln.', '401 Redhawk Ave.', '124 Williams Blvd.', and '3250 Mullin Dr.'. Only '12 Valley Dr. #4' vs '12 Valley Dr.' is different."
+    },
+    {
+        "id": 177,
+        "text": "What would be the next number in the following series? 3 ... 7 ... 10 ... 17 ... 27 ...?",
+        "options": ["30", "34", "37", "40", "44"],
+        "correctAnswer": "44",
+        "explanation": "The pattern is +4, +3, +7, +10. Following this pattern, the next number would be 27 + 17 = 44."
+    },
+    {
+        "id": 178,
+        "text": "A cashier uses an average of 3.5 twenty dollar bills every hour in order to make change for customers. If this cashier works 180 hours per month, how many twenty dollar bills will he need each month?",
+        "options": ["450", "540", "585", "630", "675"],
+        "correctAnswer": "630",
+        "explanation": "3.5 bills per hour * 180 hours = 630 twenty dollar bills per month."
+    },
+    {
+        "id": 179,
+        "text": "A customer service representative handles 7.5 calls per hour, while his coworker handles 8 calls per hour. If both representatives start working at the same time and each spends 60 hours handling calls over a two-week period, how many calls have they handled in total?",
+        "options": ["900", "915", "930", "945", "960"],
+        "correctAnswer": "930",
+        "explanation": "Rep 1: 7.5 calls/hour * 60 hours = 450 calls. Rep 2: 8 calls/hour * 60 hours = 480 calls. Total: 450 + 480 = 930 calls."
+    },
+    {
+        "id": 180,
+        "text": "Because of the company's decision to roll out the new marketing strategy slowly, it was difficult to _____ its effectiveness, and the _____ of the new approach were not clear until almost a year later, when sales began to suffer.",
+        "options": ["gauge ... metrics", "conceptualize ... results", "monitor ... virtues", "determine ... advantages", "measure ... limitations"],
+        "correctAnswer": "measure ... limitations",
+        "explanation": "'Measure' fits well with assessing the effectiveness of a strategy, and 'limitations' makes sense in the context of sales suffering, revealing the drawbacks of the approach."
+    },
+    {
+        "id": 181,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Aware that his conduct had been _____ and intent on limiting the fallout from the scandal, the politician decided to resign and leave public office.",
+        "options": ["reprehensible", "irreproachable", "defensible", "petulant", "fortuitous"],
+        "correctAnswer": "reprehensible",
+        "explanation": "'Reprehensible' means deserving censure or condemnation, which fits the context of a scandal that leads to resignation. The other options don't fit the negative context implied by the sentence."
+    },
+    {
+        "id": 182,
+        "text": "A group of five numbers has an average (arithmetic mean) of 20. The first four numbers are 12, 16, 17, and 23. What is the fifth number?",
+        "options": ["24", "27", "29", "30", "32"],
+        "correctAnswer": "32",
+        "explanation": "The sum of all five numbers must be 20 * 5 = 100. The sum of the first four numbers is 12 + 16 + 17 + 23 = 68. Therefore, the fifth number must be 100 - 68 = 32."
+    },
+    {
+        "id": 183,
+        "text": "A home is purchased for $600,000. The owners have the home reappraised every five years. Its value appreciates 10% in the first five years and another 10% in the next five years. What is the value of the home after ten years?",
+        "options": ["$726,000", "$792,000", "$825,000", "$900,000"],
+        "correctAnswer": "$726,000",
+        "explanation": "After 5 years: $600,000 * 1.10 = $660,000. After 10 years: $660,000 * 1.10 = $726,000. Note that it's not $792,000 because the second 10% increase is based on the new value after 5 years, not the original value."
+    },
+    {
+        "id": 184,
+        "text": "A car manufacturer issues a recall for a new car model, finding that 30% of the cars at random have a serious mechanical defect. If a single household owns two of these cars, what are the chances that NEITHER car has the defect?",
+        "options": ["14%", "19%", "30%", "49%", "70%"],
+        "correctAnswer": "49%",
+        "explanation": "The probability of a single car not having the defect is 70% (100% - 30%). For both cars to not have the defect: 0.7 * 0.7 = 0.49 or 49%."
+    },
+    {
+        "id": 185,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. ERSATZ",
+        "options": ["exorbitant", "artificial", "reconditioned", "genuine", "exaggerated"],
+        "correctAnswer": "genuine",
+        "explanation": "'Ersatz' means artificial or inferior substitute. The opposite of this is 'genuine', meaning authentic or real."
+    },
+    {
+        "id": 186,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DYNAMIC",
+        "options": ["forceful", "frenetic", "mortal", "stagnant", "invincible"],
+        "correctAnswer": "stagnant",
+        "explanation": "'Dynamic' means characterized by constant change, activity, or progress. The opposite of this is 'stagnant', meaning showing little or no activity, movement, or change."
+    },
+    {
+        "id": 187,
+        "text": "CANTANKEROUS is to AFFABLE as...",
+        "options": ["LIVELY is to SPIRITED", "SOMBER is to GLUM", "EAGER is to ALOOF", "STATELY is to PROPER", "GAUCHE is to AWKWARD"],
+        "correctAnswer": "EAGER is to ALOOF",
+        "explanation": "'Cantankerous' (bad-tempered) is opposite to 'affable' (friendly). Similarly, 'eager' (keen) is opposite to 'aloof' (not friendly or forthcoming)."
+    },
+    {
+        "id": 188,
+        "text": "RECKLESS is to CAUTION as...",
+        "options": ["DELIBERATE is to THOUGHT", "SILLY is to INTENT", "MEAN is to COMPASSION", "ALERT is to SLEEP", "ANGRY is to PRUDENCE"],
+        "correctAnswer": "MEAN is to COMPASSION",
+        "explanation": "'Reckless' is the opposite of 'caution'. Similarly, 'mean' is the opposite of 'compassion'. The other pairs are either synonyms or not clearly related."
+    },
+    {
+        "id": 189,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite her firm _____ about the merits of her approach, the mayor agreed to meet with her opponents in the hope that she could _____ them by making a few concessions.",
+        "options": ["theories ... modify", "misgivings ... placate", "beliefs ... betray", "convictions ... appease", "announcements ... embarrass"],
+        "correctAnswer": "convictions ... appease",
+        "explanation": "'Convictions' fits with the idea of firm beliefs about the merits of her approach. 'Appease' means to pacify or placate, which fits with the idea of making concessions to satisfy opponents."
+    },
+    {
+        "id": 190,
+        "text": "The average (arithmetic mean) of 4 numbers is greater than 8.5 and less than 12.5. Which of the following could NOT be the sum of these four numbers?",
+        "options": ["44", "42", "31", "36", "49"],
+        "correctAnswer": "31",
+        "explanation": "The sum must be greater than 8.5 * 4 = 34 and less than 12.5 * 4 = 50. 31 is the only option that falls outside this range."
+    },
+    {
+        "id": 191,
+        "text": "A pie eating contest begins with 14 men and 10 women as contestants. By the end of Round One, 2 men and 2 women have dropped out of the contest. What percentage of contestants proceeding to Round Two are women?",
+        "options": ["40%", "50%", "60%", "70%", "80%"],
+        "correctAnswer": "40%",
+        "explanation": "After Round One: 12 men and 8 women remain. Total contestants: 20. Percentage of women: 8/20 * 100 = 40%."
+    },
+    {
+        "id": 192,
+        "text": "An arena has 15,000 seats. The best seats are in the blue sections of the arena. There are 12 blue sections and each contains between 200 and 250 seats. Which of the following could be the percentage of seats in the arena that are in the blue sections?",
+        "options": ["19%", "23%", "25%", "27%", "31%"],
+        "correctAnswer": "19%",
+        "explanation": "Minimum blue seats: 12 * 200 = 2,400. Maximum: 12 * 250 = 3,000. Percentage range: (2,400/15,000 * 100) to (3,000/15,000 * 100) = 16% to 20%. Only 19% falls within this range."
+    },
+    {
+        "id": 193,
+        "text": "An office supply store sells pencils from five different brands, each with five different colors, and in three different sizes. How many different combinations of brand, color, and size are possible?",
+        "options": ["25", "50", "75", "100", "125"],
+        "correctAnswer": "75",
+        "explanation": "This is a multiplication principle problem. 5 brands * 5 colors * 3 sizes = 75 combinations."
+    },
+    {
+        "id": 194,
+        "text": "A restaurant menu offers 3 different salads, 5 different main courses, and 4 different desserts. If a diner is going to have one salad, one main course, and one dessert, how many different possible combinations are available?",
+        "options": ["12", "24", "30", "48", "60"],
+        "correctAnswer": "60",
+        "explanation": "This is another multiplication principle problem. 3 salads * 5 main courses * 4 desserts = 60 combinations."
+    },
+    {
+        "id": 195,
+        "text": "The table below displays the most recent sales for Mr. Garcia's real estate business. What was the average square footage for the five houses?\n\n| House | Square Feet | Bedrooms | Bathrooms | Price |\n|---|---|---|---|---||\n| 1 | 1,600 | 3 | 2 | $320,000.00 |\n| 2 | 1,300 | 3 | 1.75 | $390,000.00 |\n| 3 | 1,700 | 4 | 2.5 | $595,000.00 |\n| 4 | 1,750 | 4 | 2 | $700,000.00 |\n| 5 | 2,000 | 3 | 3 | $600,000.00 |",
+        "options": ["1,670 square feet", "1,690 square feet", "1,710 square feet", "1,730 square feet", "1,750 square feet"],
+        "correctAnswer": "1,670 square feet",
+        "explanation": "Sum of square feet: 1,600 + 1,300 + 1,700 + 1,750 + 2,000 = 8,350. Average: 8,350 / 5 = 1,670 square feet."
+    },
+    {
+        "id": 196,
+        "text": "If a store sells 120 pencils per day, how many pencils does it sell in 2 weeks?",
+        "options": ["1,680", "1,780", "1,880", "1,980", "2,080"],
+        "correctAnswer": "1,680",
+        "explanation": "In 2 weeks (14 days): 120 pencils * 14 days = 1,680 pencils."
+    },
+    {
+        "id": 197,
+        "text": "Which of the following is the smallest value?",
+        "options": ["0.146", "2.862", "0.45", "1.09", "2.001"],
+        "correctAnswer": "0.146",
+        "explanation": "0.146 is the smallest value among the given options."
+    },
+    {
+        "id": 198,
+        "text": "A hardware store sells 215 ladders in the month of August. If it sells 40% more ladders in the next month, how many ladders does it sell in September?",
+        "options": ["305", "306", "311", "317", "301"],
+        "correctAnswer": "301",
+        "explanation": "40% of 215 is 86. So in September, they sell 215 + 86 = 301 ladders."
+    },
+    {
+        "id": 199,
+        "text": "SHOVEL is to DIG as...",
+        "options": ["PLAY is to WIN", "WEIGHT is to CARRY", "LAUGH is to CRY", "MONEY is to BUY", "FIRE is to COLD"],
+        "correctAnswer": "MONEY is to BUY",
+        "explanation": "A shovel is a tool used for digging, just as money is a tool used for buying. This is the most logical relationship among the given options."
+    },
+    {
+        "id": 200,
+        "text": "CAR is to VEHICLE as...",
+        "options": ["BLEACH is to WASH", "BUS is to TRAIN", "ELEPHANT is to ANIMAL", "DESK is to OFFICE", "JUMP is to WALK"],
+        "correctAnswer": "ELEPHANT is to ANIMAL",
+        "explanation": "A car is a specific type of vehicle, just as an elephant is a specific type of animal. This is the best analogy among the given options."
+    },
+    {
+        "id": 201,
+        "text": "OCCUPIED is to VACANT as...",
+        "options": ["BEAUTIFUL is to SIGHT", "BLISSFUL is to HAPPINESS", "CONSERVED is to RETAINED", "HONORABLE is to SHAMEFUL", "MYOPIC is to SHORTSIGHTED"],
+        "correctAnswer": "HONORABLE is to SHAMEFUL",
+        "explanation": "OCCUPIED and VACANT are opposites. Among the options, HONORABLE and SHAMEFUL are also opposites, making this the best analogy."
+    }
+]

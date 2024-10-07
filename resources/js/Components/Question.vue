@@ -31,23 +31,22 @@ const submitAnswer = () => {
 <template>
   <div class="max-w-3xl mx-auto bg-white dark:bg-gray-500 shadow-md rounded-lg overflow-hidden">
     <div class="p-6">
-           <div class="mb-6">
+      <div class="mb-6">
         <p class="text-lg text-gray-800 dark:text-gray-200 mb-4">{{ question.text }}</p>
         <img v-if="question.image" :src="question.image" :alt="'Image for question ' + questionNumber" class="mb-4 max-w-full h-auto rounded-lg mx-auto">
       </div>
       <div class="space-y-4">
-        <div v-for="option in question.options" :key="option" class="flex items-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-150">
+        <label v-for="option in question.options" :key="option" class="flex items-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-150 cursor-pointer">
           <input
             type="radio"
-            :id="option"
             :value="option"
             v-model="selectedAnswer"
             class="form-radio h-5 w-5 text-indigo-600 transition duration-150 ease-in-out"
           >
-          <label :for="option" class="ml-3 block text-sm leading-5 text-gray-700 dark:text-gray-300 cursor-pointer flex-grow">
+          <span class="ml-3 block text-sm leading-5 text-gray-700 dark:text-gray-300 flex-grow">
             {{ option }}
-          </label>
-        </div>
+          </span>
+        </label>
       </div>
       <button
         @click="submitAnswer"

@@ -22,6 +22,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Inertia::share([
+            'component' => function () {
+                return request()->route()->getName();
+            },
+            'url' => function () {
+                return url()->current();
+            },
             'flash' => function () {
                 return [
                     'success' => session()->get('success'),

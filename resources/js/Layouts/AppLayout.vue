@@ -9,10 +9,15 @@ import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import LazyImage from '@/Components/LazyImage.vue';
 import FlashMessage from '@/Components/FlashMessage.vue';
+import DynamicSEO from '@/Components/DynamicSEO.vue';
+
+
 
 defineProps({
     title: String,
 });
+
+
 
 const showingNavigationDropdown = ref(false);
 
@@ -34,10 +39,12 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
 
 <template>
     <div>
+        <DynamicSEO />
+
         <Head :title="title" />
 
         <Banner />
-<FlashMessage/> 
+<FlashMessage/>
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             <nav class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
@@ -62,7 +69,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                     Free Practice Test
                                 </NavLink>
                                 </template>
-                                <template v-if="isSubscribed">
+
                                     <NavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
                                         Verbal
                                     </NavLink>
@@ -75,7 +82,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                     <NavLink :href="route('full.practice.test')" :active="route().current('full.practice.test')">
                                         Full Practice Test
                                     </NavLink>
-                                </template>
+
                             </div>
                         </div>
 
@@ -370,7 +377,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
             <!-- Page Content -->
             <main>
                 <slot />
-                
+
             </main>
         </div>
     </div>

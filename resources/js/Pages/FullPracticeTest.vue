@@ -63,10 +63,11 @@ import { Link } from '@inertiajs/vue3';
 
                             <h2 id="start-test" class="text-2xl font-semibold mt-6 mb-2">Start the Test</h2>
                             <p>When you're ready to begin, click the button below. Remember, you'll have 15 minutes to complete all 50 questions. Good luck!</p>
-                            
-                            <Link :href="route('full-practice-test-start')" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300 inline-block">
+<div class="mt-8 flex justify-center">
+                            <Link :href="route('full-practice-test-start')" class="mt-4 px-4 py-2  bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300 inline-block">
                                 Start Full Practice Test
                             </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

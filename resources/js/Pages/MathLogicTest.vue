@@ -1,6 +1,8 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import LazyImage from '@/Components/LazyImage.vue';
+import { Link } from '@inertiajs/vue3';
+
 </script>
 
 <template>
@@ -70,6 +72,14 @@ import LazyImage from '@/Components/LazyImage.vue';
                                 <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Algebra Refresher Course</a></li>
                                 <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Logic Puzzles and Brain Teasers</a></li>
                             </ul>
+                            <div class="mt-8 flex justify-center">
+                                <Link
+                                    href="/math-test-start"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Start Math & Logic Practice
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

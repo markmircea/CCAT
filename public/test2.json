@@ -1,0 +1,381 @@
+[
+    {
+        "id": 1,
+        "text": "Choose the word that is most nearly opposite in meaning to 'BENEVOLENT':",
+        "options": ["Malevolent", "Beneficent", "Munificent", "Magnanimous", "Benign"],
+        "correctAnswer": "Malevolent",
+        "explanation": "'Benevolent' means kind and generous. 'Malevolent' means having or showing a wish to do evil to others, which is the opposite of benevolent. The other options are either synonyms or related positive traits."
+    },
+    {
+        "id": 2,
+        "text": "FISH : SCHOOL :: WOLF : ?",
+        "options": ["Pack", "Herd", "Flock", "Swarm", "Pride"],
+        "correctAnswer": "Pack",
+        "explanation": "This is an analogy question. A group of fish is called a 'school', while a group of wolves is called a 'pack'. The other options are collective nouns for different animals: herd (cattle), flock (birds), swarm (insects), pride (lions)."
+    },
+    {
+        "id": 3,
+        "text": "Which word does not belong with the others?",
+        "options": ["Trombone", "Flute", "Clarinet", "Oboe", "Violin"],
+        "correctAnswer": "Violin",
+        "explanation": "The violin is the only string instrument in this list. All the others (trombone, flute, clarinet, and oboe) are wind instruments."
+    },
+    {
+        "id": 4,
+        "text": "If a columnist writes 19 articles per month, how many articles does she write in a year?",
+        "options": ["190", "209", "228", "247", "266"],
+        "correctAnswer": "228",
+        "explanation": "There are 12 months in a year. So, 19 articles per month * 12 months = 228 articles per year."
+    },
+    {
+        "id": 5,
+        "text": "What is the next number in the sequence: 2, 6, 12, 20, 30, ?",
+        "options": ["36", "40", "42", "48", "50"],
+        "correctAnswer": "42",
+        "explanation": "The sequence is increasing by a pattern: +4, +6, +8, +10, so the next increase should be +12. 30 + 12 = 42."
+    },
+    {
+        "id": 6,
+        "text": "If 5 cats can catch 5 mice in 5 minutes, how long will it take 1 cat to catch 1 mouse?",
+        "options": ["1 minute", "5 minutes", "25 minutes", "125 minutes", "Not enough information"],
+        "correctAnswer": "5 minutes",
+        "explanation": "This question tests proportional reasoning. If 5 cats catch 5 mice in 5 minutes, that's a rate of 1 mouse per cat per 5 minutes. Therefore, 1 cat would take 5 minutes to catch 1 mouse."
+    },
+
+    {
+        "id": 10,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/1.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
+    },
+    {
+        "id": 11,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/2.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Examine the sequence of images carefully. Identify any patterns in shapes, colors, positions, or transformations. The correct answer will be the option that logically continues these patterns."
+    },
+    {
+        "id": 12,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/3.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Study the progression of changes in the given sequence of images. Look for consistent rules or transformations applied to the elements. Choose the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 13,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/4.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Analyze the sequence of images to identify the underlying pattern. Pay attention to how elements change or relate to each other across the sequence. The correct answer will be the option that logically extends this pattern."
+    },
+    {
+        "id": 14,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/5.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 15,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/6.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Compare all the options to find the one that stands out. Look for a common theme or pattern among most of the images and identify which one breaks this pattern or has a unique characteristic."
+    },
+    {
+        "id": 16,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/7.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+    },
+    {
+        "id": 17,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official1/8.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+    },
+    {
+        "id": 18,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/9.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically continues this pattern."
+    },
+    {
+        "id": 19,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/10.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "E",
+        "explanation": "Analyze the given sequence of images to discern the pattern. Pay attention to how elements transform or relate to each other across the sequence. Choose the option that best continues this logical progression."
+    },
+    {
+        "id": 20,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official1/11.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "E",
+        "explanation": "Study the progression of changes in the given sequence of images. Identify any consistent rules or transformations applied to the elements. The correct answer will be the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 21,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/1.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "E",
+        "explanation": "Carefully examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically extends this pattern."
+    },
+    {
+        "id": 22,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/2.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Analyze the given sequence of images to discern the pattern. Pay attention to how elements transform or relate to each other across the sequence. Choose the option that best continues this logical progression."
+    },
+    {
+        "id": 23,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/3.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Study the progression of changes in the given sequence of images. Identify any consistent rules or transformations applied to the elements. The correct answer will be the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 24,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/4.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "Examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically continues this pattern."
+    },
+    {
+        "id": 25,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official2/5.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "Compare all the options to find the one that stands out. Look for a common theme or pattern among most of the images and identify which one breaks this pattern or has a unique characteristic."
+    },
+    {
+        "id": 26,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official2/6.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+    },
+    {
+        "id": 27,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official2/7.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+    },
+    {
+        "id": 28,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/official2/8.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+    },
+    {
+        "id": 29,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/9.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "Analyze the given sequence of images to discern the pattern. Pay attention to how elements transform or relate to each other across the sequence. Choose the option that best continues this logical progression."
+    },
+    {
+        "id": 30,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/10.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "E",
+        "explanation": "Study the progression of changes in the given sequence of images. Identify any consistent rules or transformations applied to the elements. The correct answer will be the option that follows these rules and best completes the pattern."
+    },
+    {
+        "id": 31,
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/official2/11.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "E",
+        "explanation": "Carefully examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically extends this pattern."
+    },
+
+        {
+            "id": 32,
+            "text": "By what percentage did the median age increase between 1970 and 2000?",
+            "image": "/storage/img/official2/12.png",
+            "options": ["7%", "10%", "20%", "25%", "30%"],
+            "correctAnswer": "25%",
+            "explanation": "To solve this problem, locate the median age values for 1970 and 2000 in the image. Calculate the percentage increase between these two values. The correct answer is the option that matches this calculated percentage."
+        },
+        {
+            "id": 33,
+            "text": "By what percentage did the costs increase between 1975 and 1995?",
+            "image": "/storage/img/official2/13.png",
+            "options": ["25%", "75%", "150%", "200%", "250%"],
+            "correctAnswer": "250%",
+            "explanation": "Find the cost values for 1975 and 1995 in the image. Calculate the percentage increase between these two values. Choose the option that corresponds to this calculated percentage increase."
+        },
+        {
+            "id": 34,
+            "text": "The chart below shows the sales of the three most popular smoothies at Phoebe's Smoothies. Which smoothie experienced the greatest increase in sales from one year to the next?",
+            "image": "/storage/img/official2/14.png",
+            "options": ["Strawberry in Year 2 vs Year 1", "Strawberry in Year 3 vs Year 2", "Mango in Year 3 vs Year 2", "Banana in Year 2 vs Year 1", "Banana in Year 3 vs Year 2"],
+            "correctAnswer": "Banana in Year 3 vs Year 2",
+            "explanation": "Examine the sales data for each smoothie across all three years. Calculate the year-over-year increases for each smoothie. Identify which smoothie had the largest increase between any two consecutive years."
+        },
+        {
+            "id": 35,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test3/1.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "E",
+            "explanation": "Compare all the options to find the one that stands out. Look for a common theme or pattern among most of the images and identify which one breaks this pattern or has a unique characteristic."
+        },
+        {
+            "id": 36,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test3/2.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "D",
+            "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+        },
+        {
+            "id": 37,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test3/3.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "E",
+            "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+        },
+        {
+            "id": 38,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test3/4.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "A",
+            "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+        },
+        {
+            "id": 39,
+            "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+            "image": "/storage/img/test5/0.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "B",
+            "explanation": "Analyze the given sequence of images to discern the pattern. Pay attention to how elements transform or relate to each other across the sequence. Choose the option that best continues this logical progression."
+        },
+        {
+            "id": 40,
+            "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+            "image": "/storage/img/test5/1.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "D",
+            "explanation": "Study the progression of changes in the given sequence of images. Identify any consistent rules or transformations applied to the elements. The correct answer will be the option that follows these rules and best completes the pattern."
+        },
+        {
+            "id": 41,
+            "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+            "image": "/storage/img/test5/2.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "C",
+            "explanation": "Carefully examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically extends this pattern."
+        },
+        {
+            "id": 42,
+            "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+            "image": "/storage/img/test5/3.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "B",
+            "explanation": "Examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically continues this pattern."
+        },
+        {
+            "id": 43,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test5/4.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "B",
+            "explanation": "Compare all the options to find the one that stands out. Look for a common theme or pattern among most of the images and identify which one breaks this pattern or has a unique characteristic."
+        },
+        {
+            "id": 44,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test5/5.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "E",
+            "explanation": "Analyze each option to find the one that differs from the others. Look for shared characteristics or patterns among most options and determine which one doesn't follow this common theme."
+        },
+        {
+            "id": 45,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test5/6.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "A",
+            "explanation": "Study all the options to identify the one that doesn't fit with the others. Look for common features or rules that most options follow, then find the one that breaks this pattern or has a unique attribute."
+        },
+        {
+            "id": 46,
+            "text": "Which of the following does not belong?",
+            "image": "/storage/img/test5/7.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "C",
+            "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
+        },
+        {
+            "id": 47,
+            "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+            "image": "/storage/img/test5/8.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "C",
+            "explanation": "Analyze the given sequence of images to discern the pattern. Pay attention to how elements transform or relate to each other across the sequence. Choose the option that best continues this logical progression."
+        },
+        {
+            "id": 48,
+            "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+            "image": "/storage/img/test5/9.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "C",
+            "explanation": "Study the progression of changes in the given sequence of images. Identify any consistent rules or transformations applied to the elements. The correct answer will be the option that follows these rules and best completes the pattern."
+        },
+        {
+            "id": 49,
+            "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+            "image": "/storage/img/test5/10.png",
+            "options": ["A", "B", "C", "D", "E"],
+            "correctAnswer": "B",
+            "explanation": "Carefully examine the sequence of images to identify the underlying pattern. Look for consistent changes or relationships between elements. The correct answer will be the option that logically extends this pattern."
+        },
+        {
+            "id": 50,
+            "text": "By what percentage did the price increase between 2010 and 2015?",
+            "image": "/storage/img/test5/11.png",
+            "options": ["10%", "12.5%", "15%", "17.5%", "20%"],
+            "correctAnswer": "12.5%",
+            "explanation": "Locate the price values for 2010 and 2015 in the image. Calculate the percentage increase between these two values. The correct answer is the option that matches this calculated percentage."
+        },
+        {
+            "id": 51,
+            "text": "It costs six tickets to go on an amusement park ride. How many tickets will a group of 15 children need in order for the whole group to go on the ride?",
+            "options": ["30", "45", "60", "90", "120"],
+            "correctAnswer": "90",
+            "explanation": "Each child needs 6 tickets. For 15 children, multiply 6 by 15: 6 * 15 = 90 tickets in total."
+        }
+    ]

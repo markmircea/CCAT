@@ -1,0 +1,345 @@
+[
+    {
+        "id": 52,
+        "text": "In one month, a farmer produces 300 pounds of corn. In the following month he produces 35% more. How many pounds of corn does he produce in the second month?",
+        "options": ["335", "350", "375", "390", "405"],
+        "correctAnswer": "405",
+        "explanation": "To calculate a 35% increase, multiply 300 by 1.35. 300 * 1.35 = 405 pounds of corn in the second month."
+    },
+    {
+        "id": 53,
+        "text": "TREE is to SEED as...",
+        "options": ["BABY is to ADULT", "BUTTERFLY is to CATERPILLAR", "SCRIPT is to MOVIE", "STUDENT is to TEACHER", "BRANCH is to FOREST"],
+        "correctAnswer": "BUTTERFLY is to CATERPILLAR",
+        "explanation": "A tree grows from a seed, just as a butterfly develops from a caterpillar. Both relationships represent a developmental process."
+    },
+    {
+        "id": 54,
+        "text": "DINNER is to MEAL as ...",
+        "options": ["FIRE is to ICE", "EAT is to DRINK", "WINTER is to SEASON", "DRAMA is to COMEDY", "DOOR is to WALL"],
+        "correctAnswer": "WINTER is to SEASON",
+        "explanation": "Dinner is a specific type of meal, just as winter is a specific type of season. This analogy represents a part-to-whole relationship."
+    },
+    {
+        "id": 55,
+        "text": "ILLEGIBLE is to READ as ...",
+        "options": ["INCORRIGIBLE is to BEHOLD", "INCOMPREHENSIBLE is to UNDERSTAND", "INDEFENSIBLE is to ATTEMPT", "INDEFATIGABLE is to ROUSE", "INDELIBLE is to DEFEND"],
+        "correctAnswer": "INCOMPREHENSIBLE is to UNDERSTAND",
+        "explanation": "Something illegible cannot be read, just as something incomprehensible cannot be understood. Both pairs represent an inability to perform an action due to a quality of the object."
+    },
+    {
+        "id": 56,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The dedication and ______ exhibited by the athlete as she came back from a serious injury was an inspiration to her teammates.",
+        "options": ["independence", "determination", "insubordination", "elation", "perfection"],
+        "correctAnswer": "determination",
+        "explanation": "In the context of an athlete coming back from injury, 'determination' best fits with 'dedication' to describe the inspiring qualities shown."
+    },
+    {
+        "id": 57,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The supervisor provided a suggestion box, but his employees were ______ from submitting complaints by the fear that their input would not remain anonymous.",
+        "options": ["forbidden", "impeded", "exhausted", "heartened", "perplexed"],
+        "correctAnswer": "impeded",
+        "explanation": "'Impeded' means hindered or obstructed, which best describes the effect of fear on the employees' willingness to submit complaints."
+    },
+    {
+        "id": 58,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Although the pop star's young fans ______ their love for his songs, not many seemed to have given much thought to the ______ of his lyrics, which were often dark and depressing.",
+        "options": ["declared .. blandness", "denied .. subtext", "decried .. overstated", "eschewed .. undertones", "professed .. implications"],
+        "correctAnswer": "professed .. implications",
+        "explanation": "'Professed' means to declare or claim, often publicly, which fits the fans expressing their love. 'Implications' refers to the suggested meaning or significance, which aligns with the idea of dark and depressing lyrics that aren't immediately apparent."
+    },
+    {
+        "id": 59,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The company needed to find a way to quantify and ____ the productivity of its employees in order to decide who deserved raises that year.",
+        "options": ["correspond", "stabilize", "mitigate", "counteract", "measure"],
+        "correctAnswer": "measure",
+        "explanation": "'Measure' is the most appropriate word here as it aligns with the need to quantify productivity. The company needs to assess and evaluate employee performance in a measurable way."
+    },
+    {
+        "id": 60,
+        "text": "In a class of forty students, one fifth of the students also play on the school's football team. If four more students from the class join the football team, what percentage of students in the class will be on the football team?",
+        "options": ["25%", "30%", "33%", "35%", "40%"],
+        "correctAnswer": "30%",
+        "explanation": "One-fifth of 40 is 8 students. Adding 4 more students makes 12 students on the team. 12 out of 40 is 30%."
+    },
+    {
+        "id": 61,
+        "text": "12 is 40% of what number?",
+        "options": ["20", "24", "25", "30", "32"],
+        "correctAnswer": "30",
+        "explanation": "If 12 is 40% of x, then 12 = 0.4x. Solving for x: x = 12 / 0.4 = 30."
+    },
+    {
+        "id": 62,
+        "text": "What would be the next group of letters in the following series? bd...eg...hj...km...?",
+        "options": ["no", "kn", "mo", "np", "oq"],
+        "correctAnswer": "np",
+        "explanation": "The pattern is skipping one letter for each pair. From b to d, skip c. From e to g, skip f, and so on. After k to m (skipping l), the next pair would be n to p (skipping o)."
+    },
+    {
+        "id": 63,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Mia has watched 7 movies this year, which is 2 more than Ivan has watched. Ivan has watched more movies than Taylor this year. Taylor has watched fewer than 5 movies this year.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "True",
+        "explanation": "Mia watched 7 movies. Ivan watched 5 (2 fewer than Mia). Ivan watched more than Taylor, so Taylor watched fewer than 5. Therefore, the statement 'Taylor has watched fewer than 5 movies this year' is true."
+    },
+    {
+        "id": 64,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Brad is friends with Justin. Justin is friends with Pat. Brad is not friends with Pat.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "Uncertain",
+        "explanation": "The fact that Brad and Justin are friends, and Justin and Pat are friends, doesn't necessarily mean Brad and Pat are friends or not friends. There's not enough information to determine their relationship."
+    },
+    {
+        "id": 65,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Nobody who works at the downtown office was promoted within the last year. Ana works at the downtown office. Ana was promoted seven months ago.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "False",
+        "explanation": "The first statement says nobody at the downtown office was promoted in the last year. The second states Ana works there. The third claims Ana was promoted 7 months ago, which contradicts the first statement. Therefore, the final statement must be false."
+    },
+    {
+        "id": 66,
+        "text": "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column? Left column: Williams Manufacturing, Donaldson Realty, Bullock Engineering, Granger Industries, Richardson Architecture. Right column: Williams Manufacturing, Donaldson Realty, Bullock Engineering, Grainger Industries, Richardson Architecture",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "4",
+        "explanation": "Four items are exactly the same: Williams Manufacturing, Donaldson Realty, Bullock Engineering, and Richardson Architecture. The only difference is 'Granger Industries' vs 'Grainger Industries'."
+    },
+    {
+        "id": 67,
+        "text": "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column? Left column: Barnes, Roland G.; Daniels, Crystal M.; Davis, Keith W.; Freitas, Marc J.; Garfield, Beth S. Right column: Barnes, Roland G.; Daniels, Crystal N.; Davies, Keith W.; Freitas, Marc J.; Garfield, Beth S.",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "3",
+        "explanation": "Three items are exactly the same: Barnes, Roland G.; Freitas, Marc J.; and Garfield, Beth S. The differences are in Daniels (M. vs N.) and Davis/Davies."
+    },
+    {
+        "id": 68,
+        "text": "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column? Left column: 2040 Sierra Blvd., 584 San Anselmo Way #4D, 81719 Tallahassee Rd., 3782 Scorpio Canyon St., 1143 Redwood Pwky. Right column: 2040 Sierra Blvd., 584 San Anselmo Way #40, 81719 Tallahassee Rd., 3782 Scorpio Canyon St., 143 Redwood Pwky.",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "3",
+        "explanation": "Three items are exactly the same: 2040 Sierra Blvd., 81719 Tallahassee Rd., and 3782 Scorpio Canyon St. The differences are in San Anselmo Way (#4D vs #40) and Redwood Pwky. (1143 vs 143)."
+    },
+    {
+        "id": 69,
+        "text": "What would be the next number in the following series? 3 ... 7 ... 10 ... 17 ... 27 ...?",
+        "options": ["30", "34", "37", "40", "44"],
+        "correctAnswer": "44",
+        "explanation": "The pattern is +4, +3, +7, +10. Following this increasing pattern, the next increase should be +17. So, 27 + 17 = 44."
+    },
+    {
+        "id": 70,
+        "text": "A cashier uses an average of 3.5 twenty dollar bills every hour in order to make change for customers. If this cashier works 180 hours per month, how many twenty dollar bills will he need each month?",
+        "options": ["450", "540", "585", "630", "675"],
+        "correctAnswer": "630",
+        "explanation": "The cashier uses 3.5 twenty dollar bills per hour. For 180 hours: 3.5 * 180 = 630 twenty dollar bills."
+    },
+    {
+        "id": 71,
+        "text": "A safety specialist can complete an inspection in 0.5 hours. Her less experienced colleague takes 2.0 hours to complete an inspection. If both individuals start working at the same time, and each spends 70 hours completing inspections over the course of a month, how many total inspections will they have completed?",
+        "options": ["165", "170", "175", "180", "185"],
+        "correctAnswer": "175",
+        "explanation": "The specialist completes 70 / 0.5 = 140 inspections. The colleague completes 70 / 2.0 = 35 inspections. Total: 140 + 35 = 175 inspections."
+    },
+    {
+        "id": 72,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Taking issue with media reports, the president ______ that she had no plans to step down and ______ claims that her office was guilty of corruption.",
+        "options": ["averred ... detailed", "affirmed ... dismissed", "alleged ... derided", "admitted ... disputed", "claimed ... buttressed"],
+        "correctAnswer": "affirmed .. dismissed",
+        "explanation": "'Affirmed' means to state positively, which fits with the president asserting she won't step down. 'Dismissed' means to reject or refuse to accept, which aligns with rejecting corruption claims."
+    },
+    {
+        "id": 73,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Undeterred by her family's ______ about her artistic ______, Sheila decided to quit her job and enroll in art school.",
+        "options": ["hesitations ... opinions", "affinities ... leanings", "conversations ... tastes", "misgivings ... aspirations", "concerns ... integrity"],
+        "correctAnswer": "misgivings .. aspirations",
+        "explanation": "'Misgivings' means doubts or apprehension, which fits the family's negative reaction. 'Aspirations' means ambitions or goals, which aligns with Sheila's desire to pursue art."
+    },
+    {
+        "id": 74,
+        "text": "The table below displays the sales figures for a group of realtors over a 2-year period. What was the approximate average sales price for the houses sold by Mrs. Boggs in Year 1? [Table content] Realtor | Houses Sold Year 1 | Total Sales Year 1 | Houses Sold Year 2 | Total Sales Year 2, Boggs | 5 | $1,550,000 | 7 | $2,450,000, Jenkins | 3 | $1,350,000 | 4 | $1,800,000, Miller | 4 | $1,375,000 | 6 | $1,750,000, Wilson | 2 | $825,000 | 5 | $1,850,000, Wright | 7 | $2,050,000 | 5 | $1,505,000",
+        "options": ["$250,000", "$310,000", "$333,333", "$350,000", "$450,000"],
+        "correctAnswer": "310,000",
+        "explanation": "Mrs. Boggs sold 5 houses for a total of $1,550,000 in Year 1. Average price: $1,550,000 / 5 = $310,000."
+    },
+    {
+        "id": 75,
+        "text": "A group of four numbers has an average (arithmetic mean) of 18. The first three numbers are 12, 24, and 16. What is the other number?",
+        "options": ["16", "18", "20", "22", "24"],
+        "correctAnswer": "20",
+        "explanation": "The sum of all four numbers must be 18 * 4 = 72. The sum of the first three numbers is 12 + 24 + 16 = 52. The fourth number must be 72 - 52 = 20."
+    },
+    {
+        "id": 76,
+        "text": "At the halfway point of a telethon, a charity has only raised one quarter of its target amount. If its total amount raised doubles each of the next two hours, what percentage of its target amount will it have raised?",
+        "options": ["75%", "80%", "87.5%", "93%", "100%"],
+        "correctAnswer": "100%",
+        "explanation": "At halfway, they've raised 25%. After 1 hour of doubling, it's 50%. After 2 hours of doubling, it's 100% of the target amount."
+    },
+    {
+        "id": 77,
+        "text": "It is estimated that 10% of all U.S. citizens have never traveled outside of the state in which they were born. If this is true, and two U.S. citizens were to be selected at random, what are the chances that NEITHER person has traveled outside of their own birth state?",
+        "options": ["0.1%", "0.5%", "1.0%", "5.0%", "10.0%"],
+        "correctAnswer": "1.0%",
+        "explanation": "The chance of selecting one person who hasn't traveled is 10% or 0.1. For both to not have traveled: 0.1 * 0.1 = 0.01 or 1%."
+    },
+    {
+        "id": 78,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. CONFORM",
+        "options": ["adjust", "deviate", "realign", "anticipate", "devolve"],
+        "correctAnswer": "deviate",
+        "explanation": "'Conform' means to comply with rules or standards. 'Deviate' means to depart from an established course, which is the opposite of conforming."
+    },
+    {
+        "id": 79,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. LATENT",
+        "options": ["Underdeveloped", "Sluggish", "Detrimental", "Deterred", "Exposed"],
+        "correctAnswer": "exposed",
+        "explanation": "'Latent' means hidden or concealed. 'Exposed' means visible or revealed, which is the opposite of latent."
+    },
+    {
+        "id": 80,
+        "text": "LAMBASTE is to EXTOL as ...",
+        "options": ["GALVANIZE is to CATALYZE", "MANDATE is to DECREE", "INFILTRATE is to SNEAK", "SKIM is to SCOUR", "DISPLACE is to RELOCATE"],
+        "correctAnswer": "SKIM is to SCOUR",
+        "explanation": "'Lambaste' means to criticize harshly, while 'extol' means to praise enthusiastically. Similarly, 'skim' means to read or consider superficially, while 'scour' means to examine thoroughly."
+    },
+    {
+        "id": 81,
+        "text": "LAMBASTE is to EXTOL as ...",
+        "options": ["GALVANIZE is to CATALYZE", "MANDATE is to DECREE", "INFILTRATE is to SNEAK", "SKIM is to SCOUR", "DISPLACE is to RELOCATE"],
+        "correctAnswer": "SKIM is to SCOUR",
+        "explanation": "This question is a duplicate of the previous one. The explanation remains the same."
+    },
+    {
+        "id": 82,
+        "text": "OBSEQUIOUS is to DEFERENCE as ...",
+        "options": ["PLANNED is to CHANCE", "OBLIVIOUS is to COGNIZANCE", "OBVIOUS is to ENIGMA", "DESTITUTE is to POVERTY", "DREARY is to MIRTH"],
+        "correctAnswer": "OBLIVIOUS is to COGNIZANCE",
+        "explanation": "'Obsequious' means showing excessive deference, while 'deference' is respect and submission. Similarly, 'oblivious' means unaware, while 'cognizance' means awareness or knowledge."
+    },
+    {
+        "id": 83,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The homeowner, well aware of the building regulations in his hometown, was not surprised that he would have to make some _____ to his original design to renovate his home.",
+        "options": ["austere ... measures", "obscure ... divisions", "stringent ... modifications", "lenient ... revisions", "limited ... magnifications"],
+        "correctAnswer": "stringent ... modifications",
+        "explanation": "'Stringent modifications' best fits the context of building regulations requiring changes to the original design. 'Stringent' implies strict rules, and 'modifications' refers to the changes needed."
+    },
+    {
+        "id": 84,
+        "text": "A bartender's monthly pay consists of $2,400 base salary plus 10% in tips on average for all drinks sold. If the bartender's total pay for the month was $4,250, how much money did she generate in drink sales during this time?",
+        "options": ["$16,650", "$17,500", "$18,500", "$24,000", "$42,500"],
+        "correctAnswer": "$18,500",
+        "explanation": "Tips = Total pay - Base salary = $4,250 - $2,400 = $1,850. Since tips are 10% of drink sales, drink sales = $1,850 / 0.1 = $18,500."
+    },
+    {
+        "id": 85,
+        "text": "A long distance race begins with 12 runners from Team A and 12 runners from Team B. 3 runners from Team A and 6 runners from Team B do not finish the race. What percentage of the runners who finish the race are from team A?",
+        "options": ["50%", "60%", "63%", "66%", "75%"],
+        "correctAnswer": "60%",
+        "explanation": "9 runners from Team A and 6 runners from Team B finish the race. Total finishers = 15. Percentage of Team A finishers = 9/15 * 100 = 60%."
+    },
+    {
+        "id": 86,
+        "text": "Cynthia is one-fourth the age of her father and 25% younger than her cousin. If Cynthia's cousin is 16 years old, how old is Cynthia's father?",
+        "options": ["36", "44", "48", "56", "64"],
+        "correctAnswer": "48",
+        "explanation": "Cynthia is 25% younger than her 16-year-old cousin, so Cynthia is 12 years old (16 * 0.75 = 12). If Cynthia is one-fourth her father's age, her father is 12 * 4 = 48 years old."
+    },
+    {
+        "id": 87,
+        "text": "After selecting 180 of its employees to form a new division, a company discovers that engineers outnumber analysts by a 3:1 ratio in the division. Only analysts and engineers work in the new division. How many more analysts must the company add to the division if it wants to have a 1:1 ratio of engineers to analysts at the new division?",
+        "options": ["45", "60", "75", "90", "135"],
+        "correctAnswer": "90",
+        "explanation": "With a 3:1 ratio in 180 employees, there are 135 engineers and 45 analysts. To achieve a 1:1 ratio, we need 135 analysts. So, 135 - 45 = 90 more analysts are needed."
+    },
+    {
+        "id": 88,
+        "text": "Suppose that in an election voter preference is sharply divided along gender lines. 40% of women will vote for Candidate A, the rest will vote for Candidate B; 70% of men will vote for Candidate A, the rest for Candidate B. Which of the following represents the lowest percentage of voters that must be women on election day, in order that Candidate B wins the election?",
+        "options": ["56%", "61%", "65%", "67%", "70%"],
+        "correctAnswer": "67%",
+        "explanation": "Let x be the percentage of women voters. For B to win: 0.6x + 0.3(100-x) > 50. Solving this inequality gives x > 66.67%. The lowest whole percentage above this is 67%."
+    },
+    {
+        "id": 89,
+        "text": "If a stock clerk receives six shipments per week, how many shipments does she receive over the course of 16 weeks?",
+        "options": ["80", "84", "88", "92", "96"],
+        "correctAnswer": "96",
+        "explanation": "6 shipments per week * 16 weeks = 96 shipments"
+    },
+    {
+        "id": 90,
+        "text": "Which of the following is the largest value?",
+        "options": ["0.815", "0.581", "0.851", "0.518", "0.185"],
+        "correctAnswer": "0.851",
+        "explanation": "Arranging the numbers in descending order: 0.851 > 0.815 > 0.581 > 0.518 > 0.185. Therefore, 0.851 is the largest value."
+    },
+    {
+        "id": 91,
+        "text": "A hat store sells 900 hats in its first year. If the number of hats it sells in the next year is 50% higher, how many hats will it sell in its second year?",
+        "options": ["1200", "1350", "1380", "1400", "1440"],
+        "correctAnswer": "1350",
+        "explanation": "50% more than 900 is calculated as: 900 + (50% of 900) = 900 + 450 = 1350 hats"
+    },
+    {
+        "id": 92,
+        "text": "SALMON is to FISH as ...",
+        "options": ["EXPERIMENT is to CHEMISTRY", "OXYGEN is to ELEMENT", "TRAIN is to BUS", "ANIMAL is to REPTILE", "MOTION is to SWIM"],
+        "correctAnswer": "OXYGEN is to ELEMENT",
+        "explanation": "Salmon is a specific type of fish, just as oxygen is a specific type of element. This represents a specific-to-general relationship."
+    },
+    {
+        "id": 93,
+        "text": "PAPER is to THIN as ...",
+        "options": ["FLEA is to TINY", "BINDER is to ORGANIZE", "PRINTER is to COPY", "RABBIT is to WISHFUL", "SPOON is to SULKY"],
+        "correctAnswer": "FLEA is to TINY",
+        "explanation": "Paper is characteristically thin, just as a flea is characteristically tiny. Both pairs represent a defining characteristic of the subject."
+    },
+    {
+        "id": 94,
+        "text": "PROFICIENT is to PRACTICE as ...",
+        "options": ["STRONG is to EXERCISE", "EXPERT is to PREFERENCE", "IGNORANT is to DISPUTE", "CONCEDE is to PERMIT", "INFORMED is to GENEROSITY"],
+        "correctAnswer": "STRONG is to EXERCISE",
+        "explanation": "One becomes proficient through practice, just as one becomes strong through exercise. Both pairs represent a cause-and-effect relationship."
+    },
+    {
+        "id": 95,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The pace at which the professor lectured frustrated some students, who wished he wouldn't spend so much time explaining basic concepts.",
+        "options": ["elevated", "accelerated", "temperate", "swift", "deliberate"],
+        "correctAnswer": "deliberate",
+        "explanation": "'Deliberate' best fits the context as it suggests a slow, careful pace, which aligns with the professor spending a lot of time on basic concepts."
+    },
+    {
+        "id": 96,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The journalist's article, expected to be a harsh _____ of the politician, actually portrayed her in a very positive light.",
+        "options": ["reenactment", "critique", "declaration", "rebuttal", "preview"],
+        "correctAnswer": "critique",
+        "explanation": "'Critique' best fits here as it can mean a detailed analysis and assessment, which was expected to be harsh but turned out positive."
+    },
+    {
+        "id": 97,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. When someone uses their cell phone in a movie theater, others might find this to be _____",
+        "options": ["lawful", "commendable", "endurable", "justified", "impertinent"],
+        "correctAnswer": "impertinent",
+        "explanation": "'Impertinent' means rude or showing lack of respect, which best describes how others might view cell phone use in a movie theater."
+    },
+    {
+        "id": 98,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The new phone model is being panned by critics due to the changes made to its design; while the old model offered ample storage, this model _____ storage in lieu of camera quality.",
+        "options": ["derided", "preserved", "extended", "sacrificed", "postponed"],
+        "correctAnswer": "sacrificed",
+        "explanation": "'Sacrificed' best fits the context as it suggests giving up one feature (storage) in favor of another (camera quality)."
+    },
+    {
+        "id": 99,
+        "text": "In a class of forty students, one fifth of the students also play on the school's football team. If four more students from the class join the football team, what percentage of students in the class will be on the football team?",
+        "options": ["25%", "30%", "33%", "35%", "40%"],
+        "correctAnswer": "30%",
+        "explanation": "One-fifth of 40 is 8 students. Adding 4 more students makes 12 students on the team. 12 out of 40 is 30%."
+    },
+    {
+        "id": 100,
+        "text": "12 is 40% of what number?",
+        "options": ["20", "24", "25", "30", "32"],
+        "correctAnswer": "30",
+        "explanation": "If 12 is 40% of x, then 12 = 0.4x. Solving for x: x = 12 / 0.4 = 30."
+    }
+]

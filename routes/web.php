@@ -20,15 +20,14 @@ use Illuminate\Support\Facades\Auth;
 
 // Redirect root to dashboard for all users
 Route::get('/', function () {
-    return redirect()->route('dashboard')->with('success', 'Congratulations! Your account has been successfully upgraded. You now have access to all premium features.');
-    
+    return redirect()->route('dashboard');
 });
 
 // Dashboard route accessible to all users
 Route::get('/dashboard', function () {
     $user = Auth::user();
     $isSubscribed = $user ? $user->isSubscribed() : false;
-    
+
     return Inertia::render('Dashboard', [
         'isSubscribed' => $isSubscribed,
     ]);
@@ -46,7 +45,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     // Add any authenticated-only routes here
-    
+
     // Upgrade Account route
     Route::get('/upgrade-account', [UpgradeAccountController::class, 'show'])->name('upgrade.account');
     Route::post('/upgrade-account', [UpgradeAccountController::class, 'process'])->name('upgrade.account.process');
@@ -57,15 +56,23 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-    'paid.user', // This middleware needs to be created
+    'paid.user',
 ])->group(function () {
     Route::get('/verbal-test', function () {
         return Inertia::render('VerbalTest');
     })->name('verbal.test');
 
+    Route::get('/verbal-test-start', function () {
+        return Inertia::render('VerbalTestStart');
+    })->name('verbal.test.start');
+
     Route::get('/math-logic-test', function () {
         return Inertia::render('MathLogicTest');
     })->name('math.logic.test');
+
+    Route::get('/math-test-start', function () {
+        return Inertia::render('MathLogicTestStart');
+    })->name('math.test.start');
 
     Route::get('/spatial-reasoning-test', function () {
         return Inertia::render('SpatialReasoningTest');
