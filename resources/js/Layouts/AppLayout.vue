@@ -65,61 +65,62 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    <template #icon>
-                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2L2 22h20L12 2z M12 22L22 2H2L12 22z" />
-                                        </svg>
-                                    </template>
-                                    CCAT Cognitive Aptitude
-                                </NavLink>
-                                <template v-if="!isSubscribed">
-                                    <NavLink :href="route('free.practice.test')"
-                                        :active="route().current('free.practice.test')">
-                                        <template #icon>
-                                            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                                <rect x="2" y="2" width="20" height="20" />
-                                            </svg>
-                                        </template>
-                                        Free Practice Test
-                                    </NavLink>
-                                </template>
-                                <NavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
-                                    <template #icon>
-                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                            <polygon points="12 2 2 22 22 22" />
-                                        </svg>
-                                    </template>
-                                    Verbal
-                                </NavLink>
-                                <NavLink :href="route('math.logic.test')" :active="route().current('math.logic.test')">
-                                    <template #icon>
-                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                            <circle cx="12" cy="12" r="10" />
-                                        </svg>
-                                    </template>
-                                    Math and Logic
-                                </NavLink>
-                                <NavLink :href="route('spatial.reasoning.test')"
-                                    :active="route().current('spatial.reasoning.test')">
-                                    <template #icon>
-                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                        </svg>
-                                    </template>
-                                    Spatial Reasoning
-                                </NavLink>
-                                <NavLink :href="route('full.practice.test')"
-                                    :active="route().current('full.practice.test')">
-                                    <template #icon>
-                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                                        </svg>
-                                    </template>
-                                    Full Practice Tests
-                                </NavLink>
-
-                            </div>
+    <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+      <template #icon>
+        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 22h20L12 2z M12 22L22 2H2L12 22z" />
+        </svg>
+      </template>
+      <span class="hidden xl:inline">CCAT Cognitive Aptitude</span>
+      <span class="xl:hidden">CCAT</span>
+    </NavLink>
+    <template v-if="!isSubscribed">
+      <NavLink :href="route('free.practice.test')" :active="route().current('free.practice.test')">
+        <template #icon>
+          <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="2" width="20" height="20" />
+          </svg>
+        </template>
+        <span class="hidden xl:inline">Free Practice Test</span>
+        <span class="xl:hidden">Practice Test</span>
+      </NavLink>
+    </template>
+    <NavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
+      <template #icon>
+        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="12 2 2 22 22 22" />
+        </svg>
+      </template>
+      <span>Verbal</span>
+    </NavLink>
+    <NavLink :href="route('math.logic.test')" :active="route().current('math.logic.test')">
+      <template #icon>
+        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="12" r="10" />
+        </svg>
+      </template>
+      <span class="hidden xl:inline">Math and Logic</span>
+      <span class="xl:hidden">Math/Logic</span>
+    </NavLink>
+    <NavLink :href="route('spatial.reasoning.test')" :active="route().current('spatial.reasoning.test')">
+      <template #icon>
+        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+        </svg>
+      </template>
+      <span class="hidden xl:inline">Spatial Reasoning</span>
+      <span class="xl:hidden">Spatial</span>
+    </NavLink>
+    <NavLink :href="route('full.practice.test')" :active="route().current('full.practice.test')">
+      <template #icon>
+        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+      </template>
+      <span class="hidden xl:inline">Full Practice Tests</span>
+      <span class="xl:hidden">Full Test</span>
+    </NavLink>
+  </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -134,76 +135,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                             </template>
 
                             <template v-else>
-                                <div class="ms-3 relative">
-                                    <!-- Teams Dropdown -->
-                                    <Dropdown v-if="$page.props.jetstream.hasTeamFeatures" align="right" width="60">
-                                        <template #trigger>
-                                            <span class="inline-flex rounded-md">
-                                                <button type="button"
-                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
-                                                    {{ $page.props.auth.user.current_team.name }}
 
-                                                    <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                        stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
-                                                    </svg>
-                                                </button>
-                                            </span>
-                                        </template>
-
-                                        <template #content>
-                                            <div class="w-60">
-                                                <!-- Team Management -->
-                                                <div class="block px-4 py-2 text-xs text-gray-400">
-                                                    Manage Team
-                                                </div>
-
-                                                <!-- Team Settings -->
-                                                <DropdownLink
-                                                    :href="route('teams.show', $page.props.auth.user.current_team)">
-                                                    Team Settings
-                                                </DropdownLink>
-
-                                                <DropdownLink v-if="$page.props.jetstream.canCreateTeams"
-                                                    :href="route('teams.create')">
-                                                    Create New Team
-                                                </DropdownLink>
-
-                                                <!-- Team Switcher -->
-                                                <template v-if="$page.props.auth.user.all_teams.length > 1">
-                                                    <div class="border-t border-gray-200 dark:border-gray-600" />
-
-                                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                                        Switch Teams
-                                                    </div>
-
-                                                    <template v-for="team in $page.props.auth.user.all_teams"
-                                                        :key="team.id">
-                                                        <form @submit.prevent="switchToTeam(team)">
-                                                            <DropdownLink as="button">
-                                                                <div class="flex items-center">
-                                                                    <svg v-if="team.id == $page.props.auth.user.current_team_id"
-                                                                        class="me-2 h-5 w-5 text-green-400"
-                                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                        viewBox="0 0 24 24" stroke-width="1.5"
-                                                                        stroke="currentColor">
-                                                                        <path stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                                    </svg>
-
-                                                                    <div>{{ team.name }}</div>
-                                                                </div>
-                                                            </DropdownLink>
-                                                        </form>
-                                                    </template>
-                                                </template>
-                                            </div>
-                                        </template>
-                                    </Dropdown>
-                                </div>
 
                                 <!-- Settings Dropdown -->
                                 <div class="ms-3 relative">
@@ -368,52 +300,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                     </ResponsiveNavLink>
                                 </form>
 
-                                <!-- Team Management -->
-                                <template v-if="$page.props.jetstream.hasTeamFeatures">
-                                    <div class="border-t border-gray-200 dark:border-gray-600" />
 
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                        Manage Team
-                                    </div>
-
-                                    <!-- Team Settings -->
-                                    <ResponsiveNavLink :href="route('teams.show', $page.props.auth.user.current_team)"
-                                        :active="route().current('teams.show')">
-                                        Team Settings
-                                    </ResponsiveNavLink>
-
-                                    <ResponsiveNavLink v-if="$page.props.jetstream.canCreateTeams"
-                                        :href="route('teams.create')" :active="route().current('teams.create')">
-                                        Create New Team
-                                    </ResponsiveNavLink>
-
-                                    <!-- Team Switcher -->
-                                    <template v-if="$page.props.auth.user.all_teams.length > 1">
-                                        <div class="border-t border-gray-200 dark:border-gray-600" />
-
-                                        <div class="block px-4 py-2 text-xs text-gray-400">
-                                            Switch Teams
-                                        </div>
-
-                                        <template v-for="team in $page.props.auth.user.all_teams" :key="team.id">
-                                            <form @submit.prevent="switchToTeam(team)">
-                                                <ResponsiveNavLink as="button">
-                                                    <div class="flex items-center">
-                                                        <svg v-if="team.id == $page.props.auth.user.current_team_id"
-                                                            class="me-2 h-5 w-5 text-green-400"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                            viewBox="0 0 24 24" stroke-width="1.5"
-                                                            stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                        </svg>
-                                                        <div>{{ team.name }}</div>
-                                                    </div>
-                                                </ResponsiveNavLink>
-                                            </form>
-                                        </template>
-                                    </template>
-                                </template>
                             </div>
                         </template>
                     </div>

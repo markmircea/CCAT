@@ -135,7 +135,7 @@ onUnmounted(() => {
     <AppLayout title="CCAT Cognitive Aptitude Assessments">
         <div class="bg-gradient-to-b from-blue-100 to-white dark:from-gray-900 dark:to-gray-800 min-h-screen">
             <!-- Dynamic Header -->
-            <header ref="headerRef" class="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800">
+            <header ref="headerRef" class="relative overflow-hidden bg-gradient-to-br from-blue-600 to-transparent">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div class="text-center">
                         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-up">
@@ -150,7 +150,9 @@ onUnmounted(() => {
                         <div class="mt-10 flex justify-center space-x-4">
                             <a v-if="!props.isSubscribed" :href="route('free.practice.test')"
                                 class=" relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
-                                Start Practicing Now
+                                Start Practicing
+                                <a class="hidden md:block"> &nbsp; Now</a>
+
                                 <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -286,7 +288,7 @@ onUnmounted(() => {
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">What are CCAT assessments?</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong
-                                class="text-gray-900 dark:text-white">CCAT –
+                                class="text-gray-700 dark:text-white">CCAT –
                                 Criteria Cognitive Aptitude Test</strong>
                             measures candidates' learning, critical thinking, and problem-solving skills (<strong
                                 class="text-gray-900 dark:text-white">50 questions</strong> under a time limit of
@@ -340,10 +342,10 @@ onUnmounted(() => {
                             the test.
                         </p>
 
-                        <h2 id="question-types" class="text-2xl text-gray-300 font-semibold mt-6 mb-2">Types of Math and
+                        <h2 id="question-types" class="text-2xl  text-gray-700 dark:text-gray-300 white font-semibold mt-6 mb-2">Types of Math and
                             Logic Questions</h2>
-                        <p class="text-gray-300">Common types of math and logic test questions include:</p>
-                        <ul class="list-disc text-gray-300 list-inside space-y-1">
+                        <p class=" text-gray-700 dark:text-gray-300">Common types of math and logic test questions include:</p>
+                        <ul class="list-disc  text-gray-700 dark:text-gray-300 list-inside space-y-1">
                             <li>Basic Arithmetic</li>
                             <li>Algebra</li>
                             <li>Word Problems</li>
@@ -397,10 +399,10 @@ onUnmounted(() => {
                             is not your first language, your English should be properly improved to pass this verbal
                             test.</p>
 
-                        <h2 id="question-types" class="text-2xl text-gray-300 font-semibold mt-6 mb-2">Types of Verbal
+                        <h2 id="question-types" class="text-2xl  text-gray-700 dark:text-gray-300 font-semibold mt-6 mb-2">Types of Verbal
                             Test Questions</h2>
-                        <p class="text-gray-300">Common types of verbal test questions include:</p>
-                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <p class=" text-gray-700 dark:text-gray-300">Common types of verbal test questions include:</p>
+                        <ul class="list-disc list-inside space-y-1  text-gray-700 dark:text-gray-300">
                             <li>Synonyms and Antonyms</li>
                             <li>Analogies</li>
                             <li>Sentence Completion</li>
@@ -456,10 +458,10 @@ onUnmounted(() => {
                             your innate aptitude and the ability to learn, solve problems, and leverage new information
                             properly.</p>
 
-                        <h2 id="question-types" class="text-2xl text-gray-300 font-semibold mt-6 mb-2">Types of Spatial
+                        <h2 id="question-types" class="text-2xl  text-gray-700 dark:text-gray-300 font-semibold mt-6 mb-2">Types of Spatial
                             Reasoning Questions</h2>
-                        <p class="text-gray-300">Common types of spatial reasoning test questions include:</p>
-                        <ul class="list-disc text-gray-300 list-inside space-y-1">
+                        <p class=" text-gray-700 dark:text-gray-300">Common types of spatial reasoning test questions include:</p>
+                        <ul class="list-disc  text-gray-700 dark:text-gray-300 list-inside space-y-1">
                             <li>Mental Rotation</li>
                             <li>Mirror Images</li>
                             <li>Paper Folding</li>
