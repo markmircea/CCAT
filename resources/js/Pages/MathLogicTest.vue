@@ -66,12 +66,8 @@ import { Link } from '@inertiajs/vue3';
                             </ul>
 
                             <h2 id="practice" class="text-2xl font-semibold mt-6 mb-2">Practice Resources</h2>
-                            <p>To improve your math and logic skills, consider using the following resources:</p>
-                            <ul class="list-disc list-inside space-y-1">
-                                <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Our Math and Logic Practice Tests</a></li>
-                                <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Algebra Refresher Course</a></li>
-                                <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Logic Puzzles and Brain Teasers</a></li>
-                            </ul>
+                            <p>To improve your math and logic skills, practice with the continuously generated unlimited questions below:</p>
+
                             <div class="mt-8 flex justify-center">
                                 <Link
                                     href="/math-test-start"

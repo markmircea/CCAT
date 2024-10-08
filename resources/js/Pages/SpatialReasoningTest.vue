@@ -27,7 +27,6 @@ import LazyImage from '@/Components/LazyImage.vue';
                                     <li><a href="#question-types" class="text-blue-600 dark:text-blue-400 hover:underline">Types of Spatial Reasoning Questions</a></li>
                                     <li><a href="#examples" class="text-blue-600 dark:text-blue-400 hover:underline">Example Questions</a></li>
                                     <li><a href="#tips" class="text-blue-600 dark:text-blue-400 hover:underline">Tips for Success</a></li>
-                                    <li><a href="#practice" class="text-blue-600 dark:text-blue-400 hover:underline">Practice Resources</a></li>
                                 </ul>
                             </div>
 
@@ -63,13 +62,7 @@ import LazyImage from '@/Components/LazyImage.vue';
                                 <li>Take timed practice tests to improve your speed and accuracy</li>
                             </ul>
 
-                            <h2 id="practice" class="text-2xl font-semibold mt-6 mb-2">Practice Resources</h2>
-                            <p>To improve your spatial reasoning skills, consider using the following resources:</p>
-                            <ul class="list-disc list-inside space-y-1">
-                                <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Our Spatial Reasoning Practice Tests</a></li>
-                                <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">3D Visualization Exercises</a></li>
-                                <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Pattern Recognition Puzzles</a></li>
-                            </ul>
+
                         </div>
                     </div>
                 </div>

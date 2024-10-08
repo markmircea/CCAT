@@ -215,7 +215,7 @@ onUnmounted(() => {
                 <nav class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 mb-8 animate-fade-in">
                     <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">Table of Contents</p>
                     <ul class="space-y-2">
-                        <li v-for="(item, index) in ['lifetime-plan', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-mconsultingprep', 'FAQ']"
+                        <li v-for="(item, index) in ['lifetime-plan', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-CCATtest', 'FAQ']"
                             :key="index">
                             <a :href="`#${item}`"
                                 class="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200 flex items-center">
@@ -293,12 +293,12 @@ onUnmounted(() => {
                             measures candidates' learning, critical thinking, and problem-solving skills (<strong
                                 class="text-gray-900 dark:text-white">50 questions</strong> under a time limit of
                             <strong class="text-gray-900 dark:text-white">15 minutes</strong>). This test has 3 types of
-                            questions: <a href="https://mconsultingprep.com/verbal-reasoning-tests-ultimate-guide"
+                            questions: <a href="https://CCATtest.com/verbal-reasoning-tests-ultimate-guide"
                                 class="text-blue-600 dark:text-blue-400 hover:underline"><strong>Verbal</strong></a>, <a
-                                href="https://mconsultingprep.com/guide-to-numerical-reasoning-tests"
+                                href="https://CCATtest.com/guide-to-numerical-reasoning-tests"
                                 class="text-blue-600 dark:text-blue-400 hover:underline"><strong>Math and
                                     Logic</strong></a>, and <a
-                                href="https://mconsultingprep.com/what-is-a-spatial-reasoning-test"
+                                href="https://CCATtest.com/what-is-a-spatial-reasoning-test"
                                 class="text-blue-600 dark:text-blue-400 hover:underline"><strong>Spatial
                                     Reasoning</strong></a>. During the test, English is the only language used, and
                             calculators are NOT allowed. Some leading employers using CCAT in their hiring process
@@ -367,7 +367,7 @@ onUnmounted(() => {
                             <p class="text-gray-700 dark:text-gray-300">This type of question is called Word Problem.
                                 Word Problem questions are indeed calculation questions with short contexts, which
                                 involve addition, subtraction, division, and multiplication. Within our <a
-                                    href="https://mconsultingprep.com/numerical-reasoning-test/"
+                                    href="https://CCATtest.com/numerical-reasoning-test/"
                                     class="text-blue-600 dark:text-blue-400 hover:underline">Numerical Reasoning Test
                                     Pack</a>, we provide a range of Word Problem questions (easy to hard levels). There
                                 are no other ways to improve your speed except by practicing.</p>
@@ -387,7 +387,7 @@ onUnmounted(() => {
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">CCAT Verbal Test</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Read more:</strong> <a
-                                href="https://mconsultingprep.com/verbal-reasoning-tests-ultimate-guide"
+                                href="https://CCATtest.com/verbal-reasoning-tests-ultimate-guide"
                                 class="text-blue-600 dark:text-blue-400 hover:underline">What is a Verbal Reasoning
                                 Test?</a></p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300">CCAT verbal test typically contains <strong>17
@@ -425,7 +425,7 @@ onUnmounted(() => {
                             <p class="text-gray-700 dark:text-gray-300">This type of question is also an analogy
                                 question requiring you to identify the right relationship (bridge) between words.
                                 Keeping practice will help you spot the correct word relationships faster. Luckily, our
-                                <a href="https://test.mconsultingprep.com/test-suites/testing/ba0d6ff2-b86b-469f-8514-56bc22ac081c"
+                                <a href="https://test.CCATtest.com/test-suites/testing/ba0d6ff2-b86b-469f-8514-56bc22ac081c"
                                     class="text-blue-600 dark:text-blue-400 hover:underline">free verbal practice
                                     test</a> does include this question type – let's give it a try!
                             </p>
@@ -507,20 +507,20 @@ onUnmounted(() => {
                     </div>
                 </section>
 
-                <section id="practice-with-mconsultingprep" class="mb-12 animate-on-scroll"
-                    :class="{ 'animate-fade-in-up': isIntersecting['practice-with-mconsultingprep'] }">
+                <section id="practice-with-CCATtest" class="mb-12 animate-on-scroll"
+                    :class="{ 'animate-fade-in-up': isIntersecting['practice-with-CCATtest'] }">
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Practice CCAT assessments with
-                        MConsultingPrep</h2>
+                        CCATtest</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-gray-700 dark:text-gray-300">
                         <p class="mb-4">After months of research on popular test providers (including Criteria Corp),
-                            MConsultingPrep has designed an <a
-                                href="https://mconsultingprep.com/cr/mcp/courses/bundle/aptitude-test-package"
+                            CCATtest has designed an <a
+                                href="https://CCATtest.com/cr/mcp/courses/bundle/aptitude-test-package"
                                 class="text-blue-600 dark:text-blue-400 hover:underline">aptitude test package</a>. Our
                             unique selling point is that these practice questions are comparatively difficult compared
                             to other products on the market. Plus, you'll get the A to Z approach to numerical, verbal
                             and logical reasoning tests with our in-depth study guides into specific assessments.</p>
                         <p class="mb-4">What's more, we keep updating the number of questions – you pay once, you'll
-                            have lifetime access to the question bank. MConsultingPrep aims to help candidates get
+                            have lifetime access to the question bank. CCATtest aims to help candidates get
                             through any aptitude tests.</p>
                         <p class="mb-4">We do offer some <a href="/free-practice-test"
                                 class="text-blue-600 dark:text-blue-400 hover:underline">free questions</a> so that you

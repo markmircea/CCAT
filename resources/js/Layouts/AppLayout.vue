@@ -221,7 +221,6 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                             :active="route().current('free.practice.test')">
                             Free Practice Test
                         </ResponsiveNavLink>
-                        <template v-if="isSubscribed">
                             <ResponsiveNavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
                                 Verbal Test
                             </ResponsiveNavLink>
@@ -237,7 +236,6 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                 :active="route().current('full.practice.test')">
                                 Full Practice Tests
                             </ResponsiveNavLink>
-                        </template>
                     </div>
 
                     <!-- Responsive Settings Options -->
