@@ -107,7 +107,7 @@ onUnmounted(() => {
                             Overview and Practice Tests
                         </p>
                         <div class="mt-10 flex justify-center space-x-4">
-                            <a  v-if="!props.isSubscribed" href="free-practice-test"
+                            <a  v-if="!props.isSubscribed" :href="route('free.practice.test')"
                                 class=" relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
                                 Start Practicing Now
                                 <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -117,7 +117,7 @@ onUnmounted(() => {
                                         clip-rule="evenodd"></path>
                                 </svg>
                             </a>
-                            <a  v-if="props.isSubscribed" href="/full-practice-test-start"
+                            <a  v-if="props.isSubscribed" :href="route('full-practice-test-start')"
                                 class=" relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
                                 Start Practicing Now
                                 <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -164,7 +164,7 @@ onUnmounted(() => {
                 <nav class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 mb-8 animate-fade-in">
                     <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">Table of Contents</p>
                     <ul class="space-y-2">
-                        <li v-for="(item, index) in ['lifetime-plan', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-mconsultingprep', 'faqs']"
+                        <li v-for="(item, index) in ['lifetime-plan', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-mconsultingprep', 'FAQ']"
                             :key="index">
                             <a :href="`#${item}`"
                                 class="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200 flex items-center">
@@ -481,7 +481,7 @@ onUnmounted(() => {
                     </div>
                 </section>
 
-                <section id="faqs" class="mb-12 animate-on-scroll"
+                <section id="FAQ" class="mb-12 animate-on-scroll"
                     :class="{ 'animate-fade-in-up': isIntersecting['faqs'] }">
                     <FAQ />
                 </section>
@@ -571,14 +571,19 @@ onUnmounted(() => {
 
 
 @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(10px, -15px) scale(1.05); }
+    50% { transform: translate(20px, -30px) scale(1.1); }
+    75% { transform: translate(10px, -45px) scale(1.05); }
+}
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+.bubble {
+    animation: float 20s ease-in-out infinite;
+    transition: all 0.3s ease-in-out;
+}
 
-    50% {
-        transform: translateY(-20px);
-    }
+.bubble:hover {
+    opacity: 0.3;
+    transform: scale(1.1);
 }
 </style>
