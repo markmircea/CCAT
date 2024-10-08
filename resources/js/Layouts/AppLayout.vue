@@ -10,18 +10,14 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import LazyImage from '@/Components/LazyImage.vue';
 import FlashMessage from '@/Components/FlashMessage.vue';
 import DynamicSEO from '@/Components/DynamicSEO.vue';
-
-
+import DarkModeToggle from '@/Components/DarkModeToggle.vue';
 
 defineProps({
     title: String,
 });
 
-
-
 const showingNavigationDropdown = ref(false);
 const showingFullPracticeTestSubmenu = ref(false);
-
 
 const switchToTeam = (team) => {
     router.put(route('current-team.update'), {
@@ -41,7 +37,7 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
 </script>
 
 <template>
-    <div>
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <DynamicSEO />
 
         <Head :title="title" />
@@ -62,65 +58,64 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                 </Link>
                             </div>
 
-
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-    <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-      <template #icon>
-        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L2 22h20L12 2z M12 22L22 2H2L12 22z" />
-        </svg>
-      </template>
-      <span class="hidden xl:inline">CCAT Cognitive Aptitude</span>
-      <span class="xl:hidden">CCAT</span>
-    </NavLink>
-    <template v-if="!isSubscribed">
-      <NavLink :href="route('free.practice.test')" :active="route().current('free.practice.test')">
-        <template #icon>
-          <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-            <rect x="2" y="2" width="20" height="20" />
-          </svg>
-        </template>
-        <span class="hidden xl:inline">Free Practice Test</span>
-        <span class="xl:hidden">Practice Test</span>
-      </NavLink>
-    </template>
-    <NavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
-      <template #icon>
-        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-          <polygon points="12 2 2 22 22 22" />
-        </svg>
-      </template>
-      <span>Verbal</span>
-    </NavLink>
-    <NavLink :href="route('math.logic.test')" :active="route().current('math.logic.test')">
-      <template #icon>
-        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-          <circle cx="12" cy="12" r="10" />
-        </svg>
-      </template>
-      <span class="hidden xl:inline">Math and Logic</span>
-      <span class="xl:hidden">Math/Logic</span>
-    </NavLink>
-    <NavLink :href="route('spatial.reasoning.test')" :active="route().current('spatial.reasoning.test')">
-      <template #icon>
-        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-        </svg>
-      </template>
-      <span class="hidden xl:inline">Spatial Reasoning</span>
-      <span class="xl:hidden">Spatial</span>
-    </NavLink>
-    <NavLink :href="route('full.practice.test')" :active="route().current('full.practice.test')">
-      <template #icon>
-        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-        </svg>
-      </template>
-      <span class="hidden xl:inline">Full Practice Tests</span>
-      <span class="xl:hidden">Full Test</span>
-    </NavLink>
-  </div>
+                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                    <template #icon>
+                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2L2 22h20L12 2z M12 22L22 2H2L12 22z" />
+                                        </svg>
+                                    </template>
+                                    <span class="hidden xl:inline">CCAT Cognitive Aptitude</span>
+                                    <span class="xl:hidden">CCAT</span>
+                                </NavLink>
+                                <template v-if="!isSubscribed">
+                                    <NavLink :href="route('free.practice.test')" :active="route().current('free.practice.test')">
+                                        <template #icon>
+                                            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                                <rect x="2" y="2" width="20" height="20" />
+                                            </svg>
+                                        </template>
+                                        <span class="hidden xl:inline">Free Practice Test</span>
+                                        <span class="xl:hidden">Practice Test</span>
+                                    </NavLink>
+                                </template>
+                                <NavLink :href="route('verbal.test')" :active="route().current('verbal.test')">
+                                    <template #icon>
+                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                            <polygon points="12 2 2 22 22 22" />
+                                        </svg>
+                                    </template>
+                                    <span>Verbal</span>
+                                </NavLink>
+                                <NavLink :href="route('math.logic.test')" :active="route().current('math.logic.test')">
+                                    <template #icon>
+                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                            <circle cx="12" cy="12" r="10" />
+                                        </svg>
+                                    </template>
+                                    <span class="hidden xl:inline">Math and Logic</span>
+                                    <span class="xl:hidden">Math/Logic</span>
+                                </NavLink>
+                                <NavLink :href="route('spatial.reasoning.test')" :active="route().current('spatial.reasoning.test')">
+                                    <template #icon>
+                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                        </svg>
+                                    </template>
+                                    <span class="hidden xl:inline">Spatial Reasoning</span>
+                                    <span class="xl:hidden">Spatial</span>
+                                </NavLink>
+                                <NavLink :href="route('full.practice.test')" :active="route().current('full.practice.test')">
+                                    <template #icon>
+                                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                        </svg>
+                                    </template>
+                                    <span class="hidden xl:inline">Full Practice Tests</span>
+                                    <span class="xl:hidden">Full Test</span>
+                                </NavLink>
+                            </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -135,8 +130,6 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                             </template>
 
                             <template v-else>
-
-
                                 <!-- Settings Dropdown -->
                                 <div class="ms-3 relative">
                                     <Dropdown align="right" width="48">
@@ -299,8 +292,6 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
                                         Log Out
                                     </ResponsiveNavLink>
                                 </form>
-
-
                             </div>
                         </template>
                     </div>
@@ -317,8 +308,10 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
             <!-- Page Content -->
             <main>
                 <slot />
-
             </main>
+
+            <!-- Dark Mode Toggle -->
+            <DarkModeToggle />
         </div>
     </div>
 </template>
