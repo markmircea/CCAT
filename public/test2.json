@@ -1,48 +1,5 @@
 [
-    {
-        "id": 1,
-        "text": "Choose the word that is most nearly opposite in meaning to 'BENEVOLENT':",
-        "options": ["Malevolent", "Beneficent", "Munificent", "Magnanimous", "Benign"],
-        "correctAnswer": "Malevolent",
-        "explanation": "'Benevolent' means kind and generous. 'Malevolent' means having or showing a wish to do evil to others, which is the opposite of benevolent. The other options are either synonyms or related positive traits."
-    },
-    {
-        "id": 2,
-        "text": "FISH : SCHOOL :: WOLF : ?",
-        "options": ["Pack", "Herd", "Flock", "Swarm", "Pride"],
-        "correctAnswer": "Pack",
-        "explanation": "This is an analogy question. A group of fish is called a 'school', while a group of wolves is called a 'pack'. The other options are collective nouns for different animals: herd (cattle), flock (birds), swarm (insects), pride (lions)."
-    },
-    {
-        "id": 3,
-        "text": "Which word does not belong with the others?",
-        "options": ["Trombone", "Flute", "Clarinet", "Oboe", "Violin"],
-        "correctAnswer": "Violin",
-        "explanation": "The violin is the only string instrument in this list. All the others (trombone, flute, clarinet, and oboe) are wind instruments."
-    },
-    {
-        "id": 4,
-        "text": "If a columnist writes 19 articles per month, how many articles does she write in a year?",
-        "options": ["190", "209", "228", "247", "266"],
-        "correctAnswer": "228",
-        "explanation": "There are 12 months in a year. So, 19 articles per month * 12 months = 228 articles per year."
-    },
-    {
-        "id": 5,
-        "text": "What is the next number in the sequence: 2, 6, 12, 20, 30, ?",
-        "options": ["36", "40", "42", "48", "50"],
-        "correctAnswer": "42",
-        "explanation": "The sequence is increasing by a pattern: +4, +6, +8, +10, so the next increase should be +12. 30 + 12 = 42."
-    },
-    {
-        "id": 6,
-        "text": "If 5 cats can catch 5 mice in 5 minutes, how long will it take 1 cat to catch 1 mouse?",
-        "options": ["1 minute", "5 minutes", "25 minutes", "125 minutes", "Not enough information"],
-        "correctAnswer": "5 minutes",
-        "explanation": "This question tests proportional reasoning. If 5 cats catch 5 mice in 5 minutes, that's a rate of 1 mouse per cat per 5 minutes. Therefore, 1 cat would take 5 minutes to catch 1 mouse."
-    },
-
-    {
+       {
         "id": 10,
         "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
         "image": "/storage/img/official1/1.png",
@@ -370,12 +327,5 @@
             "options": ["10%", "12.5%", "15%", "17.5%", "20%"],
             "correctAnswer": "12.5%",
             "explanation": "Locate the price values for 2010 and 2015 in the image. Calculate the percentage increase between these two values. The correct answer is the option that matches this calculated percentage."
-        },
-        {
-            "id": 51,
-            "text": "It costs six tickets to go on an amusement park ride. How many tickets will a group of 15 children need in order for the whole group to go on the ride?",
-            "options": ["30", "45", "60", "90", "120"],
-            "correctAnswer": "90",
-            "explanation": "Each child needs 6 tickets. For 15 children, multiply 6 by 15: 6 * 15 = 90 tickets in total."
         }
     ]

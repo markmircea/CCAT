@@ -12,9 +12,49 @@ const bubbleContainer = ref(null);
 const bubbles = ref([]);
 let bubbleId = 0;
 
+const shapeContainer = ref(null);
+const shapes = ref([]);
+let shapeId = 0;
+
 const isIntersecting = ref({});
 
 const currentMonthYear = ref("");
+
+
+const createShape = () => {
+    const size = Math.random() * 60 + 20; // Size between 20 and 80
+    shapes.value.push({
+        id: shapeId++,
+        type: ['circle', 'triangle', 'square'][Math.floor(Math.random() * 3)],
+        size,
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        delay: Math.random() * 5,
+        duration: Math.random() * 10 + 10
+    });
+
+    if (shapes.value.length > 50) {
+        shapes.value.shift();
+    }
+};
+
+const generateShapes = () => {
+    for (let i = 0; i < 20; i++) {
+        createShape();
+    }
+};
+
+const getShapeStyle = (shape) => {
+    return {
+        position: 'absolute',
+        width: `${shape.size}px`,
+        height: `${shape.size}px`,
+        top: `${shape.top}%`,
+        left: `${shape.left}%`,
+        animationDelay: `${shape.delay}s`,
+        animationDuration: `${shape.duration}s`,
+    };
+};
 
 
 const props = defineProps({
@@ -46,9 +86,10 @@ const generateBubbles = () => {
 const handleScroll = () => {
     const headerBottom = headerRef.value.getBoundingClientRect().bottom;
     if (headerBottom <= 0) {
-        createBubble();
+        createShape();
     }
 };
+
 
 onMounted(() => {
     const monthNames = [
@@ -63,7 +104,7 @@ onMounted(() => {
     // Set current month and year
     currentMonthYear.value = `${month} ${year}`;
 
-    generateBubbles();
+    generateShapes();
     window.addEventListener('scroll', handleScroll);
 
     const observer = new IntersectionObserver((entries) => {
@@ -107,7 +148,7 @@ onUnmounted(() => {
                             Overview and Practice Tests
                         </p>
                         <div class="mt-10 flex justify-center space-x-4">
-                            <a  v-if="!props.isSubscribed" :href="route('free.practice.test')"
+                            <a v-if="!props.isSubscribed" :href="route('free.practice.test')"
                                 class=" relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
                                 Start Practicing Now
                                 <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -117,9 +158,10 @@ onUnmounted(() => {
                                         clip-rule="evenodd"></path>
                                 </svg>
                             </a>
-                            <a  v-if="props.isSubscribed" :href="route('full-practice-test-start')"
+                            <a v-if="props.isSubscribed" :href="route('full-practice-test-start')"
                                 class=" relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
-                                Start Practicing Now
+                                Start Practicing
+                                <div class="hidden md:block"> &nbsp; Now</div>
                                 <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -129,7 +171,7 @@ onUnmounted(() => {
                             </a>
                             <a href="#definition"
                                 class="relative z-10 inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-full text-white hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 transform hover:scale-105 group">
-                                Learn More
+                                <div class="hidden md:block">Learn &nbsp;</div> More
                                 <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
                                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -144,16 +186,23 @@ onUnmounted(() => {
                     viewBox="0 0 1440 54">
                     <path fill="currentColor" d="M0 54L1440 0v54H0z"></path>
                 </svg>
-                <div ref="bubbleContainer" class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-                    <div v-for="bubble in bubbles" :key="bubble.id"
-                        class="absolute bg-blue-400 rounded-full opacity-10 bubble" :style="{
-                            width: `${bubble.size}px`,
-                            height: `${bubble.size}px`,
-                            top: `${bubble.top}%`,
-                            left: `${bubble.left}%`,
-                            animationDelay: `${bubble.delay}s`,
-                            animationDuration: `${bubble.duration}s`
-                        }">
+                <div ref="shapeContainer" class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+                    <div v-for="shape in shapes" :key="shape.id" class="shape" :style="getShapeStyle(shape)">
+                        <template v-if="shape.type === 'triangle'">
+                            <svg :width="shape.size" :height="shape.size" viewBox="0 0 100 100">
+                                <polygon points="50,15 100,100 0,100" fill="rgba(255,255,255,0.1)" />
+                            </svg>
+                        </template>
+                        <template v-else-if="shape.type === 'square'">
+                            <div
+                                :style="{ width: `${shape.size}px`, height: `${shape.size}px`, background: 'rgba(255,255,255,0.1)' }">
+                            </div>
+                        </template>
+                        <template v-else>
+                            <div
+                                :style="{ width: `${shape.size}px`, height: `${shape.size}px`, borderRadius: '50%', background: 'rgba(255,255,255,0.1)' }">
+                            </div>
+                        </template>
                     </div>
                 </div>
             </header>
@@ -237,7 +286,8 @@ onUnmounted(() => {
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">What are CCAT assessments?</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong
-                                class="text-gray-900 dark:text-white">CCAT – Criteria Cognitive Aptitude Test</strong>
+                                class="text-gray-900 dark:text-white">CCAT –
+                                Criteria Cognitive Aptitude Test</strong>
                             measures candidates' learning, critical thinking, and problem-solving skills (<strong
                                 class="text-gray-900 dark:text-white">50 questions</strong> under a time limit of
                             <strong class="text-gray-900 dark:text-white">15 minutes</strong>). This test has 3 types of
@@ -259,7 +309,7 @@ onUnmounted(() => {
                             has provided more than 25 million tests across 60 countries.</p>
                         <LazyImage src="/storage/img/1669372150373_ccat_assessments_2_1500_x751.png"
                             alt="CCAT Assessments Overview" class="rounded-lg shadow-md mx-auto mb-4" />
-                            <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
+                        <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
 
                         <p class="mb-4 text-gray-700 dark:text-gray-300">We will provide you with the tools you need to
                             study and pass the exam! To get hired at Crossover for Work you need to score in the 85
@@ -272,7 +322,7 @@ onUnmounted(() => {
                             different questions of the same type just like what you will experience on crossover.</p>
                         <LazyImage src="/storage/img/crossoversteps.jpg" alt="Crossover Steps"
                             class="rounded-lg shadow-md mx-auto mb-4" />
-                            <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
+                        <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
 
                     </div>
                 </section>
@@ -476,7 +526,7 @@ onUnmounted(() => {
 
                         <LazyImage src="/storage/img/1669372162795_ccat_assessments8_1500_x938.png"
                             alt="CCAT Assessment Timing" class="rounded-lg shadow-md mx-auto mb-4" />
-                            <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
+                        <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
 
                     </div>
                 </section>
@@ -571,18 +621,31 @@ onUnmounted(() => {
 
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(10px, -15px) scale(1.05); }
-    50% { transform: translate(20px, -30px) scale(1.1); }
-    75% { transform: translate(10px, -45px) scale(1.05); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(10px, -15px) scale(1.05);
+    }
+
+    50% {
+        transform: translate(20px, -30px) scale(1.1);
+    }
+
+    75% {
+        transform: translate(10px, -45px) scale(1.05);
+    }
 }
 
-.bubble {
+.shape {
     animation: float 20s ease-in-out infinite;
     transition: all 0.3s ease-in-out;
 }
 
-.bubble:hover {
+.shape:hover {
     opacity: 0.3;
     transform: scale(1.1);
 }

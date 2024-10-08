@@ -38,6 +38,10 @@ Route::get('/free-practice-test', function () {
     return Inertia::render('FreePracticeTestStart');
 })->name('free.practice.test');
 
+Route::get('/full-practice-test', function () {
+    return Inertia::render('FullPracticeTest');
+})->name('full.practice.test');
+
 // Authenticated routes group
 Route::middleware([
     'auth:sanctum',
@@ -78,11 +82,18 @@ Route::middleware([
         return Inertia::render('SpatialReasoningTest');
     })->name('spatial.reasoning.test');
 
-    Route::get('/full-practice-test', function () {
-        return Inertia::render('FullPracticeTest');
-    })->name('full.practice.test');
-
     Route::get('/full-practice-test-start', function () {
         return Inertia::render('FullPracticeTestStart');
     })->name('full-practice-test-start');
+
+    // Full Practice Test routes
+    for ($i = 1; $i <= 10; $i++) {
+        Route::get("/full-practice-test-{$i}", function () use ($i) {
+            return Inertia::render('FullTest', ['testNumber' => $i]);
+        })->name("full.practice.test.{$i}");
+
+        Route::get("/full-practice-test-{$i}-start", function () use ($i) {
+            return Inertia::render('FullPracticeTestStart', ['testNumber' => $i]);
+        })->name("full.practice.test.{$i}.start");
+    }
 });

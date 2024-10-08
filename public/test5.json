@@ -355,5 +355,356 @@
         "options": ["BEAUTIFUL is to SIGHT", "BLISSFUL is to HAPPINESS", "CONSERVED is to RETAINED", "HONORABLE is to SHAMEFUL", "MYOPIC is to SHORTSIGHTED"],
         "correctAnswer": "HONORABLE is to SHAMEFUL",
         "explanation": "OCCUPIED and VACANT are opposites. Among the options, HONORABLE and SHAMEFUL are also opposites, making this the best analogy."
+    },
+    {
+        "id": 201,
+        "text": "What would be the next number in the following series? 3... 7... 13 ... 21 ... 31 ...?",
+        "options": ["41", "43", "45", "47", "49"],
+        "correctAnswer": "43",
+        "explanation": "The pattern is increasing by 4, then 6, then 8, then 10. Following this pattern, the next increase should be by 12. So, 31 + 12 = 43."
+    },
+    {
+        "id": 202,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? Emma speaks French fluently. All French speakers can read Latin. Emma can read Latin.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "True",
+        "explanation": "If Emma speaks French fluently, and all French speakers can read Latin, then it logically follows that Emma can read Latin."
+    },
+    {
+        "id": 203,
+        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Anderson Consulting\n* Bright Future Technologies\n* Crestview Apartments\n* Deluxe Auto Repair\n* Eagle Eye Security\n\nRight column:\n* Anderson Consulting\n* Bright Future Technology\n* Crestview Appartments\n* Deluxe Auto Repair\n* Eagle Eye Securities",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "2",
+        "explanation": "Only two entries (Anderson Consulting and Deluxe Auto Repair) are exactly the same in both columns. The others have slight differences in spelling or pluralization."
+    },
+    {
+        "id": 204,
+        "text": "A salesperson earns a base salary of $2,000 per month plus a 5% commission on all sales. If they make $3,500 in a month, what was their total sales amount?",
+        "options": ["$28,000", "$29,000", "£30,000", "£31,000", "£32,000"],
+        "correctAnswer": "£30,000",
+        "explanation": "Commission = Total pay - Base salary = $3,500 - $2,000 = $1,500. Since commission is 5% of sales, sales = $1,500 / 0.05 = $30,000."
+    },
+    {
+        "id": 205,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The scientist's _____ approach to the experiment yielded unexpected results, leading to a _____ in the field of quantum physics.",
+        "options": ["conventional ... setback", "innovative ... breakthrough", "haphazard ... consensus", "rigorous ... stalemate", "ambivalent ... revolution"],
+        "correctAnswer": "innovative ... breakthrough",
+        "explanation": "'Innovative' fits with unexpected results, and 'breakthrough' aligns with significant progress in the field of quantum physics."
+    },
+    {
+        "id": 206,
+        "text": "NOVEL is to BOOK as ...",
+        "options": ["PAINTING is to BRUSH", "CHAPTER is to PAGE", "SONG is to ALBUM", "ACTOR is to MOVIE", "RECIPE is to INGREDIENT"],
+        "correctAnswer": "SONG is to ALBUM",
+        "explanation": "A novel is a specific type of book, just as a song is a specific part of an album. Both pairs represent a part-to-whole relationship."
+    },
+    {
+        "id": 207,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. FRUGAL",
+        "options": ["thrifty", "miserly", "extravagant", "economical", "prudent"],
+        "correctAnswer": "extravagant",
+        "explanation": "'Frugal' means economical in use or expenditure. 'Extravagant' means lacking restraint in spending money or using resources, which is the opposite of frugal."
+    },
+    {
+        "id": 208,
+        "text": "A clothing store sells 600 shirts in its first quarter. If the number of shirts it sells in the next quarter is 25% higher, how many shirts will it sell in its second quarter?",
+        "options": ["650", "700", "725", "750", "775"],
+        "correctAnswer": "750",
+        "explanation": "25% more than 600 is calculated as: 600 + (25% of 600) = 600 + 150 = 750 shirts"
+    },
+    {
+        "id": 209,
+        "text": "What would be the next group of letters in the following series? bkpv... bjou ... bipt... bhqs?",
+        "options": ["bgpr", "bgqr", "bgrr", "bgrs", "bgsq"],
+        "correctAnswer": "bgrr",
+        "explanation": "The pattern is: first letter stays 'b', second letter decreases alphabetically (k, j, i, h, g), third letter follows the pattern (p, o, p, q, r), fourth letter follows the pattern (v, u, t, s, r)."
+    },
+    {
+        "id": 210,
+        "text": "A group of five numbers has an average (arithmetic mean) of 22. The first four numbers are 18, 25, 20, and 30. What is the other number?",
+        "options": ["15", "17", "19", "21", "23"],
+        "correctAnswer": "17",
+        "explanation": "The sum of all five numbers must be 22 * 5 = 110. The sum of the first four numbers is 18 + 25 + 20 + 30 = 93. The fifth number must be 110 - 93 = 17."
+    },
+    {
+        "id": 211,
+        "text": "If it takes a printer 8 minutes to print 100 pages, how many pages can it print in 2 hours?",
+        "options": ["1200", "1350", "1400", "1500", "1600"],
+        "correctAnswer": "1500",
+        "explanation": "In 1 minute, the printer prints 100/8 = 12.5 pages. In 2 hours (120 minutes), it will print: 12.5 * 120 = 1500 pages."
+    },
+    {
+        "id": 212,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All dolphins are mammals. Some mammals can breathe underwater. Some dolphins can breathe underwater.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all dolphins are mammals, and some mammals can breathe underwater, we don't have enough information to determine if dolphins specifically are among those mammals that can breathe underwater."
+    },
+    {
+        "id": 213,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite his _____ demeanor, the lawyer's arguments were _____ and ultimately won the case.",
+        "options": ["aggressive ... feeble", "timid ... forceful", "eloquent ... ineffective", "boisterous ... subdued", "unassuming ... compelling"],
+        "correctAnswer": "unassuming ... compelling",
+        "explanation": "'Unassuming' contrasts with the effectiveness of the arguments, while 'compelling' explains why the lawyer won the case despite his modest demeanor."
+    },
+    {
+        "id": 214,
+        "text": "CANVAS is to PAINTER as ...",
+        "options": ["COURT is to JUDGE", "STAGE is to ACTOR", "KEYBOARD is to TYPIST", "RECIPE is to CHEF", "CLASSROOM is to TEACHER"],
+        "correctAnswer": "KEYBOARD is to TYPIST",
+        "explanation": "A canvas is the primary tool or medium for a painter, just as a keyboard is the primary tool for a typist. Both pairs represent a tool-to-user relationship."
+    },
+    {
+        "id": 215,
+        "text": "An online store offers a 15% discount on all purchases over $100. If a customer buys an item for $140 after the discount, what was the original price?",
+        "options": ["$160", "$164", "$165", "$168", "$170"],
+        "correctAnswer": "£164.71",
+        "explanation": "Let x be the original price. After 15% discount: 0.85x = 140. Solving for x: x = 140 / 0.85 ≈ $164.71. Rounded to the nearest dollar, it's $165."
+    },
+    {
+        "id": 216,
+        "text": "What would be the next number in the following series? 1... 3... 7 ... 15 ... 31 ...?",
+        "options": ["63", "64", "65", "67", "71"],
+        "correctAnswer": "63",
+        "explanation": "The pattern is: each number is doubling and adding 1. So, 31 * 2 + 1 = 63."
+    },
+    {
+        "id": 217,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. PROLIFIC",
+        "options": ["abundant", "fertile", "barren", "productive", "fecund"],
+        "correctAnswer": "barren",
+        "explanation": "'Prolific' means producing much fruit or foliage or many offspring. 'Barren' means unproductive or sterile, which is the opposite of prolific."
+    },
+    {
+        "id": 218,
+        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 555-123-4567\n* (800) 555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1 212 555 3456\n\nRight column:\n* 555-123-4567\n* 800-555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1-212-555-3456",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "3",
+        "explanation": "Three entries are exactly the same: 555-123-4567, 1-900-CALL-NOW, and 867-5309. The others have slight differences in formatting."
+    },
+    {
+        "id": 219,
+        "text": "A factory produces 1200 units per day. If they increase production by 20% and work for 5 days, how many units will they produce?",
+        "options": ["6000", "7000", "7200", "7500", "8000"],
+        "correctAnswer": "7200",
+        "explanation": "Increased production per day: 1200 * 1.20 = 1440 units. For 5 days: 1440 * 5 = 7200 units."
+    },
+    {
+        "id": 220,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All roses have thorns. Some flowers with thorns are red. Some roses are red.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all roses have thorns and some thorny flowers are red, we don't have enough information to determine if roses specifically are among those red, thorny flowers."
+    },
+    {
+        "id": 221,
+        "text": "SYMPHONY is to ORCHESTRA as ...",
+        "options": ["NOVEL is to LIBRARY", "PAINTING is to MUSEUM", "FILM is to CINEMA", "PLAY is to THEATER", "SCULPTURE is to GALLERY"],
+        "correctAnswer": "PLAY is to THEATER",
+        "explanation": "A symphony is performed by an orchestra, just as a play is performed in a theater. Both pairs represent a performance-to-venue relationship."
+    },
+    {
+        "id": 222,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The politician's _____ statements during the debate left many voters feeling _____ about his true stance on the issues.",
+        "options": ["candid ... informed", "ambiguous ... uncertain", "forthright ... doubtful", "eloquent ... impressed", "verbose ... overwhelmed"],
+        "correctAnswer": "ambiguous ... uncertain",
+        "explanation": "'Ambiguous' means open to more than one interpretation, which would lead voters to feel 'uncertain' about the politician's true stance."
+    },
+    {
+        "id": 223,
+        "text": "What would be the next group of letters in the following series? dgrk... dhsl ... ditm... djun?",
+        "options": ["dkvo", "dkvp", "dkwp", "dlvo", "dlvp"],
+        "correctAnswer": "dkvp",
+        "explanation": "The pattern is: first letter stays 'd', second letter increases alphabetically (g, h, i, j, k), third letter follows the pattern (r, s, t, u, v), fourth letter follows the pattern (k, l, m, n, p)."
+    },
+    {
+        "id": 224,
+        "text": "A car rental company charges $40 per day plus $0.25 per mile driven. If a customer rents a car for 3 days and drives 200 miles, how much will they be charged?",
+        "options": ["$150", "$160", "$170", "$180", "$190"],
+        "correctAnswer": "£170",
+        "explanation": "Daily charge: $40 * 3 = $120. Mileage charge: $0.25 * 200 = $50. Total charge: $120 + $50 = $170."
+    },
+    {
+        "id": 225,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. DILIGENT",
+        "options": ["assiduous", "industrious", "meticulous", "lazy", "thorough"],
+        "correctAnswer": "lazy",
+        "explanation": "'Diligent' means showing persistent and hardworking effort. 'Lazy' means unwilling to work or use energy, which is the opposite of diligent."
+    },
+    {
+        "id": 251,
+        "text": "What would be the next number in the following series? 4... 9... 16 ... 25 ... 36 ...?",
+        "options": ["45", "47", "49", "51", "64"],
+        "correctAnswer": "49",
+        "explanation": "The pattern is the sequence of perfect squares: 2^2, 3^2, 4^2, 5^2, 6^2. The next in the sequence is 7^2 = 49."
+    },
+    {
+        "id": 252,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All programmers know Java. Sarah knows Java. Sarah is a programmer.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all programmers know Java and Sarah knows Java, we can't conclude that everyone who knows Java is a programmer. Sarah might know Java without being a programmer."
+    },
+    {
+        "id": 253,
+        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Johnson & Johnson\n* Procter & Gamble\n* Hewlett-Packard\n* Ben & Jerry's\n* AT&T\n\nRight column:\n* Johnson and Johnson\n* Procter & Gamble\n* Hewlett Packard\n* Ben and Jerry's\n* AT&T",
+        "options": ["1", "2", "3", "4", "5"],
+        "correctAnswer": "2",
+        "explanation": "Only two entries (Procter & Gamble and AT&T) are exactly the same in both columns. The others have differences in the use of '&' vs 'and' or hyphenation."
+    },
+    {
+        "id": 254,
+        "text": "A project manager estimates that a project will take 120 hours to complete. If three team members work on it full-time (8 hours a day), how many days will it take to finish the project?",
+        "options": ["3", "4", "5", "6", "7"],
+        "correctAnswer": "5",
+        "explanation": "Total work hours per day: 3 team members * 8 hours = 24 hours. Days to complete: 120 hours / 24 hours per day = 5 days."
+    },
+    {
+        "id": 255,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The archeologist's _____ research led to a _____ discovery that challenged existing theories about ancient civilizations.",
+        "options": ["cursory ... minor", "meticulous ... groundbreaking", "biased ... controversial", "hasty ... questionable", "theoretical ... practical"],
+        "correctAnswer": "meticulous ... groundbreaking",
+        "explanation": "'Meticulous' means showing great attention to detail, which would lead to a 'groundbreaking' (innovative and important) discovery that challenges existing theories."
+    },
+    {
+        "id": 256,
+        "text": "LENS is to CAMERA as ...",
+        "options": ["WHEEL is to CAR", "SCREEN is to COMPUTER", "STRINGS is to GUITAR", "PAGE is to BOOK", "BRUSH is to PAINT"],
+        "correctAnswer": "STRINGS is to GUITAR",
+        "explanation": "A lens is an essential component that enables a camera to function, just as strings are essential for a guitar to produce sound. Both pairs represent a crucial part-to-whole relationship."
+    },
+    {
+        "id": 257,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. VERBOSE",
+        "options": ["talkative", "concise", "eloquent", "lengthy", "wordy"],
+        "correctAnswer": "concise",
+        "explanation": "'Verbose' means using or containing more words than necessary. 'Concise' means brief but comprehensive, which is the opposite of verbose."
+    },
+    {
+        "id": 258,
+        "text": "A bakery sells 800 loaves of bread per week. If they increase production by 15% for a special event, how many loaves will they produce in that week?",
+        "options": ["880", "900", "920", "940", "960"],
+        "correctAnswer": "920",
+        "explanation": "15% increase of 800 is calculated as: 800 + (15% of 800) = 800 + 120 = 920 loaves"
+    },
+    {
+        "id": 259,
+        "text": "What would be the next group of letters in the following series? cfkp... cglo ... chin... cjim?",
+        "options": ["ckjl", "ckkl", "cklk", "cklj", "cklm"],
+        "correctAnswer": "cklk",
+        "explanation": "The pattern is: first letter stays 'c', second letter increases alphabetically (f, g, h, i, j, k), third letter follows the pattern (k, l, i, j, l), fourth letter follows the pattern (p, o, n, m, k)."
+    },
+    {
+        "id": 260,
+        "text": "A group of six numbers has an average (arithmetic mean) of 15. The first five numbers are 12, 18, 15, 20, and 10. What is the other number?",
+        "options": ["13", "14", "15", "16", "17"],
+        "correctAnswer": "15",
+        "explanation": "The sum of all six numbers must be 15 * 6 = 90. The sum of the first five numbers is 12 + 18 + 15 + 20 + 10 = 75. The sixth number must be 90 - 75 = 15."
+    },
+    {
+        "id": 261,
+        "text": "If a machine can produce 50 widgets in 2 hours, how many widgets can it produce in 5 days if it operates 8 hours per day?",
+        "options": ["2000", "2500", "3000", "3500", "4000"],
+        "correctAnswer": "5000",
+        "explanation": "In 1 hour, the machine produces 25 widgets. In 8 hours (1 day), it produces 25 * 8 = 200 widgets. In 5 days: 200 * 5 = 1000 widgets."
+    },
+    {
+        "id": 262,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All squares are rectangles. Some rectangles are blue. Some squares are blue.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all squares are rectangles and some rectangles are blue, we don't have enough information to determine if squares specifically are among those blue rectangles."
+    },
+    {
+        "id": 263,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. Despite the team's _____ efforts, their project remained _____ and failed to meet the deadline.",
+        "options": ["lackluster ... successful", "tireless ... incomplete", "mediocre ... flawless", "minimal ... unfinished", "excessive ... punctual"],
+        "correctAnswer": "tireless ... incomplete",
+        "explanation": "'Tireless' means constantly active, which contrasts with the project remaining 'incomplete' despite their efforts."
+    },
+    {
+        "id": 264,
+        "text": "DEMOCRACY is to GOVERNMENT as ...",
+        "options": ["CAPITALISM is to ECONOMY", "JUSTICE is to COURT", "EDUCATION is to SCHOOL", "RELIGION is to CHURCH", "HEALTH is to HOSPITAL"],
+        "correctAnswer": "CAPITALISM is to ECONOMY",
+        "explanation": "Democracy is a system of government, just as capitalism is a system of economy. Both pairs represent a system-to-domain relationship."
+    },
+    {
+        "id": 265,
+        "text": "A store offers a 20% discount on all items. If a customer buys a product for $160 after the discount, what was the original price?",
+        "options": ["$180", "$190", "$200", "$210", "$220"],
+        "correctAnswer": "£200",
+        "explanation": "Let x be the original price. After 20% discount: 0.8x = 160. Solving for x: x = 160 / 0.8 = $200."
+    },
+    {
+        "id": 266,
+        "text": "What would be the next number in the following series? 2... 5... 11 ... 23 ... 47 ...?",
+        "options": ["91", "93", "95", "97", "99"],
+        "correctAnswer": "95",
+        "explanation": "The pattern is: each number is doubling and adding 1. So, 47 * 2 + 1 = 95."
+    },
+    {
+        "id": 267,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. BENEVOLENT",
+        "options": ["kind", "generous", "malevolent", "charitable", "benign"],
+        "correctAnswer": "malevolent",
+        "explanation": "'Benevolent' means kind and generous. 'Malevolent' means having or showing a wish to do evil to others, which is the opposite of benevolent."
+    },
+    {
+        "id": 268,
+        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 123 Main St.\n* 456 Elm Avenue\n* 789 Oak Road\n* 321 Pine Lane\n* 654 Cedar Blvd.\n\nRight column:\n* 123 Main Street\n* 456 Elm Ave.\n* 789 Oak Rd.\n* 321 Pine Ln.\n* 654 Cedar Boulevard",
+        "options": ["0", "1", "2", "3", "4"],
+        "correctAnswer": "0",
+        "explanation": "None of the entries are exactly the same. Each pair has differences in abbreviations or spellings of street types."
+    },
+    {
+        "id": 269,
+        "text": "A company's profit increased by 30% from 2022 to 2023. If the profit in 2023 was $260,000, what was the profit in 2022?",
+        "options": ["$182,000", "$190,000", "$200,000", "$210,000", "$230,000"],
+        "correctAnswer": "£200,000",
+        "explanation": "Let x be the 2022 profit. After 30% increase: 1.3x = 260,000. Solving for x: x = 260,000 / 1.3 = $200,000."
+    },
+    {
+        "id": 270,
+        "text": "Assume the first two statements are true. Is the final statement: 1) True, 2) False, or 3) Uncertain based on the information provided? All athletes in this gym are fit. Some fit people are vegetarians. Some athletes in this gym are vegetarians.",
+        "options": ["True", "False", "Uncertain"],
+        "correctAnswer": "Uncertain",
+        "explanation": "While we know all athletes in the gym are fit and some fit people are vegetarians, we don't have enough information to determine if the athletes in this specific gym are among those fit vegetarians."
+    },
+    {
+        "id": 271,
+        "text": "TELESCOPE is to ASTRONOMER as ...",
+        "options": ["STETHOSCOPE is to DOCTOR", "CAMERA is to PHOTOGRAPHER", "PAINTBRUSH is to ARTIST", "CALCULATOR is to ACCOUNTANT", "MICROPHONE is to SINGER"],
+        "correctAnswer": "STETHOSCOPE is to DOCTOR",
+        "explanation": "A telescope is a crucial instrument for an astronomer, just as a stethoscope is a crucial instrument for a doctor. Both pairs represent an essential tool-to-profession relationship."
+    },
+    {
+        "id": 272,
+        "text": "Choose the word or words that, when inserted in the sentence to replace the blank or blanks, best fits the meaning of the sentence. The critic's _____ review of the film was met with _____ from fans who believed the movie deserved more credit.",
+        "options": ["glowing ... agreement", "scathing ... backlash", "neutral ... indifference", "balanced ... controversy", "superficial ... depth"],
+        "correctAnswer": "scathing ... backlash",
+        "explanation": "'Scathing' means severely critical, which would likely lead to 'backlash' (a strong negative reaction) from fans who disagreed with the harsh critique."
+    },
+    {
+        "id": 273,
+        "text": "What would be the next group of letters in the following series? ejot... fkpu ... glqv... hmrw?",
+        "options": ["inrx", "insx", "insw", "iosx", "iosy"],
+        "correctAnswer": "insx",
+        "explanation": "The pattern is: first letter increases alphabetically (e, f, g, h, i), second letter increases alphabetically (j, k, l, m, n), third letter increases alphabetically (o, p, q, r, s), fourth letter increases alphabetically (t, u, v, w, x)."
+    },
+    {
+        "id": 274,
+        "text": "A car travels 240 miles in 4 hours. If it maintains the same speed, how long will it take to travel 360 miles?",
+        "options": ["5 hours", "6 hours", "7 hours", "8 hours", "9 hours"],
+        "correctAnswer": "6 hours",
+        "explanation": "The car's speed is 240 miles / 4 hours = 60 miles per hour. To travel 360 miles at this speed: 360 miles / 60 miles per hour = 6 hours."
+    },
+    {
+        "id": 275,
+        "text": "Choose the word that is most nearly OPPOSITE to the word in capital letters. OPAQUE",
+        "options": ["cloudy", "transparent", "solid", "dense", "obscure"],
+        "correctAnswer": "transparent",
+        "explanation": "'Opaque' means not able to be seen through, impenetrable to light. 'Transparent' means allowing light to pass through so that objects behind can be distinctly seen, which is the opposite of opaque."
     }
+
 ]
