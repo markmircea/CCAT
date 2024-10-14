@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\User;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class UpgradeAccountController extends Controller
 {
@@ -30,20 +32,49 @@ class UpgradeAccountController extends Controller
             'verify' => false, // Only use this for local development!
         ])
         ->get("https://api-m.sandbox.paypal.com/v2/checkout/orders/{$orderId}");
-        
-        if ($response->successful()) {
-            if ($response['status'] === 'COMPLETED') {
-                $user = $request->user();
-                $user->has_paid_subscription = true;
-                $user->subscription_started_at = now();
-                $user->save();
 
+        if ($response->successful() && $response['status'] === 'COMPLETED') {
+            if (auth()->check()) {
+                $this->upgradeUser(auth()->user());
                 return redirect()->route('dashboard')->with('success', 'Congratulations! Your account has been successfully upgraded. You now have access to all premium features.');
             } else {
-                return back()->with('error', 'The payment was not completed. Please try again or contact support if the issue persists.');
+                // Store payment info in session for later use
+                session(['pending_upgrade' => true]);
+                return redirect()->route('register')->with('success', 'Payment successful! Please create an account to complete your upgrade.');
             }
         }
 
         return back()->with('error', 'There was an error processing your payment. Please try again or contact our support team for assistance.');
+    }
+
+    public function completeRegistration(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        if (session('pending_upgrade')) {
+            $this->upgradeUser($user);
+            session()->forget('pending_upgrade');
+        }
+
+        auth()->login($user);
+
+        return redirect()->route('dashboard')->with('success', 'Your account has been created and upgraded successfully!');
+    }
+
+    private function upgradeUser(User $user)
+    {
+        $user->has_paid_subscription = true;
+        $user->subscription_started_at = now();
+        $user->save();
     }
 }

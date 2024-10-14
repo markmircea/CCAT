@@ -75,7 +75,7 @@
     },
     {
         question: "10. Why should I choose your test prep instead of from another test prep site?",
-        answer: "We have taken a good look at our competitions material, none of them are offering what we are. We provide you with the same test that you will be taking to practice on, our competition offers tests that are not made by Crossover's test provider and the questions are not even remotely similar to what you see."
+        answer: "We are previous employees of Crossover so we know exactly what you need to know to get hired. We have taken a good look at our competitions material, none of them are offering what we are. We provide you with the same test that you will be taking to practice on, our competition offers tests that are not made by Crossover's test provider and the questions are not even remotely similar to what you see."
     },
     {
         question: "11. Is my information safe? I don't want to get caught.",

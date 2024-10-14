@@ -8,6 +8,10 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 
+const props = defineProps({
+    pendingUpgrade: Boolean,
+});
+
 const form = useForm({
     name: '',
     email: '',
@@ -17,7 +21,7 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.post(route('register'), {
+    form.post(props.pendingUpgrade ? route('complete.registration') : route('register'), {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
@@ -37,6 +41,10 @@ const submit = () => {
         <p class="mt-2 mb-6 text-sm text-center text-gray-600 dark:text-gray-400">
             Create a new account
         </p>
+
+        <div v-if="pendingUpgrade" class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
+            Your account will be automatically upgraded upon registration.
+        </div>
 
         <form @submit.prevent="submit">
             <div>

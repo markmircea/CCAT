@@ -12,11 +12,11 @@ const props = defineProps({
   },
   width: {
     type: [Number, String],
-    default: null
+    required: true
   },
   height: {
     type: [Number, String],
-    default: null
+    required: true
   }
 });
 
@@ -27,13 +27,16 @@ onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       imgRef.value.src = props.src;
-      isLoaded.value = true;
       observer.disconnect();
     }
   });
 
   observer.observe(imgRef.value);
 });
+
+const onLoad = () => {
+  isLoaded.value = true;
+};
 </script>
 
 <template>
@@ -44,6 +47,7 @@ onMounted(() => {
     :width="width"
     :height="height"
     :class="{ 'opacity-0': !isLoaded, 'opacity-100': isLoaded }"
-    class="transition-opacity duration-300"
+    class="transition-opacity duration-300 rounded-lg shadow-md mx-auto mb-4"
+    @load="onLoad"
   />
 </template>

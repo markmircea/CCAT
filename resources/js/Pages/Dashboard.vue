@@ -145,7 +145,7 @@ onUnmounted(() => {
                         </h1>
                         <p
                             class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
-                            Overview and Practice Tests
+                            As Ex-Crossover Employees we KNOW what you need to KNOW to get hired.
                         </p>
                         <div class="mt-10 flex justify-center space-x-4">
                             <a v-if="!props.isSubscribed" :href="route('free.practice.test')"
@@ -236,16 +236,17 @@ onUnmounted(() => {
                     :class="{ 'animate-fade-in-up': isIntersecting['upgrade-account'] }">
                     <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
                         <h2 class="text-3xl font-bold mb-4">Upgrade to Lifetime Access</h2>
-                        <p class="mb-4">Get unlimited access to all our practice tests and questions. Upgrade now to
+                        <p class="mb-4">Get unlimited lifetime access to all our practice tests and questions. Upgrade now to
                             supercharge your CCAT preparation!</p>
                         <ul class="list-disc list-inside mb-6 space-y-2">
-                            <li>10 Full Practice tests (500 Questions) from the CCAT</li>
-                            <li>380 Verbal practice questions from the CCAT</li>
-                            <li>326 Math & Logic practice questions from the CCAT</li>
-                            <li>260 Spatial Reasoning practice questions from the CCAT</li>
+                            <li>10 Full Practice tests (500 Questions) from the current CCAT</li>
+                            <li>1000+ Verbal practice questions from the CCAT</li>
+                            <li>1000+ Math & Logic practice questions from the CCAT</li>
+                            <li>1000+ Spatial Reasoning practice questions from the CCAT</li>
                             <li>Weekly updates with new questions from the CCAT</li>
+                            <li>Original Tests Available in the same practice conditions so you can get used to the format and structure</li>
                         </ul>
-                        <p class="mb-4">98% OF OUR CUSTOMERS REPORTED PASSING THEIR EXAMS USING OUR PREP SOLUTION -
+                        <p class="mb-4">98% OF OUR USERS REPORTED PASSING THEIR EXAMS USING OUR PREP SOLUTION -
                             LATEST CCAT {{ currentMonthYear }} EXAMS!</p>
                         <Link :href="route('upgrade.account')"
                             class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
@@ -322,8 +323,13 @@ onUnmounted(() => {
                         <p class="mb-4 text-gray-700 dark:text-gray-300">You will be able to take the 50 question test
                             as many times as you want, unlimited access, each time the test will provide you with
                             different questions of the same type just like what you will experience on crossover.</p>
-                        <LazyImage src="/storage/img/crossoversteps.jpg" alt="Crossover Steps"
-                            class="rounded-lg shadow-md mx-auto mb-4" />
+                            <LazyImage
+  src="/storage/img/crossoversteps.jpg"
+  alt="Crossover Steps"
+  :width="1500"
+  :height="938"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
 
                     </div>
@@ -357,8 +363,13 @@ onUnmounted(() => {
 
                         <p class="mb-4 text-gray-700 dark:text-gray-300">Here are some math & logic from the real CCAT:
                         </p>
-                        <LazyImage src="/storage/img/1669372150373_ccat_assessments_2_1500_x751.png"
-                            alt="CCAT Math & Logic Example 1" class="rounded-lg shadow-md mx-auto mb-4" />
+                        <LazyImage
+  src="/storage/img/1669372150373_ccat_assessments_2_1500_x751.png"
+  alt="CCAT Math & Logic Example 1"
+  :width="1500"
+  :height="751"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer: </strong>120</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Explanation: </strong>The number of
@@ -372,8 +383,13 @@ onUnmounted(() => {
                                     Pack</a>, we provide a range of Word Problem questions (easy to hard levels). There
                                 are no other ways to improve your speed except by practicing.</p>
                         </div>
-                        <LazyImage src="/storage/img/1669372162795_ccat_assessments3_1500_x938.png"
-                            alt="CCAT Math & Logic Example 2" class="rounded-lg shadow-md mx-auto mb-4" />
+                        <LazyImage
+  src="/storage/img/1669372162795_ccat_assessments3_1500_x938.png"
+  alt="CCAT Math & Logic Example 2"
+  :width="1500"
+  :height="938"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer:</strong> E</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Explanation: </strong>The pattern
@@ -411,8 +427,13 @@ onUnmounted(() => {
                         <br>
                         <p class="mb-4 text-gray-700 dark:text-gray-300">Here are some verbal questions from the real
                             CCAT:</p>
-                        <LazyImage src="/storage/img/1669372162795_ccat_assessments4_1500_x938.png"
-                            alt="CCAT Verbal Example 1" class="rounded-lg shadow-md mx-auto mb-4" />
+                            <LazyImage
+  src="/storage/img/1669372162795_ccat_assessments4_1500_x938.png"
+  alt="CCAT Verbal Example 1"
+  :width="1500"
+  :height="938"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer:</strong> ESTEEMED is to SEEDY
                         </p>
@@ -430,15 +451,25 @@ onUnmounted(() => {
                                     test</a> does include this question type – let's give it a try!
                             </p>
                         </div>
-                        <LazyImage src="/storage/img/1669372162795_ccat_assessments5_1500_x938.png"
-                            alt="CCAT Verbal Example 2" class="rounded-lg shadow-md mx-auto mb-4" />
+                        <LazyImage
+  src="/storage/img/1669372162795_ccat_assessments5_1500_x938.png"
+  alt="CCAT Verbal Example 2"
+  :width="1500"
+  :height="938"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer:</strong> <em>repulsion</em></p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Explanation:
                             </strong><em>"repulsion"</em> means pushing each other away, while <em>"allure"</em> means
                             being attractive.</p>
-                        <LazyImage src="/storage/img/1669372162795_ccat_assessments6_1500_x938.png"
-                            alt="CCAT Verbal Example 3" class="rounded-lg shadow-md mx-auto mb-4" />
+                            <LazyImage
+  src="/storage/img/1669372162795_ccat_assessments6_1500_x938.png"
+  alt="CCAT Verbal Example 3"
+  :width="1500"
+  :height="938"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center italic mb-4">Source: CCAT</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer: </strong>supercilious ..
                             insolence</p>
@@ -470,8 +501,13 @@ onUnmounted(() => {
                             <li>Block Counting</li>
                         </ul>
                         <br>
-                        <LazyImage src="/storage/img/1669372162795_ccat_assessments7_1500_x938.png"
-                            alt="CCAT Spatial Reasoning Example" class="rounded-lg shadow-md mx-auto mb-4" />
+                        <LazyImage
+  src="/storage/img/1669372162795_ccat_assessments7_1500_x938.png"
+  alt="CCAT Spatial Reasoning Example"
+  :width="1500"
+  :height="938"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer:</strong> C</p>
                         <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Explanation:</strong> All four options
@@ -526,8 +562,13 @@ onUnmounted(() => {
                                 class="text-blue-600 dark:text-blue-400 hover:underline">free questions</a> so that you
                             get what our tests look like.</p>
 
-                        <LazyImage src="/storage/img/1669372162795_ccat_assessments8_1500_x938.png"
-                            alt="CCAT Assessment Timing" class="rounded-lg shadow-md mx-auto mb-4" />
+                            <LazyImage
+  src="/storage/img/1669372162795_ccat_assessments8_1500_x938.png"
+  alt="CCAT Assessment Timing"
+  :width="1500"
+  :height="938"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
                         <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
 
                     </div>

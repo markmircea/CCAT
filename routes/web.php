@@ -4,8 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\UpgradeAccountController;
+use App\Http\Controllers\Auth\CustomRegisterController;
 use Illuminate\Support\Facades\Auth;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +18,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Redirect root to dashboard for all users
-Route::get('/', function () {
-    return redirect()->route('dashboard');
-});
+// Override the default registration route
+Route::get('/register', [CustomRegisterController::class, 'create'])
+    ->middleware(['guest'])
+    ->name('register');
 
 // Dashboard route accessible to all users
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     $user = Auth::user();
     $isSubscribed = $user ? $user->isSubscribed() : false;
 
@@ -42,6 +42,12 @@ Route::get('/full-practice-test', function () {
     return Inertia::render('FullPracticeTest');
 })->name('full.practice.test');
 
+Route::get('/upgrade-account', [UpgradeAccountController::class, 'show'])->name('upgrade.account');
+Route::post('/upgrade-account', [UpgradeAccountController::class, 'process'])->name('upgrade.account.process');
+
+// New route for completing registration after payment
+Route::post('/complete-registration', [UpgradeAccountController::class, 'completeRegistration'])->name('complete.registration');
+
 // Authenticated routes group
 Route::middleware([
     'auth:sanctum',
@@ -49,10 +55,6 @@ Route::middleware([
     'verified',
 ])->group(function () {
     // Add any authenticated-only routes here
-
-    // Upgrade Account route
-    Route::get('/upgrade-account', [UpgradeAccountController::class, 'show'])->name('upgrade.account');
-    Route::post('/upgrade-account', [UpgradeAccountController::class, 'process'])->name('upgrade.account.process');
 });
 
 // Paid user routes group
@@ -96,4 +98,13 @@ Route::middleware([
             return Inertia::render('FullPracticeTestStart', ['testNumber' => $i]);
         })->name("full.practice.test.{$i}.start");
     }
+});
+
+Route::fallback(function () {
+    return app()->call(function () {
+        // Copy the logic from your root route here
+        return Inertia::render('Dashboard', [
+            'isSubscribed' => Auth::check() ? Auth::user()->isSubscribed() : false,
+        ]);
+    });
 });
