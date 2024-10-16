@@ -127,15 +127,28 @@ const sections = ref([
                                                 <span>{{ test.name }}</span>
                                                 <ChevronRightIcon class="h-5 w-5" />
                                                 </Link>
-                                                <a href="#"
-                                                    class="flex items-center text-blue-500 hover:text-blue-700 transition duration-300 mt-2"
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                                        <div v-for="(test, index) in fullPracticeTests" :key="test.route"
+                                            class="flex flex-col">
+                                            <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                                                <a href=""
+                                                    class="flex items-center justify-between text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300 mb-2 animated-link"
                                                     @click="(event) => downloadPdf(event, test.pdfFile)">
-                                                    <DocumentArrowDownIcon class="h-5 w-5 mr-2" />
-                                                    <span>Download PDF</span>
+                                                    <div class="flex items-center">
+                                                        <DocumentArrowDownIcon class="h-5 w-5 mr-2" />
+                                                        <span>Download PDF {{ index + 1 }} - Questions, Answers and
+                                                            Explanations</span>
+                                                    </div>
+                                                    <ChevronRightIcon class="h-5 w-5" />
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="mt-8 flex justify-center">
                                         <Link :href="route('full-practice-test-start')"
                                             class=" text-white font-bold py-2 px-4 rounded animated-link">

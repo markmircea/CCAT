@@ -86,11 +86,15 @@ const error = ref(null);
 const loading = ref(false);
 
 const features = [
-    '10 Full Practice tests (500 Questions) from the current CCAT',
-    '1000+ Verbal practice questions from the CCAT',
-    '1000+ Math & Logic practice questions from the CCAT',
-    '1000+ Spatial Reasoning practice questions from the CCAT',
-    'Weekly updates with new questions from the CCAT',
+"10 Full Practice tests (500 Questions, Answers and Explanations) from the current CCAT",
+  "10 Full PDF files with Questions and Answers (500 ADDITIONAL Questions and Answers and Explanations)",
+  "1000+ Verbal practice questions",
+  "1000+ Math & Logic practice questions",
+  "1000+ Spatial Reasoning practice questions",
+  "Detailed Explanations for ALL Questions ",
+  "Original Tests in the same practice conditions",
+  "Weekly updates with new questions",
+  "Bonus: 3-month EasyAce.AI PRO membership!"
 ];
 
 const currentMonthYear = ref(new Date().toLocaleString('default', { month: 'long', year: 'numeric' }));

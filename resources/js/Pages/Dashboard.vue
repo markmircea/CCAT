@@ -236,14 +236,14 @@ onUnmounted(() => {
 
                 <!-- Upgrade Account Section for non-subscribed users -->
                 <section v-if="!props.isSubscribed" id="upgrade-account" class="mb-12 animate-on-scroll"
-                    :class="{ 'animate-fade-in-up': isIntersecting['upgrade-account'] }">
-                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-xl p-8 text-white overflow-hidden relative">
+    :class="{ 'animate-fade-in-up': isIntersecting['upgrade-account'] }">
+    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-xl p-8 text-white overflow-hidden relative">
       <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-yellow-300 rounded-full opacity-20 animate-pulse"></div>
       <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-32 h-32 bg-pink-400 rounded-full opacity-20 animate-pulse"></div>
 
       <h1 class="text-4xl font-bold text-white dark:text-white mb-2">
-                            <u>Upgrade to Lifetime Access</u>
-                        </h1>
+        <u>Upgrade to Lifetime Access</u>
+      </h1>
 
       <p class="mb-6 text-lg">
         Supercharge your CCAT preparation with unlimited lifetime access to all our practice tests and questions!
@@ -262,8 +262,12 @@ onUnmounted(() => {
         <span class="text-yellow-300">98%</span> OF OUR USERS REPORTED PASSING THEIR EXAMS USING OUR PREP SOLUTION
       </p>
 
-      <p class="mb-8 text-lg">
+      <p class="mb-4 text-lg">
         LATEST VERSION CCAT <strong class="text-pink-300">{{ currentMonthYear }}</strong> EXAMS!
+      </p>
+
+      <p class="mb-8 text-lg font-semibold bg-green-600 p-3 rounded-lg">
+        As a bonus, you get a 3-month subscription to <a href="https://easyace.ai">   EasyAce.AI </a> PRO membership!
       </p>
 
       <Link
@@ -272,11 +276,12 @@ onUnmounted(() => {
       >
         Upgrade Now
         <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
       </Link>
     </div>
   </section>
+
 
                 <!-- Lifetime Plan Information Section for subscribed users -->
                 <section v-if="props.isSubscribed" id="lifetime-plan" class="mb-12 animate-on-scroll"

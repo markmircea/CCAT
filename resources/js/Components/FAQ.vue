@@ -67,7 +67,7 @@
     },
     {
         question: "8. How can I pay?",
-        answer: "Payment can be made through PayPal / Stripe with Credit/Debit card, Bitcoin, and IBAN (International Bank Transfer SEPA for EU) contact support for payment other than PayPal"
+        answer: "Payment can be made through PayPal with Credit/Debit card or PayPal account, and Bitcoin contact support@ccattest.com"
     },
     {
         question: "9. I used my calculator on the first Crossover CCAT, why can't I use it again?",
