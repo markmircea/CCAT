@@ -7,6 +7,7 @@ use App\Http\Controllers\UpgradeAccountController;
 use App\Http\Controllers\Auth\CustomRegisterController;
 use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\QuestionPDFController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,6 +94,8 @@ Route::middleware([
         return Inertia::render('FullPracticeTestStart');
     })->name('full-practice-test-start');
 
+
+
     // Full Practice Test routes
     for ($i = 1; $i <= 10; $i++) {
         Route::get("/full-practice-test-{$i}", function () use ($i) {
@@ -113,3 +116,7 @@ Route::fallback(function () {
         ]);
     });
 });
+
+Route::get('/generate-pdfs', [QuestionPDFController::class, 'generatePDFs'])->name('generate.pdf');
+
+

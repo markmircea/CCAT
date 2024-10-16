@@ -16,7 +16,9 @@ const fullPracticeTests = [
     { name: 'Full Practice Test 9', route: 'full.practice.test.9' },
     { name: 'Full Practice Test 10', route: 'full.practice.test.10' },
 ];
-
+const getTestNumber = (route) => {
+    return parseInt(route.split('.').pop());
+};
 const sections = ref([
     { id: 'overview', title: 'Test Overview' },
     { id: 'structure', title: 'Test Structure' },
@@ -113,14 +115,24 @@ const sections = ref([
                                         maintaining the same structure and difficulty level. Choose any test below to
                                         begin:</p>
 
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-                                        <Link v-for="test in fullPracticeTests" :key="test.route"
-                                            :href="route(test.route)"
-                                            class="flex items-center justify-between p-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300">
-                                        {{ test.name }}
-                                        <ChevronRightIcon class="h-5 w-5" />
-                                        </Link>
-                                    </div>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div v-for="test in fullPracticeTests" :key="test.route" class="flex flex-col">
+            <Link
+                :href="route(test.route)"
+                class="flex items-center justify-between p-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition duration-300 mb-2"
+            >
+                {{ test.name }}
+                <ChevronRightIcon class="h-5 w-5" />
+            </Link>
+            <a :href="route('generate.pdf', { testNumber: getTestNumber(test.route) })"
+            class="text-blue-500 hover:text-blue-700 text-sm"
+            download
+        >
+            Download PDF
+        </a>
+        </div>
+    </div>
+
 
                                     <div class="mt-8 flex justify-center">
                                         <Link :href="route('full-practice-test-start')"
