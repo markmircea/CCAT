@@ -6,6 +6,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\UpgradeAccountController;
 use App\Http\Controllers\Auth\CustomRegisterController;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\PdfDownloadController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\QuestionPDFController;
 
@@ -106,6 +107,9 @@ Route::middleware([
             return Inertia::render('FullPracticeTestStart', ['testNumber' => $i]);
         })->name("full.practice.test.{$i}.start");
     }
+
+    Route::get('/download-pdf/{filename}', [PdfDownloadController::class, 'download'])->name('download.pdf');
+
 });
 
 Route::fallback(function () {
@@ -117,6 +121,6 @@ Route::fallback(function () {
     });
 });
 
-Route::get('/generate-pdfs', [QuestionPDFController::class, 'generatePDFs'])->name('generate.pdf');
+// Route::get('/generate-pdfs', [QuestionPDFController::class, 'generatePDFs'])->name('generate.pdf');
 
 
