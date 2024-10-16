@@ -7,6 +7,8 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
+import GoogleLoginButton from '@/Components/GoogleLoginButton.vue';
+
 
 defineProps({
     canResetPassword: Boolean,
@@ -31,7 +33,7 @@ const submit = () => {
 
 <template>
     <Head title="Log in" />
-
+<div>
     <AuthenticationCard>
         <template #logo>
             <AuthenticationCardLogo />
@@ -91,6 +93,7 @@ const submit = () => {
                 <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
                 </PrimaryButton>
+
             </div>
 
             <div class="text-center mt-4">
@@ -99,5 +102,8 @@ const submit = () => {
                 </Link>
             </div>
         </form>
+        <GoogleLoginButton />
     </AuthenticationCard>
+
+</div>
 </template>

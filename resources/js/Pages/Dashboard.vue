@@ -5,7 +5,6 @@ import LazyImage from '@/Components/LazyImage.vue';
 import { Link } from '@inertiajs/vue3';
 import FAQ from '@/Components/FAQ.vue';
 
-
 const hover = ref('');
 const headerRef = ref(null);
 const bubbleContainer = ref(null);
@@ -90,6 +89,16 @@ const handleScroll = () => {
     }
 };
 
+const features = [
+  "10 Full Practice tests (500 Questions and Answers) from the current CCAT",
+  "10 Full PDF files with Questions and Answers (500 Questions and Answers)",
+  "1000+ Verbal practice questions",
+  "1000+ Math & Logic practice questions",
+  "1000+ Spatial Reasoning practice questions",
+  "Detailed Explanations for ALL Questions ",
+  "Original Tests in the same practice conditions",
+  "Weekly updates with new questions",
+];
 
 onMounted(() => {
     const monthNames = [
@@ -102,23 +111,28 @@ onMounted(() => {
     const year = now.getFullYear();
 
     // Set current month and year
-    currentMonthYear.value = `${month} ${year}`;
+    currentMonthYear.value = `${month.toUpperCase()} ${year}`;
 
     generateShapes();
     window.addEventListener('scroll', handleScroll);
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            isIntersecting.value[entry.target.id] = entry.isIntersecting;
-        });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+    ([entry]) => {
+      isIntersecting.value = entry.isIntersecting;
+    },
+    { threshold: 0.1 }
+  );
 
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-        observer.observe(el);
-    });
+  const section = document.getElementById('upgrade-account');
+  if (section) {
+    observer.observe(section);
+  }
 
-
+  return () => observer.disconnect();
 });
+
+
+
 
 onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll);
@@ -133,9 +147,9 @@ onUnmounted(() => {
 
 <template>
     <AppLayout title="CCAT Cognitive Aptitude Assessments">
-        <div class="bg-gradient-to-b from-blue-100 to-white dark:from-gray-900 dark:to-gray-800 min-h-screen">
+        <div class="bg-gradient-to-b from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-800 min-h-screen">
             <!-- Dynamic Header -->
-            <header ref="headerRef" class="relative overflow-hidden bg-gradient-to-br from-blue-600 to-transparent">
+            <header ref="headerRef" class="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-400 dark:from-blue-600 dark:to-transparent">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <div class="text-center">
                         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-up">
@@ -148,29 +162,18 @@ onUnmounted(() => {
                             As Ex-Crossover Employees we KNOW what you need to KNOW to get hired.
                         </p>
                         <div class="mt-10 flex justify-center space-x-4">
-                            <a v-if="!props.isSubscribed" :href="route('free.practice.test')"
-                                class=" relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
-                                Start Practicing
-                                <a class="hidden md:block"> &nbsp; Now</a>
+                            <Link :href="props.isSubscribed ? route('full-practice-test-start') : route('free.practice.test')"
+                        class="relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
+                        Start Practicing
+                        <span class="hidden md:inline">&nbsp;Now</span>
+                        <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </Link>
 
-                                <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                            <a v-if="props.isSubscribed" :href="route('full-practice-test-start')"
-                                class=" relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
-                                Start Practicing
-                                <div class="hidden md:block"> &nbsp; Now</div>
-                                <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
+
+
+
                             <a href="#definition"
                                 class="relative z-10 inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-full text-white hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 transform hover:scale-105 group">
                                 <div class="hidden md:block">Learn &nbsp;</div> More
@@ -184,7 +187,7 @@ onUnmounted(() => {
                         </div>
                     </div>
                 </div>
-                <svg class="absolute bottom-0 w-full h-16 text-white dark:text-gray-800" preserveAspectRatio="none"
+                <svg class="absolute bottom-0 w-full h-16 text-gray-50 dark:text-gray-800" preserveAspectRatio="none"
                     viewBox="0 0 1440 54">
                     <path fill="currentColor" d="M0 54L1440 0v54H0z"></path>
                 </svg>
@@ -213,7 +216,7 @@ onUnmounted(() => {
 
 
                 <nav class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 mb-8 animate-fade-in">
-                    <p class="font-semibold mb-2 text-lg text-gray-700 dark:text-gray-300">Table of Contents</p>
+                    <p class="font-semibold mb-2 text-lg text-gray-800 dark:text-gray-300">Table of Contents</p>
                     <ul class="space-y-2">
                         <li v-for="(item, index) in ['lifetime-plan', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-CCATtest', 'FAQ']"
                             :key="index">
@@ -234,51 +237,65 @@ onUnmounted(() => {
                 <!-- Upgrade Account Section for non-subscribed users -->
                 <section v-if="!props.isSubscribed" id="upgrade-account" class="mb-12 animate-on-scroll"
                     :class="{ 'animate-fade-in-up': isIntersecting['upgrade-account'] }">
-                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
-                        <h2 class="text-3xl font-bold mb-4">Upgrade to Lifetime Access</h2>
-                        <p class="mb-4">Get unlimited lifetime access to all our practice tests and questions. Upgrade now to
-                            supercharge your CCAT preparation!</p>
-                        <ul class="list-disc list-inside mb-6 space-y-2">
-                            <li>10 Full Practice tests (500 Questions) from the current CCAT</li>
-                            <li>1000+ Verbal practice questions from the CCAT</li>
-                            <li>1000+ Math & Logic practice questions from the CCAT</li>
-                            <li>1000+ Spatial Reasoning practice questions from the CCAT</li>
-                            <li>Weekly updates with new questions from the CCAT</li>
-                            <li>Original Tests Available in the same practice conditions so you can get used to the format and structure</li>
-                        </ul>
-                        <p class="mb-4">98% OF OUR USERS REPORTED PASSING THEIR EXAMS USING OUR PREP SOLUTION -
-                            LATEST CCAT {{ currentMonthYear }} EXAMS!</p>
-                        <Link :href="route('upgrade.account')"
-                            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
-                        Upgrade Now
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
+                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-xl p-8 text-white overflow-hidden relative">
+      <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-yellow-300 rounded-full opacity-20 animate-pulse"></div>
+      <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-32 h-32 bg-pink-400 rounded-full opacity-20 animate-pulse"></div>
+
+      <h1 class="text-4xl font-bold text-white dark:text-white mb-2">
+                            <u>Upgrade to Lifetime Access</u>
+                        </h1>
+
+      <p class="mb-6 text-lg">
+        Supercharge your CCAT preparation with unlimited lifetime access to all our practice tests and questions!
+      </p>
+
+      <ul class="space-y-3 mb-8">
+        <li v-for="(feature, index) in features" :key="index" class="flex items-center">
+          <svg class="h-5 w-5 text-green-300 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>{{ feature }}</span>
+        </li>
+      </ul>
+
+      <p class="mb-6 text-xl font-semibold">
+        <span class="text-yellow-300">98%</span> OF OUR USERS REPORTED PASSING THEIR EXAMS USING OUR PREP SOLUTION
+      </p>
+
+      <p class="mb-8 text-lg">
+        LATEST VERSION CCAT <strong class="text-pink-300">{{ currentMonthYear }}</strong> EXAMS!
+      </p>
+
+      <Link
+        :href="route('upgrade.account')"
+        class="relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group"
+      >
+        Upgrade Now
+        <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
-                        </Link>
-                    </div>
-                </section>
+      </Link>
+    </div>
+  </section>
 
                 <!-- Lifetime Plan Information Section for subscribed users -->
                 <section v-if="props.isSubscribed" id="lifetime-plan" class="mb-12 animate-on-scroll"
                     :class="{ 'animate-fade-in-up': isIntersecting['lifetime-plan'] }">
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Your Lifetime Plan</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">
-                            <strong>Access to:</strong>
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">
+                            <strong>Unlimited Access</strong>
                         </p>
-                        <ul class="list-disc list-inside mb-4 text-gray-700 dark:text-gray-300">
-                            <li>10 Full Practice tests (500 Questions)</li>
-                            <li>380 Verbal practice questions</li>
-                            <li>326 Math & Logic practice questions</li>
-                            <li>260 Spatial Reasoning practice questions</li>
+                        <ul class="list-disc list-inside mb-4 text-gray-800 dark:text-gray-300">
+                            <li>10 Full Practice tests (500 Questions) & PDFs</li>
+                            <li>Verbal practice questions</li>
+                            <li>Math & Logic practice questions</li>
+                            <li>Spatial Reasoning practice questions</li>
                         </ul>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">
                             More practice questions are added weekly.
                         </p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
                             Subscription started: {{ $page.props.auth.user.subscription_started_at }}
                         </p>
                     </div>
@@ -288,8 +305,8 @@ onUnmounted(() => {
                     :class="{ 'animate-fade-in-up': isIntersecting['definition'] }">
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">What are CCAT assessments?</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong
-                                class="text-gray-700 dark:text-white">CCAT –
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong
+                                class="text-gray-800 dark:text-white">CCAT –
                                 Criteria Cognitive Aptitude Test</strong>
                             measures candidates' learning, critical thinking, and problem-solving skills (<strong
                                 class="text-gray-900 dark:text-white">50 questions</strong> under a time limit of
@@ -305,32 +322,39 @@ onUnmounted(() => {
                             calculators are NOT allowed. Some leading employers using CCAT in their hiring process
                             include Crossover, Vista Equity, Lambda School, etc.
                         </p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">CCAT is published by <a
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">CCAT is published by <a
                                 href="https://www.criteriacorp.com/"
                                 class="text-blue-600 dark:text-blue-400 hover:underline">Criteria Corp</a>, which is a
                             reliable assessment provider in Los Angeles. Since its establishment in 2016, the company
                             has provided more than 25 million tests across 60 countries.</p>
-                        <LazyImage src="/storage/img/1669372150373_ccat_assessments_2_1500_x751.png"
-                            alt="CCAT Assessments Overview" class="rounded-lg shadow-md mx-auto mb-4" />
-                        <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
+                            <LazyImage
+  src="/storage/img/1669372150373_ccat_assessments_2_1500_x751.png"
+  alt="CCAT Math & Logic Example 1"
+  :width="1500"
+  :height="751"
+  class="rounded-lg shadow-md mx-auto mb-4"
+/>
+                        <p class="text-center italic mb-4 text-gray-800 dark:text-gray-300">Source: CCAT</p>
 
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">We will provide you with the tools you need to
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">We will provide you with the tools you need to
                             study and pass the exam! To get hired at Crossover for Work you need to score in the 85
                             percentile or top 15%. (MINIMUM 35 / 50 CORRECT)</p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">Signing up for our paid exam will prepare you
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">Signing up for our paid exam will prepare you
                             for ALL the questions on the test, make a small investment today for a greater future
                             tomorrow.</p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">You will be able to take the 50 question test
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">You will gain access to 10 FULL PRACTICE TESTS, as well as
+                            thousands of additional questions from each question category (Math/Logic, Verbal, Spatial). The access is a lifetime
+                            membership.
+                            You will be able to take the 50 question test
                             as many times as you want, unlimited access, each time the test will provide you with
                             different questions of the same type just like what you will experience on crossover.</p>
                             <LazyImage
-  src="/storage/img/crossoversteps.jpg"
+  src="/storage/img/crossoversteps.png"
   alt="Crossover Steps"
-  :width="1500"
-  :height="938"
+
   class="rounded-lg shadow-md mx-auto mb-4"
 />
-                        <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
+                        <p class="text-center italic mb-4 text-gray-800 dark:text-gray-300">Source: CCAT</p>
 
                     </div>
                 </section>
@@ -339,7 +363,7 @@ onUnmounted(() => {
                     :class="{ 'animate-fade-in-up': isIntersecting['math-and-logic-test'] }">
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">CCAT Math & Logic Test</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">CCAT math & logic test usually includes
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">CCAT math & logic test usually includes
                             <strong>22 questions</strong>, assessing candidates' fundamental <strong>algebra skills and
                                 the ability to solve word problems</strong>. The questions may involve proportions,
                             averages, and percentages, graphs, tables, ratios, etc. NO calculators are allowed. You need
@@ -348,10 +372,10 @@ onUnmounted(() => {
                             the test.
                         </p>
 
-                        <h2 id="question-types" class="text-2xl  text-gray-700 dark:text-gray-300 white font-semibold mt-6 mb-2">Types of Math and
+                        <h2 id="question-types" class="text-2xl  text-gray-800 dark:text-gray-300 white font-semibold mt-6 mb-2">Types of Math and
                             Logic Questions</h2>
-                        <p class=" text-gray-700 dark:text-gray-300">Common types of math and logic test questions include:</p>
-                        <ul class="list-disc  text-gray-700 dark:text-gray-300 list-inside space-y-1">
+                        <p class=" text-gray-800 dark:text-gray-300">Common types of math and logic test questions include:</p>
+                        <ul class="list-disc  text-gray-800 dark:text-gray-300 list-inside space-y-1">
                             <li>Basic Arithmetic</li>
                             <li>Algebra</li>
                             <li>Word Problems</li>
@@ -361,7 +385,7 @@ onUnmounted(() => {
                         </ul>
                         <br>
 
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">Here are some math & logic from the real CCAT:
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">Here are some math & logic from the real CCAT:
                         </p>
                         <LazyImage
   src="/storage/img/1669372150373_ccat_assessments_2_1500_x751.png"
@@ -370,12 +394,12 @@ onUnmounted(() => {
   :height="751"
   class="rounded-lg shadow-md mx-auto mb-4"
 />
-                        <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer: </strong>120</p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Explanation: </strong>The number of
+                        <p class="text-center italic mb-4 text-gray-800 dark:text-gray-300">Source: CCAT</p>
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong>Answer: </strong>120</p>
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong>Explanation: </strong>The number of
                             customers the cashier can ring up in eight hours: 15 x 8 = 120.</p>
-                        <div class="bg-blue-100 dark:bg-blue-900 p-4 rounded-lg my-4">
-                            <p class="text-gray-700 dark:text-gray-300">This type of question is called Word Problem.
+                        <div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg my-4">
+                            <p class="text-gray-800 dark:text-gray-300">This type of question is called Word Problem.
                                 Word Problem questions are indeed calculation questions with short contexts, which
                                 involve addition, subtraction, division, and multiplication. Within our <a
                                     href="https://CCATtest.com/numerical-reasoning-test/"
@@ -390,9 +414,9 @@ onUnmounted(() => {
   :height="938"
   class="rounded-lg shadow-md mx-auto mb-4"
 />
-                        <p class="text-center italic mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer:</strong> E</p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Explanation: </strong>The pattern
+                        <p class="text-center italic mb-4 text-gray-800 dark:text-gray-300">Source: CCAT</p>
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong>Answer:</strong> E</p>
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong>Explanation: </strong>The pattern
                             should be an upside-down triangle followed by a triangle. So, the question mark should be
                             replaced by an upside-down triangle.</p>
                     </div>
@@ -402,30 +426,30 @@ onUnmounted(() => {
                     :class="{ 'animate-fade-in-up': isIntersecting['verbal-test'] }">
                     <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">CCAT Verbal Test</h2>
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Read more:</strong> <a
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong>Read more:</strong> <a
                                 href="https://CCATtest.com/verbal-reasoning-tests-ultimate-guide"
                                 class="text-blue-600 dark:text-blue-400 hover:underline">What is a Verbal Reasoning
                                 Test?</a></p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">CCAT verbal test typically contains <strong>17
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">CCAT verbal test typically contains <strong>17
                                 questions</strong>, challenging candidates to <strong>identify a word's correct meaning,
                                 recognize relationships between words, and select appropriate words in specific
                                 contexts.</strong></p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">For both native and non-native English
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">For both native and non-native English
                             speakers, it's necessary to get familiar with different question types in CCAT. If English
                             is not your first language, your English should be properly improved to pass this verbal
                             test.</p>
 
-                        <h2 id="question-types" class="text-2xl  text-gray-700 dark:text-gray-300 font-semibold mt-6 mb-2">Types of Verbal
+                        <h2 id="question-types" class="text-2xl  text-gray-800 dark:text-gray-300 font-semibold mt-6 mb-2">Types of Verbal
                             Test Questions</h2>
-                        <p class=" text-gray-700 dark:text-gray-300">Common types of verbal test questions include:</p>
-                        <ul class="list-disc list-inside space-y-1  text-gray-700 dark:text-gray-300">
+                        <p class=" text-gray-800 dark:text-gray-300">Common types of verbal test questions include:</p>
+                        <ul class="list-disc list-inside space-y-1  text-gray-800 dark:text-gray-300">
                             <li>Synonyms and Antonyms</li>
                             <li>Analogies</li>
                             <li>Sentence Completion</li>
                             <li>Reading Comprehension</li>
                         </ul>
                         <br>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300">Here are some verbal questions from the real
+                        <p class="mb-4 text-gray-800 dark:text-gray-300">Here are some verbal questions from the real
                             CCAT:</p>
                             <LazyImage
   src="/storage/img/1669372162795_ccat_assessments4_1500_x938.png"
@@ -434,10 +458,10 @@ onUnmounted(() => {
   :height="938"
   class="rounded-lg shadow-md mx-auto mb-4"
 />
-                        <p class="text-center mb-4 text-gray-700 dark:text-gray-300">Source: CCAT</p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Answer:</strong> ESTEEMED is to SEEDY
+                        <p class="text-center mb-4 text-gray-800 dark:text-gray-300">Source: CCAT</p>
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong>Answer:</strong> ESTEEMED is to SEEDY
                         </p>
-                        <p class="mb-4 text-gray-700 dark:text-gray-300"><strong>Explanation:</strong> The relationship
+                        <p class="mb-4 text-gray-800 dark:text-gray-300"><strong>Explanation:</strong> The relationship
                             between DELUSIONAL (not based in reality) and GROUNDED (based in reality) is antonym because
                             the two words have opposite meanings. So we need to find a pair of words that also has
                             opposite meanings, and that is ESTEEMED (respected and admired) is to SEEDY (bad and
@@ -620,6 +644,19 @@ onUnmounted(() => {
     animation: fadeIn 0.6s ease-out;
 }
 
+.animate-pulse {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -693,3 +730,4 @@ onUnmounted(() => {
     transform: scale(1.1);
 }
 </style>
+

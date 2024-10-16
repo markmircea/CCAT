@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\UpgradeAccountController;
 use App\Http\Controllers\Auth\CustomRegisterController;
+use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -17,6 +18,10 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Google Login Routes
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 // Override the default registration route
 Route::get('/register', [CustomRegisterController::class, 'create'])
