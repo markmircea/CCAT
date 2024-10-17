@@ -31,7 +31,7 @@ class UpgradeAccountController extends Controller
         ->withOptions([
             'verify' => true, // Only use this for local development!
         ])
-        // ->get("https://api-m.sandbox.paypal.com/v2/checkout/orders/{$orderId}");
+         //->get("https://api-m.sandbox.paypal.com/v2/checkout/orders/{$orderId}");
         ->get("https://api-m.paypal.com/v2/checkout/orders/{$orderId}");
 
         if ($response->successful() && $response['status'] === 'COMPLETED') {

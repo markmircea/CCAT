@@ -34,6 +34,9 @@ const logout = () => {
 const isAuthenticated = computed(() => usePage().props.auth.user !== null);
 const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscription ?? false);
 
+const currentYear = computed(() => new Date().getFullYear());
+
+
 </script>
 
 <template>
@@ -304,9 +307,20 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="flex-grow">
                 <slot />
             </main>
+
+            <!-- Footer -->
+
+        <footer class="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500 dark:text-gray-400">
+                © {{ currentYear }}
+                <a href="mailto:support@ccattest.com" class="hover:text-gray-700 dark:hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+                    support@ccattest.com
+                </a>
+            </div>
+        </footer>
 
             <!-- Dark Mode Toggle -->
             <DarkModeToggle />
@@ -315,9 +329,8 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
 </template>
 
 <style scoped>
-/* ... (previous styles remain the same) ... */
 
-/* Add this new style for the icons */
+
 .nav-icon {
     display: inline-flex;
     align-items: center;
@@ -325,5 +338,18 @@ const isSubscribed = computed(() => usePage().props.auth.user?.has_paid_subscrip
     width: 24px;
     height: 24px;
     margin-right: 8px;
+}
+
+.min-h-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 </style>

@@ -98,6 +98,7 @@ const features = [
   "Detailed Explanations for ALL Questions ",
   "Original Tests in the same practice conditions",
   "Weekly updates with new questions",
+  "24/7 Support"
 ];
 
 onMounted(() => {
@@ -632,11 +633,14 @@ onUnmounted(() => {
                                 clip-rule="evenodd"></path>
                         </svg>
                         </Link>
+
                     </div>
                 </section>
 
+
             </main>
         </div>
+
     </AppLayout>
 </template>
 

@@ -157,8 +157,8 @@ const questions = ref([
     {
         id: 23,
         text: "If a clock shows 3:45, what is the angle between the hour and minute hands?",
-        options: ["67.5°", "82.5°", "90°", "97.5°", "112.5°"],
-        correctAnswer: "97.5°"
+        options: ["67.5°", "82.5°", "90°",  "157.5°", "180°"],
+        correctAnswer: "157.5°"
     },
     {
         id: 24,
@@ -232,11 +232,15 @@ const getExplanation = (question, userAnswer) => {
         case 6:
             return "If 5 cats can catch 5 mice in 5 minutes, then 1 cat can catch 1 mouse in 5 minutes. The ratio remains the same.";
         case 7:
+            return "The pattern from top to bottom is Light, Gray, Dark, 1 units, 2 units, 3 units. Aplying this we find that the answer is B";
         case 8:
+            return "All of the items have 3 points except for D";
         case 9:
+            return "The pattern is Triangle, Circle, Triangle, Circle, so the answer would be D Triangle."
         case 10:
+            return "Look at the images from Left to Right - Top to Bottom and you can see that they are rotating clockwise.";
         case 11:
-            return "This question requires visual pattern recognition. Try to identify the rule that applies to the other shapes or patterns.";
+            return "The bottom row is the same as the top row but offset to the right (with wrap around) 1 unit. Answer A is the only one thats offset to the left.";
         case 12:
             return "50% higher than 900 is calculated as: 900 + (50% of 900) = 900 + 450 = 1350";
         case 13:
@@ -260,13 +264,13 @@ const getExplanation = (question, userAnswer) => {
         case 22:
             return "'Frugal' means economical in use or expenditure; prudently saving or sparing; not wasteful.";
         case 23:
-            return "At 3:45, the hour hand has moved 3/4 of the way from 3 to 4. The minute hand is at 9. The angle between them is 97.5°.";
+            return "The minute hand moves 360 degrees in 60 minutes. Each minute corresponds to 6 degrees (360° ÷ 60). The hour hand moves 360 degrees in 12 hours. Each hour corresponds to 30 degrees (360° ÷ 12). Since it's 3:45, the hour hand has moved 3/4 of the way between 3 and 4. The hour hand moves 0.5 degrees per minute (30° ÷ 60), so in 45 minutes, it has moved 45×0.5=22.5∘45×0.5=22.5 ∘ .Therefore, the hour hand is at 90+22.5=112.5∘90+22.5=112.5 ∘.Angle Between the Hands. The difference between the positions of the minute and hour hands is ∣270−112.5∣=157.5∘∣270−112.5∣=157.5 ∘ .";
         case 24:
             return "The sequence is decreasing by 1, then 2, then 3, then 4. So the next decrease should be 5, making the next number 10.";
         case 25:
-            return "This is a code where each letter represents another letter. You need to find the pattern to decode 'OVML' as 'ROOM'.";
+            return "Given: 'VXJGL' stands for 'HOUSE' Let's match each letter: V = H | X = O | J = U |G = S |L = E The correct pattern is that each letter in the code is 4 alphabets after the actual letter. So to encode, we move 4 letters forward, and to decode, we move 4 letters backward. Now, let's decode 'OVML' by moving 4 letters backward for each: O - 4 = K | V - 4 = R | M - 4 = I (wrapping around from A to Z) L - 4 = H This gives us 'KRIH', which doesn't spell anything. But moving one more letter backward for each: K - 1 = J R - 1 = Q I - 1 = H H - 1 = G";
         default:
-            return "No specific explanation available for this question.";
+            return "Analyze the image properly to find the correct answer.";
     }
 };
 </script>

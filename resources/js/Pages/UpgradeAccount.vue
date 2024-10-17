@@ -94,10 +94,27 @@ const features = [
   "Detailed Explanations for ALL Questions ",
   "Original Tests in the same practice conditions",
   "Weekly updates with new questions",
-  "Bonus: 3-month EasyAce.AI PRO membership!"
+  "24/7 Support",
+  "Bonus: 3-month EasyAce.AI PRO membership!",
 ];
 
 const currentMonthYear = ref(new Date().toLocaleString('default', { month: 'long', year: 'numeric' }));
+
+const gtag_report_conversion = (url, transaction_id) => {
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16743315494/P4MSCMX8l94ZEKbw6q8-',
+        'value': 49.99,
+        'currency': 'USD',
+        'transaction_id': '',
+        'event_callback': callback
+    });
+    return false;
+};
 
 const initPayPalButton = () => {
     paypal.Buttons({
@@ -116,6 +133,8 @@ const initPayPalButton = () => {
             return actions.order.capture().then(function(orderData) {
                 if (orderData.status === 'COMPLETED') {
                     form.paypal_order_id = orderData.id;
+                    gtag_report_conversion(undefined, orderData.id);
+
                     form.post(route('upgrade.account.process'), {
                         preserveState: true,
                         preserveScroll: true,
