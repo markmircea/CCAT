@@ -1,3 +1,4 @@
+<!--
 <template>
     <button
       @click="toggleDarkMode"
@@ -36,11 +37,11 @@
       </svg>
     </button>
   </template>
-
+-->
   <script setup>
   import { ref, onMounted, watch } from 'vue';
 
-  const isDarkMode = ref(false);
+  const isDarkMode = ref(true);
 
   const toggleDarkMode = () => {
     isDarkMode.value = !isDarkMode.value;
@@ -59,10 +60,13 @@
 
   onMounted(() => {
     const savedDarkMode = localStorage.getItem('darkMode');
-    if (savedDarkMode) {
-      isDarkMode.value = savedDarkMode === 'true';
+    if (savedDarkMode !== null) {
+      // isDarkMode.value = savedDarkMode === 'true';
+      isDarkMode.value = true;
     } else {
-      isDarkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches;
+     // isDarkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches;
+     isDarkMode.value = true;
+
     }
     updateDarkMode();
   });

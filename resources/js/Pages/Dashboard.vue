@@ -155,18 +155,22 @@ onUnmounted(() => {
                     <div class="text-center">
                         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-up">
                             <span class="relative z-10 inline-block transition-transform hover:scale-105 duration-300">
-                                CCAT Cognitive Aptitude Assessments
+                                Criteria Cognitive Aptitude Test (CCAT) / Crossover Psychometric Test
                             </span>
                         </h1>
-                        <p
-                            class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
-                            As Ex-Crossover Employees we KNOW what you need to KNOW to get hired.
-                        </p>
+                        <p class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
+                            As prior Crossover employees we KNOW what you need to KNOW to get hired. Our CCAT exams are the exact same exams used for CROSSOVERS hiring process directly from Criteria Corp.
+                            <br><br>We provide you with the same Questions and Answers that you will be taking on Crossover’s test (Criteria Corp.)
+
+
+                        </p> <p class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
+        LATEST VERSION CCAT <strong class="text-orange-300">{{ currentMonthYear }}</strong> EXAMS!
+      </p>
                         <div class="mt-10 flex justify-center space-x-4">
                             <Link :href="props.isSubscribed ? route('full-practice-test-start') : route('free.practice.test')"
                         class="relative z-10 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105 group">
-                        Start Practicing
-                        <span class="hidden md:inline">&nbsp;Now</span>
+                        Free Practice
+                        <span class="hidden md:inline">&nbsp;Test</span>
                         <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>

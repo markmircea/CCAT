@@ -55,7 +55,7 @@
     },
     {
         question: "5. What study material will I receive?",
-        answer: "You will receive access to the 3 individual sections and the 10 Full Practice Tests. Each individual section will allow you to study each of the subsections seperately or all together. (For Example the Verbal portion has subsection: Synonyms and Antonyms, Analogies, Sentence Completion, Reading Comprehension) You will also have access to the full practice tests and a randomization generator that serves up questions randomly."
+        answer: "You will receive access to the Verbal, Math and Logic with 1000+ Practice Questions sections and the Full Practice Tests. Each individual section will allow you to study each of the subsections seperately or all together. You will also have access to the 10 full practice tests (50 Questions each 500 total) in an environment simulator, the questions will be presented in the same format they will be on the real test, you have a timer as well. At the end you are provided with the correct answers and their explanatins. You will also have PDF access to 10 additional practice tests with answers and explanations. Also a randomization generator that serves up 50 questions randomly out of the pool of 1000."
     },
     {
         question: "6. How is the CCAT structured, what does it look like?",

@@ -7,9 +7,6 @@ const currentRoute = computed(() => page.props.component);
 const currentUrl = computed(() => page.props.url);
 const baseUrl = computed(() => window.location.origin);
 
-console.log('DynamicSEO Component - Current Route:', currentRoute.value);
-console.log('DynamicSEO Component - Current URL:', currentUrl.value);
-console.log('DynamicSEO Component - Base URL:', baseUrl.value);
 
 const title = computed(() => {
   switch (currentRoute.value) {
