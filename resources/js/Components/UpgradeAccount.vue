@@ -5,7 +5,7 @@
       <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-32 h-32 bg-pink-400 rounded-full opacity-20 animate-pulse"></div>
 
       <h1 class="text-4xl font-bold text-white dark:text-white mb-2">
-        <u>Upgrade to Lifetime Access</u>
+        <u>Checkout what we offer!</u>
       </h1>
 
       <p class="mb-6 text-lg">
@@ -54,15 +54,16 @@ const isIntersecting = ref(false);
 const currentMonthYear = ref("");
 
 const features = [
-  "10 Full Practice tests (500 Questions and Answers) from the current CCAT",
-  "10 Full PDF files with Questions and Answers (500 Questions and Answers)",
-  "1000+ Verbal practice questions",
-  "1000+ Math & Logic practice questions",
-  "1000+ Spatial Reasoning practice questions",
-  "Detailed Explanations for ALL Questions ",
-  "Original Tests in the same practice conditions",
+ "10 Full Practice tests with timers (500 Questions, Answers and Explanations) from the current CCAT",
+"10 Additional Full PDF files with Questions and Answers (500 Questions and Answers)",
+"1000+ Verbal practice questions with AI assisted explanations",
+"1000+ Math & Logic practice questions with AI assisted explanations",
+"1000+ Spatial Reasoning practice questions with AI assisted explanations",
+"Detailed Explanations for ALL Questions, (if the answer you selected is incorrect, the AI model will explain to you why its incorrect)",
+  "Original Tests",
+  "Same Practice Conditions",
   "Weekly updates with new questions",
-  "24/7 Support"
+  "24/7 Support via E-mail or Chat!",
 ];
 
 onMounted(() => {

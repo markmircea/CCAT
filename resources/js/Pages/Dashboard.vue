@@ -11,6 +11,8 @@ import VerbalTest from '@/Components/VerbalTest.vue';
 import SpatialReasoningTest from '@/Components/SpatialReasoningTest.vue';
 import CompaniesUsingCCAT from '@/Components/CompaniesUsingCCAT.vue';
 import PracticeWithCCATtest from '@/Components/PracticeWithCCATtest.vue';
+import GetHiredAtCrossover from '@/Components/GetHiredAtCrossover.vue';
+
 import FAQ from '@/Components/FAQ.vue';
 
 const props = defineProps({
@@ -28,7 +30,7 @@ const isIntersecting = ref({});
                 <nav class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 mb-8 animate-fade-in">
                     <p class="font-semibold mb-2 text-lg text-gray-800 dark:text-gray-300">Table of Contents</p>
                     <ul class="space-y-2">
-                        <li v-for="(item, index) in ['lifetime-plan', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-CCATtest', 'FAQ']"
+                        <li v-for="(item, index) in ['lifetime-plan','get-hired-at-crossover', 'definition', 'math-and-logic-test', 'verbal-test', 'spatial-reasoning-test', 'companies-using-ccat', 'practice-with-CCATtest', 'FAQ']"
                             :key="index">
                             <a :href="`#${item}`"
                                 class="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200 flex items-center">
@@ -46,6 +48,7 @@ const isIntersecting = ref({});
 
                 <UpgradeAccount v-if="!props.isSubscribed" />
                 <LifetimePlan v-if="props.isSubscribed" :subscriptionStartDate="$page.props.auth.user.subscription_started_at" />
+                <get-hired-at-crossover/>
                 <Definition />
                 <MathLogicTest />
                 <VerbalTest />

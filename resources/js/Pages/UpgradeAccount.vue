@@ -14,8 +14,8 @@
                             Upgrade to Lifetime Access
                         </h1>
                         <div class="flex items-center mb-6">
-                            <span class="text-3xl font-bold text-green-600 dark:text-green-400">$49.99</span>
-                            <span class="ml-2 text-xl text-gray-500 dark:text-gray-400 line-through">$79.99</span>
+                            <span class="text-3xl font-bold text-green-600 dark:text-green-400">$79.95</span>
+                            <span class="ml-2 text-xl text-gray-500 dark:text-gray-400 line-through">$129.99</span>
                             <span class="ml-2 text-sm font-medium text-red-600 dark:text-red-400">TEMPORARY SALE</span>
                         </div>
 
@@ -87,17 +87,16 @@ const loading = ref(false);
 
 const features = [
 "10 Full Practice tests with timers (500 Questions, Answers and Explanations) from the current CCAT",
-  "10 Full PDF files with Questions and Answers (500 ADDITIONAL Questions and Answers and Explanations) from the current CCAT",
-  "1000+ Verbal practice questions",
-  "1000+ Math & Logic practice questions",
-  "1000+ Spatial Reasoning practice questions",
-  "Detailed Explanations for ALL Questions & Answers ",
-  "Explanation as to why the answer you choose was incorrect",
+"10 Additional Full PDF files with Questions and Answers (500 Questions and Answers)",
+"1000+ Verbal practice questions with AI assisted explanations",
+"1000+ Math & Logic practice questions with AI assisted explanations",
+"1000+ Spatial Reasoning practice questions with AI assisted explanations",
+"Detailed Explanations for ALL Questions, (if the answer you selected is incorrect, the AI model will explain to you why its incorrect)",
   "Original Tests",
   "Same Practice Conditions",
   "Weekly updates with new questions",
-  "24/7 Support",
-  "Bonus: 3-month EasyAce.AI PRO membership!",
+  "24/7 Support via E-mail or Chat!",
+  "Bonus: 3-month EasyAce.AI PRO membership!"
 ];
 
 const currentMonthYear = ref(new Date().toLocaleString('default', { month: 'long', year: 'numeric' }));
@@ -109,7 +108,7 @@ const gtag_report_conversion = (url, transaction_id) => {
         }
     };
     gtag('event', 'conversion', {
-        'send_to': 'AW-16743315494/P4MSCMX8l94ZEKbw6q8-',
+        'send_to': 'AW-1037877088/a1PlCPHcw94ZEOD-8u4D',
         'value': 49.99,
         'currency': 'USD',
         'transaction_id': transaction_id,
@@ -118,13 +117,15 @@ const gtag_report_conversion = (url, transaction_id) => {
     return false;
 };
 
+
+
 const initPayPalButton = () => {
     paypal.Buttons({
         createOrder: (data, actions) => {
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        value: '49.95'
+                        value: '79.95'
                     }
                 }]
             });
