@@ -120,9 +120,9 @@ Signing up for out paid exam will prepare you for ALL the questions on the test.
 
             <strong>It's not easy to qualify for a role on Crossover</strong> because the CCAT is designed to shortlist only the top 1% of applicants.
 
-          <p class="mt-6 text-gray-600 dark:text-gray-300">
+
             <strong>But it's worth it...</strong> because qualifying on Crossover is the ticket to a world-class job (with matching pay).
-          </p>
+
           </p>
 
               </div>
@@ -162,7 +162,7 @@ Signing up for out paid exam will prepare you for ALL the questions on the test.
         </div>
 
         <!-- Visual Steps -->
-        <div class="mt-12  p-6">
+        <div class="mt-12 hidden md:block p-6">
           <div class="flex justify-between items-start w-full">
             <div v-for="(step, index) in visualSteps" :key="index"
                  class="flex-1 relative group">

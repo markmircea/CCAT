@@ -4,15 +4,15 @@
             <div class="text-center">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 animate-fade-in-up">
                     <span class="relative z-10 inline-block transition-transform hover:scale-105 duration-300">
-                        Criteria Cognitive Aptitude Test (CCAT) / Crossover Psychometric Test
+                        Criteria Cognitive Aptitude Test (CCAT) & Crossover Psychometric Test
                     </span>
                 </h1>
                 <p class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
-                    As prior Crossover employees we KNOW what you need to KNOW to get hired. Our CCAT exams are the exact same exams used for CROSSOVERS hiring process directly from Criteria Corp.
-                    <br><br>We provide you with the same Questions and Answers that you will be taking on Crossover's test (Criteria Corp.)
+                    As prior Crossover employees we KNOW what you need to KNOW to get hired. Our CCAT exams are the same exams used by CROSSOVER during the hiring process directly from Criteria Corp.
+                    <br><br>Our Questions, Answers and Explanations help you get a leg up on your competition
                 </p>
                 <p class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
-                    LATEST VERSION CCAT <strong class="text-orange-300">{{ currentMonthYear }}</strong> EXAMS!
+                    Currently serving the latest <strong class="text-orange-300">{{ currentMonthYear }}</strong> version tests!
                 </p>
                 <div class="mt-10 flex justify-center space-x-4">
                     <Link :href="isSubscribed ? route('full-practice-test-start') : route('free.practice.test')"

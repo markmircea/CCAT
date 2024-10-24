@@ -60,6 +60,7 @@ const features = [
 "1000+ Math & Logic practice questions with AI assisted explanations",
 "1000+ Spatial Reasoning practice questions with AI assisted explanations",
 "Detailed Explanations for ALL Questions, (if the answer you selected is incorrect, the AI model will explain to you why its incorrect)",
+"AI Powered Tutoring",
   "Original Tests",
   "Same Practice Conditions",
   "Weekly updates with new questions",
