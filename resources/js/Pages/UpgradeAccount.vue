@@ -91,7 +91,8 @@ const features = [
   "1000+ Verbal practice questions",
   "1000+ Math & Logic practice questions",
   "1000+ Spatial Reasoning practice questions",
-  "Detailed Explanations for ALL Questions ",
+  "Detailed Explanations for ALL Questions & Answers ",
+  "Explanation as to why the answer you choose was incorrect",
   "Original Tests",
   "Same Practice Conditions",
   "Weekly updates with new questions",
@@ -108,7 +109,7 @@ const gtag_report_conversion = (url, transaction_id) => {
         }
     };
     gtag('event', 'conversion', {
-        'send_to': 'AW-1037877088/a1PlCPHcw94ZEOD-8u4D',
+        'send_to': 'AW-16743315494/P4MSCMX8l94ZEKbw6q8-',
         'value': 49.99,
         'currency': 'USD',
         'transaction_id': transaction_id,
@@ -134,12 +135,12 @@ const initPayPalButton = () => {
             return actions.order.capture().then(function(orderData) {
                 if (orderData.status === 'COMPLETED') {
                     form.paypal_order_id = orderData.id;
-                    gtag_report_conversion(undefined, orderData.id);
 
                     form.post(route('upgrade.account.process'), {
                         preserveState: true,
                         preserveScroll: true,
                         onSuccess: (response) => {
+                            gtag_report_conversion(undefined, orderData.id);
                             if (!page.props.auth.user) {
                                 window.location.href = route('register');
                             } else {

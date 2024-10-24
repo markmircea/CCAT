@@ -1,6 +1,8 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import LazyImage from '@/Components/LazyImage.vue';
+import { Link } from '@inertiajs/vue3';
+
 </script>
 
 <template>
@@ -27,6 +29,8 @@ import LazyImage from '@/Components/LazyImage.vue';
                                     <li><a href="#question-types" class="text-blue-600 dark:text-blue-400 hover:underline">Types of Spatial Reasoning Questions</a></li>
                                     <li><a href="#examples" class="text-blue-600 dark:text-blue-400 hover:underline">Example Questions</a></li>
                                     <li><a href="#tips" class="text-blue-600 dark:text-blue-400 hover:underline">Tips for Success</a></li>
+                                    <li><a href="#practice" class="text-blue-600 dark:text-blue-400 hover:underline">Practice Resources</a></li>
+
                                 </ul>
                             </div>
 
@@ -61,7 +65,17 @@ import LazyImage from '@/Components/LazyImage.vue';
                                 <li>Study geometry and practice drawing 3D shapes</li>
                                 <li>Take timed practice tests to improve your speed and accuracy</li>
                             </ul>
+                            <h2 id="practice" class="text-2xl font-semibold mt-6 mb-2">Practice Resources</h2>
+                            <p>To improve your spatial reasoning skills, practice with the continuously generated unlimited questions below:</p>
 
+                            <div class="mt-8 flex justify-center">
+                                <Link
+                                    href="/spatial-test-start"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Start Spatial & Logic Practice
+                                </Link>
+                            </div>
 
                         </div>
                     </div>

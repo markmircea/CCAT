@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\OpenRouterController;
 use App\Http\Controllers\UpgradeAccountController;
 use App\Http\Controllers\Auth\CustomRegisterController;
 use App\Http\Controllers\Auth\GoogleController;
@@ -71,6 +72,9 @@ Route::middleware([
     'verified',
     'paid.user',
 ])->group(function () {
+    Route::post('/api/generate-question', [OpenRouterController::class, 'generateQuestion'])->name('generate.question');
+    Route::post('/api/generate-explanation', [OpenRouterController::class, 'generateExplanation'])->name('generate.explanation');
+
     Route::get('/verbal-test', function () {
         return Inertia::render('VerbalTest');
     })->name('verbal.test');
@@ -90,6 +94,10 @@ Route::middleware([
     Route::get('/spatial-reasoning-test', function () {
         return Inertia::render('SpatialReasoningTest');
     })->name('spatial.reasoning.test');
+
+    Route::get('/spatial-test-start', function () {
+        return Inertia::render('SpatialReasoningTestStart');
+    })->name('spatial.test.start');
 
     Route::get('/full-practice-test-start', function () {
         return Inertia::render('FullPracticeTestStart');
@@ -122,5 +130,7 @@ Route::fallback(function () {
 });
 
 // Route::get('/generate-pdfs', [QuestionPDFController::class, 'generatePDFs'])->name('generate.pdf');
+
+
 
 

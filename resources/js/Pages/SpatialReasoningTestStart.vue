@@ -29,7 +29,7 @@ const fetchNextQuestion = async () => {
 
   try {
     const response = await axios.post('/api/generate-question', {
-      prompt: `Generate a Math & Logic reasoning question with multiple choice answers a, b, c, d similar to the CCAT Math & Logic portion one of these categories 'Basic Arithmetic, Algebra, Word Problems, Data Interpretation, Pattern Recognition, Logical Reasoning' do NOT reference any sort of text or passage, include ALL of the information in the question. I want you to randomize the questions and categories as much as possible, never start with the same one that the user may have seen before from a previous prompt. Format the response as JSON with fields: question, options (array), correctAnswer. ensure this question is different from the following previously asked questions: ${JSON.stringify(previousQuestions.value)}`
+      prompt: `Generate a verbal Spatial reasoning question with multiple choice answers a, b, c, d similar to the CCAT spatial reasoning portion do NOT reference any sort of text or passage, include ALL of the information in the question. I want you to randomize the questions and categories as much as possible, never start with the same one that the user may have seen before from a previous prompt. Format the response as JSON with fields: question, options (array), correctAnswer. ensure this question is different from the following previously asked questions: ${JSON.stringify(previousQuestions.value)}`
     });
 
     const data = response.data;
@@ -88,10 +88,10 @@ const submitAnswer = async (answer) => {
 </script>
 
 <template>
-  <AppLayout title="Math & Logic Practice Test">
+  <AppLayout title="Spatial Reasoning Practice Test">
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-        Math & Logic Practice Test
+        Spatial Reasoning Practice Test
       </h2>
     </template>
 
@@ -101,8 +101,8 @@ const submitAnswer = async (answer) => {
           <div class="p-6 sm:px-20 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
             <!-- Start Screen -->
             <div v-if="!testStarted" class="text-center">
-              <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Math & Logic Practice Test</h1>
-              <p class="mb-4 text-gray-600 dark:text-gray-400">This practice test will help you prepare for the Math & Logic portion of the CCAT. Questions will be generated dynamically, and you can practice as many as you like.</p>
+              <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Spatial Reasoning Practice Test</h1>
+              <p class="mb-4 text-gray-600 dark:text-gray-400">This practice test will help you prepare for the Spatial Reasoning portion of the CCAT. Questions will be generated dynamically, and you can practice as many as you like.</p>
               <button @click="startTest" class="inline-flex items-center px-6 py-3 bg-blue-600 border border-transparent rounded-md font-semibold text-base text-white uppercase tracking-widest hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:border-blue-700 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
                 Start Practice
               </button>
