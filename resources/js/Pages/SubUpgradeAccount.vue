@@ -58,6 +58,7 @@
             <div v-if="loading" class="mt-4 text-center text-gray-600 dark:text-gray-400">
                 Processing your payment...
             </div>
+
         </div>
     </div>
 
@@ -273,10 +274,7 @@ const initializePayPalButton = () => {
             console.log('Payment cancelled:', data);
         }
     }).render('#paypal-button-container-2')
-    .catch(err => {
-        console.error('PayPal button render error:', err);
-        error.value = "There was an error loading the payment button. Please refresh the page.";
-    });
+
 };
 
 onMounted(() => {

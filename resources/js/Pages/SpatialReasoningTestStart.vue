@@ -7,9 +7,7 @@ import axios from 'axios';
 const testStarted = ref(false);
 const currentQuestion = ref(null);
 const userAnswer = ref(null);
-const explanation = ref('');
 const loadingQuestion = ref(false);
-const loadingExplanation = ref(false);
 const error = ref('');
 const answerSubmitted = ref(false);
 const previousQuestions = ref([]);
@@ -23,13 +21,48 @@ const fetchNextQuestion = async () => {
   loadingQuestion.value = true;
   answerSubmitted.value = false;
   userAnswer.value = null;
-  explanation.value = '';
+  currentQuestion.value = null;
   error.value = '';
-  currentQuestion.value = null; // Clear current question while loading new one
 
   try {
     const response = await axios.post('/api/generate-question', {
-      prompt: `Generate a verbal Spatial reasoning question with multiple choice answers a, b, c, d similar to the CCAT spatial reasoning portion do NOT reference any sort of text or passage, include ALL of the information in the question. I want you to randomize the questions and categories as much as possible, never start with the same one that the user may have seen before from a previous prompt. Format the response as JSON with fields: question, options (array), correctAnswer. ensure this question is different from the following previously asked questions: ${JSON.stringify(previousQuestions.value)}`
+      prompt: `Generate a verbal Spatial reasoning question with multiple choice answers. Follow these steps:
+
+1. First, create a clear spatial reasoning question that tests one of these skills:
+   - Mental rotation
+   - Pattern completion
+   - Spatial visualization
+   - Shape relationships
+   - Spatial orientation
+   - Visual sequence completion
+2. Create 4 multiple choice options labeled a, b, c, or d
+3. Create an explanation object that MUST follow this EXACT structure:
+   {
+     "correctAnswerExplanation": "A detailed step-by-step explanation of the correct spatial relationship or pattern and why the correct answer is right",
+     "commonMisconceptions": [
+       "First common error in spatial perception that might lead to a wrong answer",
+       "Second common spatial reasoning mistake or misunderstanding"
+     ],
+     "keyConcepts": [
+       "First key spatial reasoning skill or concept tested in this problem",
+       "Second key spatial visualization technique or principle needed"
+     ]
+   }
+     4. Double-check that the answer in the solution explanation answer matches your multiple choice correct answer and its a option thats actually available in the multiple choice options, if it doesnt go back and fix it to make it so
+
+5. Shuffle answers a,b,c,d and then format the complete response as JSON with EXACTLY this structure:
+   {
+     "question": "The complete question text",
+     "options": ["option a", "option b", "option c", "option d"],
+     "correctAnswer": "a/b/c/d",
+     "explanation": {
+       "correctAnswerExplanation": "step-by-step explanation",
+       "commonMisconceptions": ["misconception 1", "misconception 2"],
+       "keyConcepts": ["concept 1", "concept 2"]
+     }
+   }
+
+Do NOT reference any external text or passage. Include ALL information in the question itself. Make sure this question is different from: ${JSON.stringify(previousQuestions.value)}`
     });
 
     const data = response.data;
@@ -38,14 +71,21 @@ const fetchNextQuestion = async () => {
     }
 
     const questionData = JSON.parse(data.choices[0].message.content);
-    if (!questionData.question || !Array.isArray(questionData.options) || !questionData.correctAnswer) {
+    if (!questionData.question ||
+        !Array.isArray(questionData.options) ||
+        !questionData.correctAnswer ||
+        !questionData.explanation ||
+        !questionData.explanation.correctAnswerExplanation ||
+        !Array.isArray(questionData.explanation.commonMisconceptions) ||
+        !Array.isArray(questionData.explanation.keyConcepts)) {
       throw new Error('Invalid question data format');
     }
 
     currentQuestion.value = {
       text: questionData.question,
       options: questionData.options,
-      correctAnswer: questionData.correctAnswer
+      correctAnswer: questionData.correctAnswer,
+      explanation: questionData.explanation
     };
     previousQuestions.value.push(questionData.question);
   } catch (error) {
@@ -55,35 +95,9 @@ const fetchNextQuestion = async () => {
   loadingQuestion.value = false;
 };
 
-const submitAnswer = async (answer) => {
+const submitAnswer = (answer) => {
   userAnswer.value = answer;
   answerSubmitted.value = true;
-  loadingExplanation.value = true;
-  error.value = '';
-
-  try {
-    const response = await axios.post('/api/generate-explanation', {
-      prompt: `The question was: "${currentQuestion.value.text}". The correct answer is "${currentQuestion.value.correctAnswer}". The user answered "${answer}". The options were: ${JSON.stringify(currentQuestion.value.options)}. Provide a brief explanation of why the correct answer is correct and, if the user's answer is incorrect, why it's incorrect.`
-    });
-
-    const data = response.data;
-    if (!data.choices?.[0]?.message?.content) {
-      throw new Error('Invalid response format');
-    }
-
-    explanation.value = data.choices[0].message.content;
-    if (explanation.value.includes('Please provide the answer choices')) {
-      explanation.value = `I apologize, but I couldn't generate a proper explanation. Here's what we know:\n\n` +
-                         `Your answer: ${answer}\n` +
-                         `Correct answer: ${currentQuestion.value.correctAnswer}\n\n` +
-                         `Please compare your answer with the correct one and review the question.`;
-    }
-  } catch (error) {
-    console.error('Error fetching explanation:', error);
-    error.value = error.response?.data?.error || error.message || 'Error fetching explanation. Please try again.';
-    explanation.value = '';
-  }
-  loadingExplanation.value = false;
 };
 </script>
 
@@ -132,20 +146,69 @@ const submitAnswer = async (answer) => {
                   />
                 </div>
 
-                <!-- Loading Explanation -->
-                <div v-if="loadingExplanation" class="my-4 flex flex-col items-center">
-                  <p class="text-gray-600 dark:text-gray-400">Loading explanation...</p>
-                  <div class="loader"></div>
-                </div>
-
                 <!-- Answer Results -->
-                <div v-if="answerSubmitted && !loadingExplanation" class="mt-4">
-                  <p class="text-gray-900 dark:text-gray-100">Your answer: {{ userAnswer }}</p>
-                  <p class="text-gray-900 dark:text-gray-100">Correct answer: {{ currentQuestion.correctAnswer }}</p>
-                  <div class="mt-2 text-gray-600 dark:text-gray-400">
-                    <strong>Explanation:</strong>
-                    <p>{{ explanation }}</p>
+                <div v-if="answerSubmitted" class="mt-4">
+                  <!-- Result Banner -->
+                  <div class="p-4 mb-6 rounded-lg" :class="[
+                    userAnswer === currentQuestion.correctAnswer
+                      ? 'bg-green-100 dark:bg-yellow-900'
+                      : 'bg-red-100 dark:bg-yellow-900'
+                  ]">
+                    <div class="flex items-center justify-center gap-4">
+                      <div class="text-2xl">
+
+                      </div>
+                      <div class="text-center">
+                        <p class="text-gray-900 dark:text-gray-100 font-medium">
+                          Your answer: {{ userAnswer }}
+                        </p>
+
+                      </div>
+                    </div>
                   </div>
+
+                  <!-- Explanation Sections -->
+                  <div class="space-y-6 text-left">
+                    <!-- Main Explanation -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-sm">
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                        Solution Explanation
+                      </h3>
+                      <p class="text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                        {{ currentQuestion.explanation.correctAnswerExplanation }}
+                      </p>
+                    </div>
+
+                    <!-- Common Misconceptions -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-sm">
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                        Common Misconceptions
+                      </h3>
+                      <ul class="list-disc ml-4 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li v-for="(misconception, index) in currentQuestion.explanation.commonMisconceptions"
+                            :key="index"
+                            class="pl-2">
+                          {{ misconception }}
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- Key Concepts -->
+                    <div class="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-sm">
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                        Key Concepts
+                      </h3>
+                      <ul class="list-disc ml-4 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li v-for="(concept, index) in currentQuestion.explanation.keyConcepts"
+                            :key="index"
+                            class="pl-2">
+                          {{ concept }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Next Question Button -->
                   <button
                     @click="fetchNextQuestion"
                     class="mt-6 w-full inline-flex justify-center rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150"

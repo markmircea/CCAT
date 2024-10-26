@@ -48,6 +48,16 @@
                             Latest Version CCAT {{ currentMonthYear }} Exams!
                         </p>
 
+                        <!-- Money Back Guarantee Badge with responsive sizing
+                        <div class="mt-8 flex justify-center items-center">
+                                <img
+                                    src="/storage/img/Guarantee30Badge-266de129.png"
+                                    alt="30-Day Money Back Guarantee"
+                                    class="h-24 sm:h-32 md:h-36 lg:h-40 w-auto transition-all duration-300"
+                                />
+                            </div>-->
+
+
                         <div v-if="!$page.props.auth.user" class="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-md">
                             Note: After successful payment, you'll be prompted to create an account to access your upgraded features.
                         </div>
@@ -63,7 +73,9 @@
                         <div v-if="loading" class="mt-4 text-center text-gray-600 dark:text-gray-400">
                             Processing your payment...
                         </div>
+
                     </div>
+
                 </div>
                 <sub-upgrade-account/>
             </div>
