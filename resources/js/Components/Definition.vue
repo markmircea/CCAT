@@ -1,5 +1,5 @@
 <template>
-  <section id="definition" class="mb-12 animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting }">
+  <section id="definition" class="mb-12 animate-on-scroll" :class="{ '': isIntersecting }">
     <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600 bg-clip-text text-transparent">
       What are CCAT assessments?
     </h2>
@@ -92,18 +92,5 @@ onMounted(() => {
 });
 </script>
 <style scoped>
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
-}
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 </style>

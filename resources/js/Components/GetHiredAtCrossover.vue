@@ -77,7 +77,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section id="get-hired-at-crossover" class="mb-12 animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting }">
+    <section id="get-hired-at-crossover" class="mb-12 animate-on-scroll" :class="{ 'opacity-100 translate-y-0': isIntersecting }">
       <div class="relative overflow-hidden bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl p-8">
         <!-- Header Section -->
         <div class="relative z-10">
@@ -188,20 +188,8 @@ Signing up for out paid exam will prepare you for ALL the questions on the test.
 </template>
 
 <style scoped>
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
-}
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 .heading {
   @apply font-semibold mb-0.5;

@@ -7,6 +7,22 @@
                         Criteria Cognitive Aptitude Test (CCAT) & Crossover Psychometric Test
                     </span>
                 </h1>
+
+                <!-- Rating Section -->
+                <div class="relative z-10 flex justify-center mb-6 animate-fade-in-up">
+                    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg hover:bg-white/15 transition-all duration-300">
+                        <StarRating :rating="4.7" :readonly="true" size="lg" />
+                        <div class="text-lg font-medium text-white/90">
+                            4.7
+                        </div>
+                        <div class="text-sm text-white/70">
+                            <span class="px-2 py-1 bg-white/10 rounded-full">
+                                <a href="/free-practice-test#reviews" class="text-sm text-white/70 hover:text-white transition-colors"> 26 reviews</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
                 <p class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
                     As prior Crossover employees we KNOW what you need to KNOW to get hired. Our CCAT exams are the same exams used by CROSSOVER during the hiring process directly from Criteria Corp.
                     <br><br>Our Questions, Answers and Explanations help you get a leg up on your competition
@@ -65,6 +81,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Link } from '@inertiajs/vue3';
+import StarRating from '@/Components/Stars.vue';
 
 const props = defineProps({
     isSubscribed: Boolean
@@ -180,5 +197,24 @@ onUnmounted(() => {
     75% {
         transform: translate(10px, -45px) scale(1.05);
     }
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Optional: Add a subtle pulse animation to draw attention to the rating */
+@keyframes subtle-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.animate-subtle-pulse {
+    animation: subtle-pulse 3s ease-in-out infinite;
 }
 </style>

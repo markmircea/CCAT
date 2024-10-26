@@ -5,6 +5,7 @@ import { Link } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Timer from '@/Components/Timer.vue';
 import Question from '@/Components/Question.vue';
+import Review from '../Components/Review.vue';
 
 const testStarted = ref(false);
 const currentQuestionIndex = ref(0);
@@ -416,6 +417,11 @@ const getExplanation = (question, userAnswer) => {
                         </div>
                     </div>
                 </div>
+                <div id="reviews">
+                <Review
+    :test-completed="testCompleted"
+    :test-started="testStarted"
+/></div>
             </div>
         </div>
     </AppLayout>

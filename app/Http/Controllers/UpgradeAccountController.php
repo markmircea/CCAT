@@ -29,10 +29,10 @@ class UpgradeAccountController extends Controller
         // Verify the PayPal payment
         $response = Http::withBasicAuth(config('services.paypal.client_id'), config('services.paypal.secret'))
         ->withOptions([
-            'verify' => true, // Only use this for local development!
+            'verify' => false, // Only use this for local development!
         ])
-        // ->get("https://api-m.sandbox.paypal.com/v2/checkout/orders/{$orderId}");
-        ->get("https://api-m.paypal.com/v2/checkout/orders/{$orderId}");
+         ->get("https://api-m.sandbox.paypal.com/v2/checkout/orders/{$orderId}");
+        //->get("https://api-m.paypal.com/v2/checkout/orders/{$orderId}");
 
         if ($response->successful() && $response['status'] === 'COMPLETED') {
             if (auth()->check()) {

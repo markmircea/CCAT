@@ -9,7 +9,6 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import GoogleLoginButton from '@/Components/GoogleLoginButton.vue';
 
-
 const props = defineProps({
     pendingUpgrade: Boolean,
 });
@@ -37,14 +36,14 @@ const submit = () => {
             <AuthenticationCardLogo />
         </template>
 
-        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900 dark:text-gray-100">
+        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-100">
             Join Us
         </h2>
-        <p class="mt-2 mb-6 text-sm text-center text-gray-600 dark:text-gray-400">
+        <p class="mt-2 mb-6 text-sm text-center text-gray-400">
             Create a new account
         </p>
 
-        <div v-if="pendingUpgrade" class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
+        <div v-if="pendingUpgrade" class="mb-4 font-medium text-sm text-green-400">
             Your account will be automatically upgraded upon registration.
         </div>
 
@@ -108,7 +107,7 @@ const submit = () => {
                         <Checkbox id="terms" v-model:checked="form.terms" name="terms" required />
 
                         <div class="ms-2">
-                            I agree to the <a target="_blank" :href="route('terms.show')" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Terms of Service</a> and <a target="_blank" :href="route('policy.show')" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">Privacy Policy</a>
+                            I agree to the <a target="_blank" :href="route('terms.show')" class="underline text-sm text-gray-400 hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-gray-800">Terms of Service</a> and <a target="_blank" :href="route('policy.show')" class="underline text-sm text-gray-400 hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-gray-800">Privacy Policy</a>
                         </div>
                     </div>
                     <InputError class="mt-2" :message="form.errors.terms" />
@@ -116,7 +115,7 @@ const submit = () => {
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <Link :href="route('login')" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
+                <Link :href="route('login')" class="underline text-sm text-gray-400 hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-gray-800">
                     Already have an account? Log in
                 </Link>
 
@@ -126,6 +125,5 @@ const submit = () => {
             </div>
         </form>
         <GoogleLoginButton />
-
     </AuthenticationCard>
 </template>

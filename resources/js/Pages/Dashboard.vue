@@ -15,6 +15,10 @@ import GetHiredAtCrossover from '@/Components/GetHiredAtCrossover.vue';
 
 import FAQ from '@/Components/FAQ.vue';
 
+import StarRating from '@/Components/Stars.vue';
+
+const rating = ref(4.7);
+const totalReviews = ref(26);
 const props = defineProps({
     isSubscribed: Boolean
 });
@@ -61,32 +65,64 @@ const isIntersecting = ref({});
                     <FAQ />
                 </section>
 
-                <section id="free-practice-test" class="animate-on-scroll"
-                    :class="{ 'animate-fade-in-up': isIntersecting['free-practice-test'] }">
-                    <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
-                        <h2 class="text-3xl font-bold mb-4">Try our Free Practice Test</h2>
-                        <p class="mb-4">Want to experience what a CCAT is like before committing to a full test? We
-                            offer a free practice test that simulates the CCAT experience. This shorter version includes
-                            25 questions to be completed in 7:30 minutes, covering verbal, math and logic, and spatial
-                            reasoning questions.</p>
-                        <ul class="list-disc list-inside mb-6 space-y-2">
-                            <li>25 questions in 7:30 minutes</li>
-                            <li>Covers all CCAT question types</li>
-                            <li>No registration required</li>
-                            <li>Immediate results and explanations</li>
-                        </ul>
-                        <Link :href="route('free.practice.test')"
-                            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
-                        Start Free Practice Test
-                        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        </Link>
+                <section id="free-practice-test" class="animate-on-scroll" :class="{ 'animate-fade-in-up': isIntersecting['free-practice-test'] }">
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl shadow-2xl p-8 relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_-20%,rgba(255,255,255,0.1),transparent)]" />
+
+            <div class="relative">
+                <!-- Header and Rating -->
+                <div class="space-y-4 mb-8">
+                    <h2 class="text-3xl font-bold text-white">Try our Free Practice Test</h2>
+                    <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
+                        <StarRating :rating="rating" :readonly="true" size="md" />
+                        <div class="text-sm font-medium text-white/90">
+                            {{ rating.toFixed(1) }}
+                        </div>
+                        <a href="/free-practice-test#reviews" class="text-sm text-white/70 hover:text-white transition-colors">
+                            ({{ totalReviews.toLocaleString() }} {{ totalReviews === 1 ? 'review' : 'reviews' }})
+                        </a>
                     </div>
-                </section>
+                </div>
+
+                <!-- Description -->
+                <p class="text-white/90 text-lg mb-6">
+                    Want to experience what a CCAT is like before committing to a full test? We
+                    offer a free practice test that simulates the CCAT experience. This shorter version includes
+                    25 questions to be completed in 7:30 minutes, covering verbal, math and logic, and spatial
+                    reasoning questions.
+                </p>
+
+                <!-- Features -->
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <li v-for="feature in [
+                        '25 questions in 7:30 minutes',
+                        'Covers all CCAT question types',
+                        'No registration required',
+                        'Immediate results and explanations'
+                    ]" :key="feature" class="flex items-center text-white/90">
+                        <svg class="w-5 h-5 mr-2 text-emerald-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        {{ feature }}
+                    </li>
+                </ul>
+
+                <!-- CTA Button -->
+                <Link :href="route('free.practice.test')"
+                    class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg bg-white text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/20 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Start Free Practice Test
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </Link>
+            </div>
+        </div>
+    </section>
             </main>
         </div>
     </AppLayout>

@@ -7,15 +7,18 @@
         </template>
 
         <div class="py-12">
-            <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="p-6 lg:p-8 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
                         <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                             Upgrade to Lifetime Access
                         </h1>
                         <div class="flex items-center mb-6">
-                            <span class="text-3xl font-bold text-green-600 dark:text-green-400">$79.95</span>
-                            <span class="ml-2 text-xl text-gray-500 dark:text-gray-400 line-through">$129.99</span>
+                            <span class="text-3xl font-bold text-green-600 dark:text-green-400">$49.95</span>
+                            <span class="ml-2 text-xl text-gray-500 dark:text-gray-400 line-through">$79.95</span>
                             <span class="ml-2 text-sm font-medium text-red-600 dark:text-red-400">TEMPORARY SALE</span>
                         </div>
 
@@ -55,54 +58,56 @@
 
                         <div class="mt-8 flex justify-center">
     <div id="paypal-button-container" class="w-full max-w-md bg-gray-100 dark:bg-gray-600 p-4 rounded-md"></div>
-</div>
+  </div>
 
                         <div v-if="loading" class="mt-4 text-center text-gray-600 dark:text-gray-400">
                             Processing your payment...
                         </div>
                     </div>
                 </div>
+                <sub-upgrade-account/>
+            </div>
             </div>
         </div>
+        <review/>
     </AppLayout>
-</template>
-<script setup>
-import { onMounted, ref } from 'vue';
-import AppLayout from '@/Layouts/AppLayout.vue';
-import { useForm } from '@inertiajs/vue3';
-import { usePage } from '@inertiajs/vue3';
+  </template>
+  <script setup>
+  import { onMounted, ref } from 'vue';
+  import AppLayout from '@/Layouts/AppLayout.vue';
+  import { useForm } from '@inertiajs/vue3';
+  import { usePage } from '@inertiajs/vue3';
+  import SubUpgradeAccount from './SubUpgradeAccount.vue';
+  import Review from '../Components/Review.vue';
 
-const props = defineProps({
+  const props = defineProps({
     paypalClientId: String,
-});
+  });
 
-const page = usePage();
+  const page = usePage();
 
-const form = useForm({
+  const form = useForm({
     paypal_order_id: null,
-});
+  });
 
-const error = ref(null);
-const loading = ref(false);
+  const error = ref(null);
+  const loading = ref(false);
 
-const features = [
-"10 Full Practice tests with timers (500 Questions, Answers and Explanations) from the current CCAT",
-"10 Additional Full PDF files with Questions and Answers (500 Questions and Answers)",
-"1000+ Verbal practice questions with AI assisted explanations",
-"1000+ Math & Logic practice questions with AI assisted explanations",
-"1000+ Spatial Reasoning practice questions with AI assisted explanations",
-"Detailed Explanations for ALL Questions, (if the answer you selected is incorrect, the AI model will explain to you why its incorrect)",
-"AI Powered Tutoring",
+  const features = [
+  "10 Full Practice tests with timers (500 Questions, Answers and Explanations) from the current CCAT",
+  "10 Additional Full PDF files with Questions and Answers (500 Questions and Answers)",
+
+  "Detailed Explanations for ALL Questions",
   "Original Tests",
   "Same Practice Conditions",
   "Weekly updates with new questions",
   "24/7 Support via E-mail or Chat!",
-  "Bonus: 3-month EasyAce.AI PRO membership!"
-];
 
-const currentMonthYear = ref(new Date().toLocaleString('default', { month: 'long', year: 'numeric' }));
+  ];
 
-const gtag_report_conversion = (url, transaction_id) => {
+  const currentMonthYear = ref(new Date().toLocaleString('default', { month: 'long', year: 'numeric' }));
+
+  const gtag_report_conversion = (url, transaction_id) => {
     var callback = function () {
         if (typeof(url) != 'undefined') {
             window.location = url;
@@ -116,17 +121,17 @@ const gtag_report_conversion = (url, transaction_id) => {
         'event_callback': callback
     });
     return false;
-};
+  };
 
 
 
-const initPayPalButton = () => {
+  const initPayPalButton = () => {
     paypal.Buttons({
         createOrder: (data, actions) => {
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        value: '79.95'
+                        value: '49.95'
                     }
                 }]
             });
@@ -176,9 +181,9 @@ const initPayPalButton = () => {
             console.log('Payment cancelled:', data);
         }
     }).render('#paypal-button-container');
-}
+  }
 
-onMounted(() => {
+  onMounted(() => {
     const script = document.createElement('script');
     script.src = `https://www.paypal.com/sdk/js?client-id=${props.paypalClientId}`;
     script.addEventListener('load', initPayPalButton);
@@ -186,5 +191,5 @@ onMounted(() => {
         error.value = "There was an error loading the payment system. Please refresh the page or try again later.";
     });
     document.body.appendChild(script);
-});
-</script>
+  });
+  </script>

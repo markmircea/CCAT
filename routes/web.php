@@ -9,7 +9,7 @@ use App\Http\Controllers\Auth\CustomRegisterController;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\PdfDownloadController;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\QuestionPDFController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +55,9 @@ Route::post('/upgrade-account', [UpgradeAccountController::class, 'process'])->n
 
 // New route for completing registration after payment
 Route::post('/complete-registration', [UpgradeAccountController::class, 'completeRegistration'])->name('complete.registration');
+
+Route::post('/reviews', [ReviewController::class, 'store']);
+Route::get('/api/reviews', [ReviewController::class, 'getReviews']);
 
 // Authenticated routes group
 Route::middleware([
