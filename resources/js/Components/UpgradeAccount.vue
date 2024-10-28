@@ -98,17 +98,20 @@
   const currentMonthYear = ref("");
 
   const features = [
-    "10 Full Practice tests with timers (500 Questions, Answers and Explanations) from the current CCAT",
+  "10 Full Practice tests with timers (500 Questions, Answers and Explanations) from the current CCAT",
     "10 Additional Full PDF files with Questions and Answers (500 Questions and Answers)",
     "1000+ Verbal practice questions with AI assisted explanations",
     "1000+ Math & Logic practice questions with AI assisted explanations",
     "1000+ Spatial Reasoning practice questions with AI assisted explanations",
     "Detailed Explanations for ALL Questions, (if the answer you selected is incorrect, the AI model will explain to you why its incorrect)",
+    "UNLIMITED generated access links to the Official Aptitude Assessment on Criteria Corp. ONDEMANDASSESSMENT.COM",
+    "UNLIMITED access links to the Official Personality Assessment",
     "AI Powered Tutoring",
     "Original Tests",
     "Same Practice Conditions",
     "Weekly updates with new questions",
     "24/7 Support via E-mail or Chat!",
+
   ];
 
   onMounted(() => {

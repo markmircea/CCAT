@@ -48,9 +48,8 @@ const fetchNextQuestion = async () => {
        "Second key spatial visualization technique or principle needed"
      ]
    }
-     4. Double-check that the answer in the solution explanation answer matches your multiple choice correct answer and its a option thats actually available in the multiple choice options, if it doesnt go back and fix it to make it so
-
-5. Shuffle answers a,b,c,d and then format the complete response as JSON with EXACTLY this structure:
+4. Double-check that the answer in the solution explanation answer matches your multiple choice correct answer and its a option thats actually available in the multiple choice options, if it doesnt go back and fix it to make it so
+5. Shuffle Answers a,b,c,d and then format the complete response as JSON with EXACTLY this structure:
    {
      "question": "The complete question text",
      "options": ["option a", "option b", "option c", "option d"],
@@ -61,9 +60,8 @@ const fetchNextQuestion = async () => {
        "keyConcepts": ["concept 1", "concept 2"]
      }
    }
-
-Do NOT reference any external text or passage. Include ALL information in the question itself. Make sure this question is different from: ${JSON.stringify(previousQuestions.value)}`
-    });
+6. Look at the question again from a different perspective, resolve it and explain it step by step, compare these steps and answer to the previous explanations steps and answer. If you came to a different conclusion this time, find out which explanation is the correct one and use that for correctAnswerExplanation instead of what youve had previously.
+7. Shuffle Answers a,b,c,d again to randomize the position of the correct answer`  });
 
     const data = response.data;
     if (!data.choices?.[0]?.message?.content) {

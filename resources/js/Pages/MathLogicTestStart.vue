@@ -26,9 +26,10 @@ const fetchNextQuestion = async () => {
 
   try {
     const response = await axios.post('/api/generate-question', {
-      prompt: `You are a Math & Logic test generator. Generate a single question and solve it first before creating the options:
+      prompt: `You are a Math & Logic test generator. Generate a single question and resolve it first before creating the options, generate the question from ONE random category from: Basic Arithmetic, Algebra, Word Problems, Data Interpretation, Pattern Recognition, or Logical Reasoning. Do NOT reference any external text or passage. Make sure this question is different from: ${JSON.stringify(previousQuestions.value)}
 
-1. First, solve the problem completely and determine the exact correct answer
+
+1. First, step by step solve the problem and determine the exact correct answer
 2. Create 4 multiple choice options including the correct answer, labeled a, b, c, or d
 3. Create an explanation object that MUST follow this EXACT structure:
    {
@@ -54,8 +55,9 @@ const fetchNextQuestion = async () => {
        "keyConcepts": ["concept 1", "concept 2"]
      }
    }
+6. Look at the question again from a different perspective, resolve it and explain it step by step, compare these steps and answer to the previous explanations steps and answer. If you came to a different conclusion this time, find out which explanation is the correct one and use that for correctAnswerExplanation instead of what youve had previously.
+7. Shuffle Answers a,b,c,d again to randomize the position of the correct answer`
 
-Choose ONE random category from: Basic Arithmetic, Algebra, Word Problems, Data Interpretation, Pattern Recognition, or Logical Reasoning. Do NOT reference any external text or passage. Make sure this question is different from: ${JSON.stringify(previousQuestions.value)}`
     });
 
     const data = response.data;
