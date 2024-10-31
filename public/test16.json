@@ -198,16 +198,11 @@
     },
     {
         "id": 16,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 12 Valley Dr. #4\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.\n\nRight column:\n* 12 Valley Dr.\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "4",
-        "explanation": "Four items are exactly the same: '56 Deerbrook Ln.', '401 Redhawk Ave.', '124 Williams Blvd.', and '3250 Mullin Dr.'. Only '12 Valley Dr. #4' vs '12 Valley Dr.' is different."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace7.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 17,
@@ -424,16 +419,11 @@
     },
     {
         "id": 33,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 123 Main St.\n* 456 Elm Avenue\n* 789 Oak Road\n* 321 Pine Lane\n* 654 Cedar Blvd.\n\nRight column:\n* 123 Main Street\n* 456 Elm Ave.\n* 789 Oak Rd.\n* 321 Pine Ln.\n* 654 Cedar Boulevard",
-        "options": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "correctAnswer": "0",
-        "explanation": "None of the entries are exactly the same. Each pair has differences in abbreviations or spellings of street types."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace6.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 34,
@@ -544,16 +534,11 @@
     },
     {
         "id": 42,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Anderson Consulting\n* Bright Future Technologies\n* Crestview Apartments\n* Deluxe Auto Repair\n* Eagle Eye Security\n\nRight column:\n* Anderson Consulting\n* Bright Future Technology\n* Crestview Appartments\n* Deluxe Auto Repair\n* Eagle Eye Securities",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "2",
-        "explanation": "Only two entries (Anderson Consulting and Deluxe Auto Repair) are exactly the same in both columns. The others have slight differences in spelling or pluralization."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace5.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "E",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 43,

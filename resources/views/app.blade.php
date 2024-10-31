@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16743315494"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1037877088"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -16,7 +16,7 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'AW-16743315494');
+        gtag('config', 'AW-1037877088');
     </script>
     <title inertia>{{ config('app.name', 'CCATtest.COM') }}</title>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">

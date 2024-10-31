@@ -1,79 +1,66 @@
 <template>
-    <section id="upgrade-account" class="mb-12" :class="{ 'opacity-100 translate-y-0': isIntersecting }">
+    <section id="upgrade-account" class="px-4 md:px-0 mb-12" :class="{ 'opacity-100 translate-y-0': isIntersecting }">
       <div class="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 rounded-3xl shadow-2xl">
         <!-- Decorative backgrounds -->
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_-20%,rgba(255,255,255,0.2),transparent)]"></div>
-        <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-300/30 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+        <div class="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-yellow-300/30 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-pink-400/20 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
 
-        <div class="relative p-8 md:p-12">
+        <div class="relative p-4 sm:p-6 md:p-8 lg:p-12">
           <!-- Header -->
           <div class="max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 [text-wrap:balance]">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6 [text-wrap:balance]">
               <span class="inline-block border-b-4 border-yellow-400 pb-2">
                 Checkout what we offer!
               </span>
             </h1>
 
-            <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p class="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 md:mb-8 leading-relaxed">
               Supercharge your CCAT preparation with unlimited lifetime access to all our practice tests and questions!
             </p>
           </div>
 
           <!-- Features -->
-    <div class="grid md:grid-cols-2 gap-6 mb-12">
-      <div
-        v-for="(feature, index) in features"
-        :key="index"
-        class="flex items-start space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/20 transition-colors duration-300"
-      >
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl bg-green-400/20">
-          <svg class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <span class="text-lg text-white/90">{{ feature }}</span>
-      </div>
-    </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
+            <div
+              v-for="(feature, index) in features"
+              :key="index"
+              class="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/10 hover:bg-white/20 transition-colors duration-300"
+            >
+              <div class="flex-shrink-0 w-8 md:w-10 h-8 md:h-10 flex items-center justify-center rounded-lg md:rounded-xl bg-green-400/20">
+                <svg class="h-5 w-5 md:h-6 md:w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span class="text-base md:text-lg text-white/90">{{ feature }}</span>
+            </div>
+          </div>
 
           <!-- Success Rate -->
-          <div class="mb-8 transform hover:scale-105 transition-transform duration-300">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <p class="text-2xl md:text-3xl font-bold text-white text-center">
+          <div class="mb-6 md:mb-8 transform hover:scale-105 transition-transform duration-300">
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/10">
+              <p class="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
                 <span class="text-yellow-300">98%</span> OF OUR USERS REPORTED PASSING THEIR EXAMS USING OUR PREP SOLUTION
               </p>
             </div>
           </div>
 
           <!-- Latest Version -->
-          <div class="mb-8">
-            <p class="text-xl text-white/90 text-center font-medium">
+          <div class="mb-6 md:mb-8">
+            <p class="text-lg md:text-xl text-white/90 text-center font-medium">
               LATEST VERSION CCAT <strong class="text-pink-300">{{ currentMonthYear }}</strong> EXAMS!
             </p>
-          </div>
-
-          <!-- Bonus -->
-          <div class="mb-12 transform hover:scale-105 transition-transform duration-300">
-            <div class="bg-emerald-600/80 backdrop-blur-sm p-6 rounded-2xl border border-emerald-500/30 shadow-lg">
-              <p class="text-xl text-white font-semibold text-center">
-                As a bonus, you get a 3-month subscription to
-                <a href="https://easyace.ai" class="underline decoration-2 underline-offset-4 hover:text-yellow-300 transition-colors">
-                  EasyAce.AI
-                </a>
-                PRO membership!
-              </p>
-            </div>
           </div>
 
           <!-- CTA Button -->
           <div class="text-center">
             <Link
               :href="route('upgrade.account')"
-              class="group inline-flex items-center px-8 py-4 text-lg font-semibold rounded-2xl bg-white text-blue-700 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
+              class="group inline-flex items-center px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold rounded-xl md:rounded-2xl bg-white text-blue-700 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
             >
               Upgrade Now
               <svg
-                class="ml-3 -mr-1 w-6 h-6 transition-transform duration-300 group-hover:translate-x-2"
+                class="ml-2 md:ml-3 -mr-1 w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-2"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -98,20 +85,17 @@
   const currentMonthYear = ref("");
 
   const features = [
-  "10 Full Practice tests with timers (500 Questions, Answers and Explanations) from the current CCAT",
+    "10 Full Practice tests with timers (500 Questions, Answers and Explanations)",
     "10 Additional Full PDF files with Questions and Answers (500 Questions and Answers)",
     "1000+ Verbal practice questions with AI assisted explanations",
     "1000+ Math & Logic practice questions with AI assisted explanations",
     "1000+ Spatial Reasoning practice questions with AI assisted explanations",
     "Detailed Explanations for ALL Questions, (if the answer you selected is incorrect, the AI model will explain to you why its incorrect)",
-    "UNLIMITED generated access links to the Official Aptitude Assessment on Criteria Corp. ONDEMANDASSESSMENT.COM",
-    "UNLIMITED access links to the Official Personality Assessment",
     "AI Powered Tutoring",
     "Original Tests",
     "Same Practice Conditions",
     "Weekly updates with new questions",
     "24/7 Support via E-mail or Chat!",
-
   ];
 
   onMounted(() => {

@@ -347,16 +347,11 @@
     },
     {
         "id": 27,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 555-123-4567\n* (800) 555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1 212 555 3456\n\nRight column:\n* 555-123-4567\n* 800-555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1-212-555-3456",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "3",
-        "explanation": "Three entries are exactly the same: 555-123-4567, 1-900-CALL-NOW, and 867-5309. The others have slight differences in formatting."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace12.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 28,
@@ -506,16 +501,11 @@
     },
     {
         "id": 39,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Anderson Consulting\n* Bright Future Technologies\n* Crestview Apartments\n* Deluxe Auto Repair\n* Eagle Eye Security\n\nRight column:\n* Anderson Consulting\n* Bright Future Technology\n* Crestview Appartments\n* Deluxe Auto Repair\n* Eagle Eye Securities",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "2",
-        "explanation": "Only two entries (Anderson Consulting and Deluxe Auto Repair) are exactly the same in both columns. The others have slight differences in spelling or pluralization."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace13.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 40,

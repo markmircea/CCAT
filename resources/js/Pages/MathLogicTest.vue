@@ -68,13 +68,20 @@ import { Link } from '@inertiajs/vue3';
                             <h2 id="practice" class="text-2xl font-semibold mt-6 mb-2">Practice Resources</h2>
                             <p>To improve your math and logic skills, practice with the continuously generated unlimited questions below:</p>
 
-                            <div class="mt-8 flex justify-center">
+                            <div class="mt-8 flex justify-center space-x-4">
                                 <Link
-                                    href="/math-test-start"
+                                    href="/math-test-json-start"
                                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                                 >
                                     Start Math & Logic Practice
                                 </Link>
+                                <Link
+                                    href="/math-test-start"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Start Math & Logic Practice AI
+                                </Link>
+
                             </div>
                         </div>
                     </div>

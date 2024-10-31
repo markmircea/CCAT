@@ -6,10 +6,11 @@
         <strong>Unlimited Access</strong>
       </p>
       <ul class="list-disc list-inside mb-4 text-gray-800 dark:text-gray-300">
-        <li>10 Full Practice tests (500 Questions) & PDFs</li>
+        <li>Full Practice tests (500 Questions) & PDFs</li>
         <li>Verbal practice questions</li>
         <li>Math & Logic practice questions</li>
         <li>Spatial Reasoning practice questions</li>
+
       </ul>
       <p class="mb-4 text-gray-800 dark:text-gray-300">
         More practice questions are added weekly.

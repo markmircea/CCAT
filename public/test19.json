@@ -214,16 +214,11 @@
     },
     {
         "id": 17,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Mendelson Industries\n* Hernandez Pharmaceuticals\n* Jenkins Architectural Design\n* Holmes Banking and Loans\n* Wheeler Lawn Services\n\nRight column:\n* Mendelson Industries\n* Hernandez Pharmaceuticals\n* Jenkins Architectural Design\n* Holmes Banking and Loans\n* Wheeler Lawn Services",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "5",
-        "explanation": "All five entries in the left column are exactly the same as their corresponding entries in the right column."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong10.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 18,
@@ -347,16 +342,11 @@
     },
     {
         "id": 27,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Crockett Jewelers\n* Samson Flooring\n* Awad, Fischer & Associates\n* Gonzalez Catering\n* Walsh Design Center\n\nRight column:\n* Crockett Jewelers\n* Sampson Flooring\n* Awad, Fischer & Associates\n* Gonzales Catering\n* Welsh Design Center",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "2",
-        "explanation": "Two items are exactly the same: Crockett Jewelers and Awad, Fischer & Associates. The others have slight differences in spelling."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong11.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 28,

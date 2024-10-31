@@ -92,29 +92,19 @@
     },
     {
         "id": 8,
-        "text": "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column? Left column: Barnes, Roland G.; Daniels, Crystal M.; Davis, Keith W.; Freitas, Marc J.; Garfield, Beth S. Right column: Barnes, Roland G.; Daniels, Crystal N.; Davies, Keith W.; Freitas, Marc J.; Garfield, Beth S.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "3",
-        "explanation": "Three items are exactly the same: Barnes, Roland G.; Freitas, Marc J.; and Garfield, Beth S. The differences are in Daniels (M. vs N.) and Davis/Davies."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace18.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 9,
-        "text": "The table below displays the sales figures for a group of realtors over a 2-year period. What was the approximate average sales price for the houses sold by Mrs. Boggs in Year 1? [Table content] Realtor | Houses Sold Year 1 | Total Sales Year 1 | Houses Sold Year 2 | Total Sales Year 2, Boggs | 5 | $1,550,000 | 7 | $2,450,000, Jenkins | 3 | $1,350,000 | 4 | $1,800,000, Miller | 4 | $1,375,000 | 6 | $1,750,000, Wilson | 2 | $825,000 | 5 | $1,850,000, Wright | 7 | $2,050,000 | 5 | $1,505,000",
-        "options": [
-            "$250,000",
-            "$310,000",
-            "$333,333",
-            "$350,000",
-            "$450,000"
-        ],
-        "correctAnswer": "310,000",
-        "explanation": "Mrs. Boggs sold 5 houses for a total of $1,550,000 in Year 1. Average price: $1,550,000 / 5 = $310,000."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace10.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 10,
@@ -212,16 +202,11 @@
     },
     {
         "id": 17,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Johnson & Johnson\n* Procter & Gamble\n* Hewlett-Packard\n* Ben & Jerry's\n* AT&T\n\nRight column:\n* Johnson and Johnson\n* Procter & Gamble\n* Hewlett Packard\n* Ben and Jerry's\n* AT&T",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "2",
-        "explanation": "Only two entries (Procter & Gamble and AT&T) are exactly the same in both columns. The others have differences in the use of '&' vs 'and' or hyphenation."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace19.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 18,
@@ -292,16 +277,11 @@
     },
     {
         "id": 23,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Anderson Consulting\n* Bright Future Technologies\n* Crestview Apartments\n* Deluxe Auto Repair\n* Eagle Eye Security\n\nRight column:\n* Anderson Consulting\n* Bright Future Technology\n* Crestview Appartments\n* Deluxe Auto Repair\n* Eagle Eye Securities",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "2",
-        "explanation": "Only two entries (Anderson Consulting and Deluxe Auto Repair) are exactly the same in both columns. The others have slight differences in spelling or pluralization."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong11.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 24,

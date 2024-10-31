@@ -65,14 +65,22 @@ import { Link } from '@inertiajs/vue3';
                             <p>To improve your verbal skills, practice with the continuously generated unlimited questions below:</p>
 
 
-                            <div class="mt-8 flex justify-center">
+                            <div class="mt-8 flex justify-center space-x-4">
                                 <Link
-                                    href="/verbal-test-start"
-                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                >
-                                    Start Verbal Practice
-                                </Link>
-                            </div>
+        href="/verbal-test-json-start"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+        Start Verbal Practice
+    </Link>
+    <Link
+        href="/verbal-test-start"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+        Start Verbal Practice - AI Generated
+    </Link>
+
+
+</div>
                         </div>
                     </div>
                 </div>

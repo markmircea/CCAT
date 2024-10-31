@@ -290,16 +290,11 @@
     },
     {
         "id": 23,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Ferreira Financial\n* Center City Rental Co.\n* Greenwood Construction\n* Moonrise Valley Bakery\n* West Lake Auto Mall\n\nRight column:\n* Ferreira Financial\n* Center City Rentals\n* Greenwood Construction\n* Moonrise Valley Bakery\n* Westlake Auto Mall",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "2",
-        "explanation": "Only 'Ferreira Financial' and 'Greenwood Construction' are exactly the same in both columns. 'Center City Rental Co.' vs 'Center City Rentals', 'West Lake Auto Mall' vs 'Westlake Auto Mall' are different."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace10.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 24,
@@ -317,16 +312,11 @@
     },
     {
         "id": 25,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 12 Valley Dr. #4\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.\n\nRight column:\n* 12 Valley Dr.\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "4",
-        "explanation": "Four items are exactly the same: '56 Deerbrook Ln.', '401 Redhawk Ave.', '124 Williams Blvd.', and '3250 Mullin Dr.'. Only '12 Valley Dr. #4' vs '12 Valley Dr.' is different."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace2.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 26,

@@ -106,16 +106,11 @@
     },
     {
         "id": 9,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 555-123-4567\n* (800) 555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1 212 555 3456\n\nRight column:\n* 555-123-4567\n* 800-555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1-212-555-3456",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "3",
-        "explanation": "Three entries are exactly the same: 555-123-4567, 1-900-CALL-NOW, and 867-5309. The others have slight differences in formatting."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong9.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 10,
@@ -186,16 +181,11 @@
     },
     {
         "id": 15,
-        "text": "The table below displays the sales figures for a group of realtors over a 2-year period. What was the approximate average sales price for the houses sold by Mrs. Boggs in Year 1? [Table content] Realtor | Houses Sold Year 1 | Total Sales Year 1 | Houses Sold Year 2 | Total Sales Year 2, Boggs | 5 | $1,550,000 | 7 | $2,450,000, Jenkins | 3 | $1,350,000 | 4 | $1,800,000, Miller | 4 | $1,375,000 | 6 | $1,750,000, Wilson | 2 | $825,000 | 5 | $1,850,000, Wright | 7 | $2,050,000 | 5 | $1,505,000",
-        "options": [
-            "$250,000",
-            "$310,000",
-            "$333,333",
-            "$350,000",
-            "$450,000"
-        ],
-        "correctAnswer": "310,000",
-        "explanation": "Mrs. Boggs sold 5 houses for a total of $1,550,000 in Year 1. Average price: $1,550,000 / 5 = $310,000."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace11.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 16,
@@ -238,17 +228,12 @@
         "explanation": "25% more than 600 is calculated as: 600 + (25% of 600) = 600 + 150 = 750 shirts"
     },
     {
-        "id": 19,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 2040 Sierra Blvd.\n* 584 San Anselmo Way #4D\n* 81719 Tallahassee Rd.\n* 3782 Scorpio Canyon St.\n* 1143 Redwood Pwky.\n\nRight column:\n* 2040 Sierra Blvd.\n* 584 San Anselmo Way #40\n* 81719 Tallahassee Rd.\n* 3782 Scorpio Canyon St.\n* 143 Redwood Pwky.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "3",
-        "explanation": "Three items are exactly the same: 2040 Sierra Blvd., 81719 Tallahassee Rd., and 3782 Scorpio Canyon St. The differences are in San Anselmo Way (#4D vs #40) and Redwood Pwky. (1143 vs 143)."
+        "id": 14,
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong1.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 20,
@@ -402,16 +387,11 @@
     },
     {
         "id": 31,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 123 Main St.\n* 456 Elm Avenue\n* 789 Oak Road\n* 321 Pine Lane\n* 654 Cedar Blvd.\n\nRight column:\n* 123 Main Street\n* 456 Elm Ave.\n* 789 Oak Rd.\n* 321 Pine Ln.\n* 654 Cedar Boulevard",
-        "options": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "correctAnswer": "0",
-        "explanation": "None of the entries are exactly the same. Each pair has differences in abbreviations or spellings of street types."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong2.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 32,
@@ -429,16 +409,11 @@
     },
     {
         "id": 33,
-        "text": "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column? Left column: 2040 Sierra Blvd., 584 San Anselmo Way #4D, 81719 Tallahassee Rd., 3782 Scorpio Canyon St., 1143 Redwood Pwky. Right column: 2040 Sierra Blvd., 584 San Anselmo Way #40, 81719 Tallahassee Rd., 3782 Scorpio Canyon St., 143 Redwood Pwky.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "3",
-        "explanation": "Three items are exactly the same: 2040 Sierra Blvd., 81719 Tallahassee Rd., and 3782 Scorpio Canyon St. The differences are in San Anselmo Way (#4D vs #40) and Redwood Pwky. (1143 vs 143)."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong4.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 34,
@@ -496,16 +471,11 @@
     },
     {
         "id": 38,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 12 Valley Dr. #4\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.\n\nRight column:\n* 12 Valley Dr.\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "4",
-        "explanation": "Four items are exactly the same: '56 Deerbrook Ln.', '401 Redhawk Ave.', '124 Williams Blvd.', and '3250 Mullin Dr.'. Only '12 Valley Dr. #4' vs '12 Valley Dr.' is different."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong5.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 39,
@@ -522,16 +492,11 @@
     },
     {
         "id": 40,
-        "text": "How many of the five items in the left hand column are exactly the same as the corresponding entry in the right hand column? Left column: Barnes, Roland G.; Daniels, Crystal M.; Davis, Keith W.; Freitas, Marc J.; Garfield, Beth S. Right column: Barnes, Roland G.; Daniels, Crystal N.; Davies, Keith W.; Freitas, Marc J.; Garfield, Beth S.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "3",
-        "explanation": "Three items are exactly the same: Barnes, Roland G.; Freitas, Marc J.; and Garfield, Beth S. The differences are in Daniels (M. vs N.) and Davis/Davies."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong7.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 41,

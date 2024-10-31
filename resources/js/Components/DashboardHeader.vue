@@ -24,7 +24,7 @@
                 </div>
 
                 <p class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">
-                    As prior Crossover employees we KNOW what you need to KNOW to get hired. Our CCAT exams are the same exams used by CROSSOVER during the hiring process directly from Criteria Corp.
+                    As prior Crossover employees we KNOW what you need to KNOW to get hired. Our CCAT exams are the same types of exams used by CROSSOVER during the hiring process
                     <br><br>Our Questions, Answers and Explanations help you get a leg up on your competition
                 </p>
                 <p class="relative z-10 mt-3 max-w-md mx-auto text-xl text-blue-100 sm:text-2xl md:mt-5 md:max-w-3xl animate-fade-in-up">

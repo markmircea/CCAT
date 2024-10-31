@@ -29,16 +29,11 @@
     },
     {
         "id": 3,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 555-123-4567\n* (800) 555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1 212 555 3456\n\nRight column:\n* 555-123-4567\n* 800-555-1212\n* 1-900-CALL-NOW\n* 867-5309\n* +1-212-555-3456",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "3",
-        "explanation": "Three entries are exactly the same: 555-123-4567, 1-900-CALL-NOW, and 867-5309. The others have slight differences in formatting."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace17.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 4,
@@ -454,16 +449,11 @@
     },
     {
         "id": 35,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Ferreira Financial\n* Center City Rental Co.\n* Greenwood Construction\n* Moonrise Valley Bakery\n* West Lake Auto Mall\n\nRight column:\n* Ferreira Financial\n* Center City Rentals\n* Greenwood Construction\n* Moonrise Valley Bakery\n* Westlake Auto Mall",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "2",
-        "explanation": "Only 'Ferreira Financial' and 'Greenwood Construction' are exactly the same in both columns. 'Center City Rental Co.' vs 'Center City Rentals', 'West Lake Auto Mall' vs 'Westlake Auto Mall' are different."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace16.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 36,

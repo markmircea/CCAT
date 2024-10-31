@@ -36,7 +36,7 @@
             "$680,000",
             "$720,000"
         ],
-        "correctAnswer": "640,000",
+        "correctAnswer": "600,000",
         "explanation": "Working backwards: $600,000 is 80% of the 2022 profit. So 2022 profit was $600,000 / 0.8 = $750,000. $750,000 is 125% of the 2021 profit. So 2021 profit was $750,000 / 1.25 = $600,000."
     },
     {
@@ -489,16 +489,11 @@
     },
     {
         "id": 38,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 123 Main St.\n* 456 Elm Avenue\n* 789 Oak Road\n* 321 Pine Lane\n* 654 Cedar Blvd.\n\nRight column:\n* 123 Main Street\n* 456 Elm Ave.\n* 789 Oak Rd.\n* 321 Pine Ln.\n* 654 Cedar Boulevard",
-        "options": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-        ],
-        "correctAnswer": "0",
-        "explanation": "None of the entries are exactly the same. Each pair has differences in abbreviations or spellings of street types."
+        "text": "Which of the following does not belong?",
+        "image": "/storage/img/ss/doesnotbelong10.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "B",
+        "explanation": "Examine each option carefully and compare them to find the one that differs from the others. Look for common characteristics shared by most options and identify which one doesn't fit this pattern."
     },
     {
         "id": 39,

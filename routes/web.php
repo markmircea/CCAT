@@ -86,6 +86,10 @@ Route::middleware([
         return Inertia::render('VerbalTestStart');
     })->name('verbal.test.start');
 
+    Route::get('/verbal-test-json-start', function () {
+        return Inertia::render('VerbalJsonStart');
+    })->name('verbal.json.test.start');
+
     Route::get('/math-logic-test', function () {
         return Inertia::render('MathLogicTest');
     })->name('math.logic.test');
@@ -94,6 +98,10 @@ Route::middleware([
         return Inertia::render('MathLogicTestStart');
     })->name('math.test.start');
 
+    Route::get('/math-test-json-start', function () {
+        return Inertia::render('MathLogicJsonStart');
+    })->name('math.json.test.start');
+
     Route::get('/spatial-reasoning-test', function () {
         return Inertia::render('SpatialReasoningTest');
     })->name('spatial.reasoning.test');
@@ -101,6 +109,10 @@ Route::middleware([
     Route::get('/spatial-test-start', function () {
         return Inertia::render('SpatialReasoningTestStart');
     })->name('spatial.test.start');
+
+    Route::get('/spatial-test-json-start', function () {
+        return Inertia::render('SpatialReasoningJsonStart');
+    })->name('spatial.json.start');
 
     Route::get('/full-practice-test-start', function () {
         return Inertia::render('FullPracticeTestStart');

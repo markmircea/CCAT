@@ -113,7 +113,7 @@
             "$180",
             "$190"
         ],
-        "correctAnswer": "\u00c2\u00a3170",
+        "correctAnswer": "$170",
         "explanation": "Daily charge: $40 * 3 = $120. Mileage charge: $0.25 * 200 = $50. Total charge: $120 + $50 = $170."
     },
     {
@@ -131,16 +131,11 @@
     },
     {
         "id": 11,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Laren Investments\n* Faddish Marketing, Inc.\n* McGregor Production Co.\n* Hastings Market\n* Akron Agency\n\nRight column:\n* Lauren Investments\n* Faddish Marketing Inc.\n* McGregor Production Co\n* Hastings Mart\n* Akron Agency",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "1",
-        "explanation": "Only one entry (Akron Agency) is exactly the same in both columns. The others have slight differences: Laren vs Lauren, Inc. vs Inc, Co. vs Co, and Market vs Mart."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace11.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "A",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 12,
@@ -185,16 +180,11 @@
     },
     {
         "id": 15,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Vogel, Bryan M.\n* Bernal, Emilio A.\n* Tompkins, Ana L.\n* Hutchins, Isaac D.\n* Li, Kenneth O.\n\nRight column:\n* Vogel, Bryan M.\n* Bernal, Emilio A.\n* Tompkins, Ana L.\n* Hutchins, Isaac D.\n* Li, Kenneth O.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "5",
-        "explanation": "All five items are exactly the same in both columns."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace9.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 16,
@@ -436,16 +426,11 @@
     },
     {
         "id": 34,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* 12 Valley Dr. #4\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.\n\nRight column:\n* 12 Valley Dr.\n* 56 Deerbrook Ln.\n* 401 Redhawk Ave.\n* 124 Williams Blvd.\n* 3250 Mullin Dr.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "4",
-        "explanation": "Four items are exactly the same: '56 Deerbrook Ln.', '401 Redhawk Ave.', '124 Williams Blvd.', and '3250 Mullin Dr.'. Only '12 Valley Dr. #4' vs '12 Valley Dr.' is different."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace8.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 35,
@@ -540,16 +525,11 @@
     },
     {
         "id": 42,
-        "text": "The table below displays the most recent sales for Mr. Garcia's real estate business. What was the average square footage for the five houses?\n\n| House | Square Feet | Bedrooms | Bathrooms | Price |\n|---|---|---|---|---||\n| 1 | 1,600 | 3 | 2 | $320,000.00 |\n| 2 | 1,300 | 3 | 1.75 | $390,000.00 |\n| 3 | 1,700 | 4 | 2.5 | $595,000.00 |\n| 4 | 1,750 | 4 | 2 | $700,000.00 |\n| 5 | 2,000 | 3 | 3 | $600,000.00 |",
-        "options": [
-            "1,670 square feet",
-            "1,690 square feet",
-            "1,710 square feet",
-            "1,730 square feet",
-            "1,750 square feet"
-        ],
-        "correctAnswer": "1,670 square feet",
-        "explanation": "Sum of square feet: 1,600 + 1,300 + 1,700 + 1,750 + 2,000 = 8,350. Average: 8,350 / 5 = 1,670 square feet."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace5.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "E",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 43,

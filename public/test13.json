@@ -1,16 +1,11 @@
 [
     {
         "id": 1,
-        "text": "How many of the five items in the left-hand column are exactly the same as the corresponding entry in the right-hand column?\n\nLeft column:\n* Vogel, Bryan M.\n* Bernal, Emilio A.\n* Tompkins, Ana L.\n* Hutchins, Isaac D.\n* Li, Kenneth O.\n\nRight column:\n* Vogel, Bryan M.\n* Bernal, Emilio A.\n* Tompkins, Ana L.\n* Hutchins, Isaac D.\n* Li, Kenneth O.",
-        "options": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
-        ],
-        "correctAnswer": "5",
-        "explanation": "All five items are exactly the same in both columns."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace14.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "C",
+        "explanation": "To find the correct answer, analyze the logical pattern in the sequence of images. Look for consistent changes or relationships between elements in each box. The option that best continues this pattern will be the correct answer."
     },
     {
         "id": 2,
@@ -173,16 +168,11 @@
     },
     {
         "id": 14,
-        "text": "The table below displays the sales figures for a group of realtors over a 2-year period. What was the approximate average sales price for the houses sold by Mrs. Boggs in Year 1? [Table content] Realtor | Houses Sold Year 1 | Total Sales Year 1 | Houses Sold Year 2 | Total Sales Year 2, Boggs | 5 | $1,550,000 | 7 | $2,450,000, Jenkins | 3 | $1,350,000 | 4 | $1,800,000, Miller | 4 | $1,375,000 | 6 | $1,750,000, Wilson | 2 | $825,000 | 5 | $1,850,000, Wright | 7 | $2,050,000 | 5 | $1,505,000",
-        "options": [
-            "$250,000",
-            "$310,000",
-            "$333,333",
-            "$350,000",
-            "$450,000"
-        ],
-        "correctAnswer": "310,000",
-        "explanation": "Mrs. Boggs sold 5 houses for a total of $1,550,000 in Year 1. Average price: $1,550,000 / 5 = $310,000."
+        "text": "Which of the following boxes should replace the question mark (?) to complete the pattern?",
+        "image": "/storage/img/ss/whichreplace.png",
+        "options": ["A", "B", "C", "D", "E"],
+        "correctAnswer": "D",
+        "explanation": "To find the correct answer, rotate the image."
     },
     {
         "id": 15,

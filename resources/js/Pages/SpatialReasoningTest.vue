@@ -68,13 +68,21 @@ import { Link } from '@inertiajs/vue3';
                             <h2 id="practice" class="text-2xl font-semibold mt-6 mb-2">Practice Resources</h2>
                             <p>To improve your spatial reasoning skills, practice with the continuously generated unlimited questions below:</p>
 
-                            <div class="mt-8 flex justify-center">
+                            <div class="mt-8 flex justify-center space-x-4">
                                 <Link
-                                    href="/spatial-test-start"
+                                    href="/spatial-test-json-start"
                                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                                 >
                                     Start Spatial & Logic Practice
                                 </Link>
+                                <Link
+                                    href="/spatial-test-start"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                >
+                                    Start Spatial & Logic Practice - AI Generated
+                                </Link>
+
+
                             </div>
 
                         </div>
